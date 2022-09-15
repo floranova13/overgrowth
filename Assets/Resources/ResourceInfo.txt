@@ -1,0 +1,94 @@
+------------------------------------------------------
+---------------------------------------------
+------------------------------------
+---------------------------
+------------------
+//Seeker Game Resources:
+------------------------------------------------------
+
+//Key: 3 Components
+------------------------------------------------------
+
+// [Name]: String
+// [Rarity]: Integer
+// [Price]: Integer
+// [Description]: String
+
+
+------------------------------------------------------
+Category:Elements
+------------------------------------------------------
+
+---------------------------------------------
+Subcategory:1:Simple Elements
+---------------------------------------------
+
+Vira_0_-1_The organic resource, required by all living creatures to sustain their various biological functions.
+Sol_1_-1_The inorganic resource, found in various matter of various densities. Many organisms have Sol skeletal systems, among other Sol anatomical structures.
+Luminet_3_-1_An enigmatic resource, occasionally found in trace amounts. Very little about it is understood.
+
+------------------------------------------------------
+Category:Artificial Components
+------------------------------------------------------
+
+
+
+------------------------------------------------------
+Category:Organic Samples
+------------------------------------------------------
+
+
+---------------------------------------------
+Subcategory:1:Flourishflora
+---------------------------------------------
+
+Mellowend_0_-1_Also called the 'Sanctuary Flower', they have gained special recognition for being the first Flower ever grown in human-settled, artificial conditions. It is otherwise a humble plant with no special properties, harvested only for its Vira worth.
+Homewell Blossom_0_-1_Each blossom of this plant has three short, gold petals. Named by Hale shortly after taking his position heading up the Commerce Division, the Homewell Blossom is much like the Mellowend in how common and ordinary it is. Yet unlike the Mellowend, it does not grow beyond the wilderness territory local to Seras. Stories have spread about the Flourishflora. That it brings luck where it is grown, that each of its three petals represents an element of the Trine. It has also come to symbolize the accumulation of goodwill. Hale did not make traditional profit from the sale of these plants, but he used them to establish a network of contacts with which to do future business. This is how an otherwise-unremarkable species became worth something in local markets.
+Thinsee Bloom_0_-1_X
+Chromatil_0_-1_X
+Echor Blossom_0_This flourishflora uses sound producing chambers along regularly spaced stems to determine growth pattern and scale. This allows it to find locations that are less crowded by other plants and animals. The Echor Blossom is also an ancestor of a number of known flourishflora that also use similar sound systems in various other ways. Unlike most other species of flourishflora, Echor Blossoms [HAVE 3 GROUP LINKS]
+Sandslane_0_-1_This hardy flourishflora grows in arid environments or other sun-rich environments that contain very little nutrients. They will sometimes be seen popping up admidst sun-soaked sand dunes. Sandslane plants offer vira to the flora, fauna, and fungi of their immediate surroundings, which is usually a small list of dependent organisms.
+Nanotroph_0_-1_This flourishflora grows more commonly in forests than most assume. This is because its small size makes it more difficult to detect. On top of that, it takes a special skill to harvest a growing Nanotroph plant without killing it. Currently, it is the smallest known species of flourishflora. It is valued in research because samples can be stored much more easily.
+Dalchime_0_-1_Dalechimes are often found in hilly or mountainous areas. Their blossoms only unfurl when they are [reproducing to spread to new areas].
+Bogbind_0_-1_Often mislabelled by inexperienced Seekers as a creeping plant or even an aquatic tangle, Bogbind is a Flourishflora that also happens to be a creeping plant which also happens to live partially within the waters of the bogs in which it grows. The Flourishflora classification supercedes any other categorical systems. What makes proper identification even more difficult is it’s tendency to strangle and “devour” immobilized intruding fauna. It determines what is an intruder in its territory using one of two “threat identification” behavioral patterns. Aggressive variants will immedietely mark foreign organisms as threts, while reactionary variants will only do so once it determines that the lives of the organisms it watches over have been harmed. The Flourishflora does not attack itself, though. Instead, it sprays a harmless scent marker onto targets and waits for the denizens of its bog, be they flora, fauna, or fungi, to incapacitate the threat. Once incapacitated, the Bogbind grows special roots into the threat and begins draining it of life. It spreads nutrients to the organisms that participated in the incapacitation, identifying them by a second marking scent that it sprays on them in the heat of the struggle. It uses these methods to manage its territory, but it does no more. If the nutrient-bestowed victors are beset by would-be predators, they must defend their spoils alone.
+
+Lulera_1_-1_The Lulerla is known for its ability to put predators or creatures that might cause it harm to sleep with a Shroudvira cloudburst mist effect. For this reason, the plant is valued as a component in the research and manifacture of tranquilizers, be they designed for humans or other organisms.
+Ripple Bloomnode_1_-1_A small flourishflora species that illuminates a small portion of whatever darkened territory it occupies. They can only thrive in such environment, because it is within them that they can carve out a niche as a bioluminescent vira supplier. To adapt to different extremes in temperature, the plant utilizes an ampvira charge effect to generate localized heating or cooling. Some Ripple Bloomnodes demonstrate both heating and cooling properties developed and functional. These individuals utilize both when needed by changing temperatures, most effectively flourishing in environments that cycle between extremes.
+Karapas_1_-1_The Karapas plant grows a shell of varying thickness and function around its core and partially around its extremeties. Discovered functions include offensive and defensive shedding, when needed.
+Nell Blossom_1_-1_X
+
+Nightray_2_-1_X
+Evele's Risk_2_-1_This Flower gained its name during a prolongued military campaign during which the famed 'Commander Evele' fell ill before a crucial battle. Without knowledge of what the illness was and no general-use medical technology on hand, a former Seeker suggested distilling a curative from this Flower, despite having yet been encountered and studied. The former Seeker's suggestion was based on how similar it was to another species of Flower that possessed restorative properties. Other indications suggested it could also be poisonous, and the Seeker warned Evele that it could make the illness worse. Running out of time before the opposing army would make its move, Evele makes the gamble and successfully recovers. So quick was the Commander's recovery, and so decisive was the subsequent victory, that they gained a reputation for being 'unkillable'. Evele protested this label, crediting the former Seeker's insight, but the rumors persisted.
+Everkat_2_-1_X
+Ripple Bloomlocus_2_-1_X
+White Flashflower_2_-1_X
+
+Blue Flashflower_3_-1_X
+Purple Flashflower_3_-1_X
+Nightray Coloris_3_-1_The Nightray Coloris is exceptionally rare in the wild and, to date, has not been successfully cultivated by humans within the confines of Sanctuary cities. Like the related species, from which it gets its name, this flourishflora recedes during daylight hours and then unfurls in the dark of night to temporarily bloom and spread Vira it has produced during its hibernation. Nightray Coloris blooms are witnessed by only the most fortunate Seekers, the luckiest of whom gathering living specimens to grow or sell. What sets the Nightray Coloris apart from the Nightray is the color of the  flourishflora’s blooms. The color changes as a result of numerous factors, most unknown to even the most intelligent Seeker scholars, in part due to its rarity. Seekers have a special nickname for this plant, the ‘Night Princess Flower’. It is derived from a peculiar case where an ancient Seeker was discovered to be a member of royalty only after rising in the ranks from recruit to leader in her Seeker Branch. She had told no one of her lineage, relying on skill and charisma to fuel her success. Multiple conflicting stories speak of the reason for her deception, but the only clear tale tells of the revelation of her bloodline. Upon discovering a Nightray Coloris specimen and successfully harvesting it, her fame grew  to the point where a member of her family recognized her likeness on a portrait commissioned by adoring members of her Seeker Branch to memorialize her harvest. Her beauty was said to be comparable to that of the flourishflora itself. Not wishing to put her Seekers in the middle of a royal scandal, the princess resigned her position and disappeared as mysteriously as she had arrived.
+
+---------------------------------------------
+Subcategory:1:Mosses
+---------------------------------------------
+
+//White Margusholthe_0_X
+//Grey Margusholthe_0_X
+//Griever's Swath_0_A bluish moss said to grow wherever overwhelming sorrow taints the land. Some folklore add a positive slant to the myth, saying the moss absorbs that grief, alleviating the woes of the suffering, lessening their burdens.
+
+//Threadsunder_1_This species of moss is hated by many because favors coating common construction materials used in modern society, eating eroding them over time. For this reason, many buildings are coated in a paint mixed with an artificial compound that that wards off the moss.
+//Caresselent_1_A lush green moss that grows across the ground, rarely ever found in high places. It is spongy and pleasant to the touch, so much so that some even grow the moss to cover luxorious living spaces.
+
+//Crimson Griever's Swath_2_A rare, red variant of the moss said to grow wherever overwhelming sorrow taints the land. Some folklores add a positive slant to the myth, saying the moss absorbs grief, alleviating the woes of the suffering, lessening their burdens. However, this addition claims that Crimson Griever's Swath is moss that has already absorbed a significant amount of grief, implying terrible tragedies have taken place in the land in which it grows. Some supersticious Flora Seekers avoid areas where these plants grow. Others don't have the option and they pass through with haste. Some will seek out the plants, hoping to glean what they can about the conditions that allow them to grow in place of the common variety.
+
+---------------------------------------------
+Subcategory:1:Mushrooms
+---------------------------------------------
+
+Reeker Redcap_0_Reeker mushrooms are common to many areas of the wilderness and even human-settled areas. Evolutionary development of the Redcap and Whitecap varieties of Reeker shroom appear to have been linked. Redcaps are harmless.
+Reeker Whitecap_0_Reeker mushrooms are common to many areas of the wilderness and even human-settled areas. Evolutionary development of the Redcap and Whitecap varieties of Reeker shroom appear to have been linked. Whitecaps are toxic to most mammals, including humans.
+Breybarb_0_Breybarbs are mushrooms with rough, brownish caps. They aren't comfortable to sleep on in the wild, but once dry, their caps change into a smooth and springy texture that is perfect for luxury bedding. This process is involved and expensive, however.
+
+Ruckel Shroom_1_Ruckel Shrooms are commonly found in forests and caves of the wilderness. They aren't poisonous to humans, but some mammals lack stomachs that can adequately process them for nutrition, and thus avoid them.
+Ilunite Glowcap_1_The Ilunite Glowcap is the common name for a small grey fungus that absorbs the light from its surroundings and slowly radiates some of that light back out. It does this to broadcast it's location to creatures that feed on the mushroom cap and then spread contained spores to new locations.
+
+Reeker Blackcap_2_Reeker mushrooms are common to many areas of the wilderness and even human-settled areas. However, the Evolutionary development of the Blackcap has long seperated from other varieties. Blackcaps are purged wherever they are found in human areas, thanks to 1 in 3 of their caps being moderately poisonous and possibly fatal.

@@ -1,0 +1,244 @@
+{
+  "OrganicSamples": {
+    "Flourishflora": [
+      {
+        "Name": "Mellowend",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "Also called the 'Sanctuary Flower', they have gained special recognition for being the first Flower ever grown in human-settled, artificial conditions. It is otherwise a humble plant with no special properties, harvested only for its Vira worth."
+      },
+      {
+        "Name": "Homewell Blossom",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "Each blossom of this plant has three short, gold petals. Named by Hale shortly after taking his position heading up the Commerce Division, the Homewell Blossom is much like the Mellowend in how common and ordinary it is. Yet unlike the Mellowend, it does not grow beyond the wilderness territory local to Seras. Stories have spread about the Flourishflora. That it brings luck where it is grown, that each of its three petals represents an element of the Trine. It has also come to symbolize the accumulation of goodwill. Hale did not make traditional profit from the sale of these plants, but he used them to establish a network of contacts with which to do future business. This is how an otherwise-unremarkable species became worth something in local markets."
+      },
+      {
+        "Name": "Thinsee Bloom",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Chromatil",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Echor Blossom",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "This flourishflora uses sound producing chambers along regularly spaced stems to determine growth pattern and scale. This allows it to find locations that are less crowded by other plants and animals. The Echor Blossom is also an ancestor of a number of known flourishflora that also use similar sound systems in various other ways. Unlike most other species of flourishflora, Echor Blossoms [HAVE 3 GROUP LINKS]"
+      },
+      {
+        "Name": "Sandslane",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "This hardy flourishflora grows in arid environments or other sun-rich environments that contain very little nutrients. They will sometimes be seen popping up admidst sun-soaked sand dunes. Sandslane plants offer vira to the flora, fauna, and fungi of their immediate surroundings, which is usually a small list of dependent organisms."
+      },
+      {
+        "Name": "Nanotroph",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "This flourishflora grows more commonly in forests than most assume. This is because its small size makes it more difficult to detect. On top of that, it takes a special skill to harvest a growing Nanotroph plant without killing it. Currently, it is the smallest known species of flourishflora. It is valued in research because samples can be stored much more easily."
+      },
+      {
+        "Name": "Dalechimes",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "Dalechimes are often found in hilly or mountainous areas. Their blossoms only unfurl when they are [reproducing to spread to new areas]."
+      },
+      {
+        "Name": "Bogbind",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "Often mislabelled by inexperienced Seekers as a creeping plant or even an aquatic tangle, Bogbind is a Flourishflora that also happens to be a creeping plant which also happens to live partially within the waters of the bogs in which it grows. The Flourishflora classification supercedes any other categorical systems. What makes proper identification even more difficult is it's tendency to strangle and “devour” immobilized intruding fauna. It determines what is an intruder in its territory using one of two “threat identification” behavioral patterns. Aggressive variants will immedietely mark foreign organisms as threts, while reactionary variants will only do so once it determines that the lives of the organisms it watches over have been harmed. The Flourishflora does not attack itself, though. Instead, it sprays a harmless scent marker onto targets and waits for the denizens of its bog, be they flora, fauna, or fungi, to incapacitate the threat. Once incapacitated, the Bogbind grows special roots into the threat and begins draining it of life. It spreads nutrients to the organisms that participated in the incapacitation, identifying them by a second marking scent that it sprays on them in the heat of the struggle. It uses these methods to manage its territory, but it does no more. If the nutrient-bestowed victors are beset by would-be predators, they must defend their spoils alone."
+      },
+      {
+        "Name": "Lulera",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "The Lulerla is known for its ability to put predators or creatures that might cause it harm to sleep with a Shroudvira cloudburst mist effect. For this reason, the plant is valued as a component in the research and manifacture of tranquilizers, be they designed for humans or other organisms."
+      },
+      {
+        "Name": "Ripple Bloomnode",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "A small flourishflora species that illuminates a small portion of whatever darkened territory it occupies. They can only thrive in such environment, because it is within them that they can carve out a niche as a bioluminescent vira supplier. To adapt to different extremes in temperature, the plant utilizes an ampvira charge effect to generate localized heating or cooling. Some Ripple Bloomnodes demonstrate both heating and cooling properties developed and functional. These individuals utilize both when needed by changing temperatures, most effectively flourishing in environments that cycle between extremes."
+      },
+      {
+        "Name": "Karapas",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "The Karapas plant grows a shell of varying thickness and function around its core and partially around its extremeties. Discovered functions include offensive and defensive shedding, when needed."
+      },
+      {
+        "Name": "Nell Blossom",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Nightray",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Evele's Risk",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": "This Flower gained its name during a prolongued military campaign during which the famed 'Commander Evele' fell ill before a crucial battle. Without knowledge of what the illness was and no general-use medical technology on hand, a former Seeker suggested distilling a curative from this Flower, despite having yet been encountered and studied. The former Seeker's suggestion was based on how similar it was to another species of Flower that possessed restorative properties. Other indications suggested it could also be poisonous, and the Seeker warned Evele that it could make the illness worse. Running out of time before the opposing army would make its move, Evele makes the gamble and successfully recovers. So quick was the Commander's recovery, and so decisive was the subsequent victory, that they gained a reputation for being 'unkillable'. Evele protested this label, crediting the former Seeker's insight, but the rumors persisted."
+      },
+      {
+        "Name": "Everkat",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Ripple Bloomlocus",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "White Flashflower",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Blue Flashflower",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Purple Flashflower",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Nightray Coloris",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      },
+    ],
+    "Mosses": [
+      {
+        "Name": "",
+        "Category": "Organic Samples",
+        "Subcategory": "Mosses",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Falshrooms": [
+      {
+        "Name": "",
+        "Category": "Organic Samples",
+        "Subcategory": "Falshrooms",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "FlesherFungi": [
+      {
+        "Name": "",
+        "Category": "Organic Samples",
+        "Subcategory": "Flesher Fungi",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Maremolds": [
+      {
+        "Name": "",
+        "Category": "Organic Samples",
+        "Subcategory": "Maremolds",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Trees": [
+      {
+        "Name": "",
+        "Category": "Organic Samples",
+        "Subcategory": "Trees",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Waveskellen": [
+      {
+        "Name": "",
+        "Category": "Organic Samples",
+        "Subcategory": "Waveskellen",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Mosses": [
+      {
+        "Name": "",
+        "Category": "Organic Samples",
+        "Subcategory": "Mosses",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      }
+    ]
+  }
+}
