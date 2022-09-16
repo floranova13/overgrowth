@@ -406,31 +406,31 @@
     ],
     "Waveskellen": [
       {
-        "Name": "",
+        "Name": "Beamstrand",
         "Category": "Organic Samples",
         "Subcategory": "Waveskellen",
         "Rarity": "Common",
         "Price": -1,
-        "Description": ""
+        "Description": "The most common variety of freshwater waveskell in the greater region."
       },
       {
-        "Name": "",
+        "Name": "Stinging Gripweed",
         "Category": "Organic Samples",
         "Subcategory": "Waveskellen",
         "Rarity": "Uncommon",
         "Price": -1,
-        "Description": ""
+        "Description": "This waveskell Ddisguises itself as the harmless beamstrand."
       },
       {
-        "Name": "",
+        "Name": "Radiant Murkweed",
         "Category": "Organic Samples",
         "Subcategory": "Waveskellen",
         "Rarity": "Rare",
         "Price": -1,
-        "Description": ""
+        "Description": "A bioluminescent waveskell that pulses to gently illuminate the dark depths where it grows."
       },
       {
-        "Name": "",
+        "Name": "WONDROUS_WAVESKELLEN",
         "Category": "Organic Samples",
         "Subcategory": "Waveskellen",
         "Rarity": "Wondrous",
