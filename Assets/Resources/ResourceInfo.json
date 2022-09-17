@@ -74,6 +74,22 @@
         "Description": "Often mislabelled by inexperienced Seekers as a creeping plant or even an aquatic tangle, Bogbind is a Flourishflora that also happens to be a creeping plant which also happens to live partially within the waters of the bogs in which it grows. The Flourishflora classification supercedes any other categorical systems. What makes proper identification even more difficult is it's tendency to strangle and “devour” immobilized intruding fauna. It determines what is an intruder in its territory using one of two “threat identification” behavioral patterns. Aggressive variants will immedietely mark foreign organisms as threts, while reactionary variants will only do so once it determines that the lives of the organisms it watches over have been harmed. The Flourishflora does not attack itself, though. Instead, it sprays a harmless scent marker onto targets and waits for the denizens of its bog, be they flora, fauna, or fungi, to incapacitate the threat. Once incapacitated, the Bogbind grows special roots into the threat and begins draining it of life. It spreads nutrients to the organisms that participated in the incapacitation, identifying them by a second marking scent that it sprays on them in the heat of the struggle. It uses these methods to manage its territory, but it does no more. If the nutrient-bestowed victors are beset by would-be predators, they must defend their spoils alone."
       },
       {
+        "Name": "Skuffel",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Rante",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
         "Name": "Lulera",
         "Category": "Organic Samples",
         "Subcategory": "Flourishflora",
@@ -440,37 +456,419 @@
     ],
     "Stranglevines": [
       {
-        "Name": "",
+        "Name": "Grallvine",
         "Category": "Organic Samples",
         "Subcategory": "Stranglevines",
         "Rarity": "Common",
         "Price": -1,
-        "Description": ""
+        "Description": "A carnivorous plant that waits for prey to brush against its vines, which are coated with a sticky substance that can collectively ensnare prey long enough for the plant reposition its 'body' and begin devouring it. This could take over a day, depending on the age and size of the plant. A grallvine digests its prey live until their suffering finally comes to an end."
       },
       {
-        "Name": "",
+        "Name": "Notchweb Vine",
+        "Category": "Organic Samples",
+        "Subcategory": "Stranglevines",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "These vines are found within the Twisted Tangles, threaded between Spire Preventglade trees. They serve as transport systems for nutrients as well as pathways for small critters."
+      },
+      {
+        "Name": "Viselite Creep",
         "Category": "Organic Samples",
         "Subcategory": "Stranglevines",
         "Rarity": "Uncommon",
         "Price": -1,
-        "Description": ""
+        "Description": "This is the species of plant that grows from bulbs and stretches out its roots far across soft, muddy soil near water, searching for nutrients. It developed a symbiotic relationship with a crustacean species. The tougher roots can prevent the plant from uprooting as a river changes course. Over an unknown amount of time, this pair of species dominated and become central to the local ecosystem of Messhe Pond."
       },
       {
-        "Name": "",
+        "Name": "Raveweed",
         "Category": "Organic Samples",
         "Subcategory": "Stranglevines",
         "Rarity": "Rare",
         "Price": -1,
-        "Description": ""
+        "Description": "An extremely rare carnivorous plant, about which little is known."
       },
       {
-        "Name": "",
+        "Name": "WONDROUS_STRANGEVINES",
         "Category": "Organic Samples",
         "Subcategory": "Stranglevines",
         "Rarity": "Wondrous",
         "Price": -1,
         "Description": ""
       }
+    ],
+    "Stillferns": [
+      {
+        "Name": "Cyre",
+        "Category": "Organic Samples",
+        "Subcategory": "Stillferns",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Eloway Brightbush",
+        "Category": "Organic Samples",
+        "Subcategory": "Stillferns",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "A bioluminescent fern that grows within the Ilunite Forest and the Twisted Tangles."
+      },
+      {
+        "Name": "Venray Brightbush",
+        "Category": "Organic Samples",
+        "Subcategory": "Stillferns",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "A bioluminescent fern that grows within the Twisted Tangles. Related to the Eloway, the Venray glows brighter and its roots dig deeper into the soil."
+      },
+      {
+        "Name": "Strobesense Bush",
+        "Category": "Organic Samples",
+        "Subcategory": "Stillferns",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "A bioluminescent fern that grows within the Ilunite Forest and the Twisted Tangles. It remains dark until certain creatures approach and activate clusters of roots that curl just slightly aboveground to act as tripwires. Once the plant detects such an intrusion, it begins to produce a bright white light that pulses in regular intervals for a set amount of time, using stored chemicals gathered from the soil to propogate this bioluminescence. This is a reaction that developed to protect the plant from predators and conserve resources while none are present. Seekers that come into contact with Strobsense Bushes quickly learn to avoid stepping on the roots."
+      },
+      {
+        "Name": "Elongated Merow Tangle",
+        "Category": "Organic Samples",
+        "Subcategory": "Trees",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": "A common fern found in dense forests. It is difficult to travel through them, and they quickly regrow where they are cleared. It is for this reason that Seeker prefer to simply travel around them."
+      },
+      {
+        "Name": "WONDROUS_STILLFERNS",
+        "Category": "Organic Samples",
+        "Subcategory": "Stillferns",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
     ]
+  },
+  "Geomaterials": {
+    "Rocks": [
+      {
+        "Name": "Britomal",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Claera",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Daphroth",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Noma",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Sint",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Emite",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Idanir",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Helick",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Adrastel",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Cynora",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Ouret",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Reatite",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "LEGENDARY_ROCK",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Legendary",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Metallic Ores": [
+      {
+        "Name": "Amodetite",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "A common ore mined on the surface of the planet, found almost anywhere. However, it must be mined in large quantities to turn a decent profit. Large mines can turn a profit even if the ore is being mined only to be processed into Amoten, either because Daultem refining isn't possible or because smaller quantities of the metal would have to be processed at a loss."
+      },
+      {
+        "Name": "Lothenine",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Tundriumine",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Dalumatite",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "An uncommon ore mined on the surface of the planet, chosen for mining because it has high concentrations of Dultem, and lesser concentrations of Amoten add bonus value. It must be mined in moderate quantities to turn a substantial profit, and Daultem processing is a must for smaller quantities."
+      },
+      {
+        "Name": "Diserinine",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Glavisine",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Reliumine",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Arborunine",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Embrisine",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Luxuline",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "LEGENDARY_METALLIC_ORE",
+        "Category": "Geomaterials",
+        "Subcategory": "Metallic Ores",
+        "Rarity": "Legendary",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Industrial Minerals": [
+      {
+        "Name": "Murkite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Vollite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Nevanite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Rednaite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Sulite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Furletite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Baleite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Kasherite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Grandite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Dunite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Valcerine",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Olocerine",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Durskite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Dawnetite",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "LEGENDARY_INDUSTRIAL_MINERAL",
+        "Category": "Geomaterials",
+        "Subcategory": "Industrial Minerals",
+        "Rarity": "Legendary",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Fuel Minerals": [
+      
+    ],
+    "Gem Minerals": []
   }
 }
