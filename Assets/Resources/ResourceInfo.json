@@ -362,7 +362,7 @@
         "Description": "This flesherfungus has a deep purple, appearance, with flesh like knotted wood."
       },
       {
-        "Name": "Grallvine",
+        "Name": "Grallgraft",
         "Category": "Organic Samples",
         "Subcategory": "Flesher Fungi",
         "Rarity": "Uncommon",
@@ -370,7 +370,7 @@
         "Description": "A carnivorous fungus that waits for prey to brush against its vines, which are coated with an adhesive. It digests live prey over the course of about a day, depending on the age and size of the fungus."
       },
       {
-        "Name": "FLESHER_FUNGI_RARE",
+        "Name": "Acumben's Curse",
         "Category": "Organic Samples",
         "Subcategory": "Flesher Fungi",
         "Rarity": "Rare",
@@ -867,8 +867,218 @@
       }
     ],
     "Fuel Minerals": [
-      
+      {
+        "Name": "Fexatite",
+        "Category": "Geomaterials",
+        "Subcategory": "Fuel Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Hexatite",
+        "Category": "Geomaterials",
+        "Subcategory": "Fuel Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Verexite",
+        "Category": "Geomaterials",
+        "Subcategory": "Fuel Minerals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Ouret",
+        "Category": "Geomaterials",
+        "Subcategory": "Fuel Minerals",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "RARE_FUEL_MINERAL",
+        "Category": "Geomaterials",
+        "Subcategory": "Fuel Minerals",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "LEGENDARY_FUEL_MINERAL",
+        "Category": "Geomaterials",
+        "Subcategory": "Fuel Minerals",
+        "Rarity": "Legendary",
+        "Price": -1,
+        "Description": ""
+      }
     ],
-    "Gem Minerals": []
+    "Gem Minerals": [
+      {
+        "Name": "Red Corregate",
+        "Category": "Geomaterials",
+        "Subcategory": "Gem Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Green Corregate",
+        "Category": "Geomaterials",
+        "Subcategory": "Gem Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Blue Corregate",
+        "Category": "Geomaterials",
+        "Subcategory": "Gem Minerals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Falestone",
+        "Category": "Geomaterials",
+        "Subcategory": "Gem Minerals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Umiste",
+        "Category": "Geomaterials",
+        "Subcategory": "Gem Minerals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Lumenite Lightstone",
+        "Category": "Geomaterials",
+        "Subcategory": "Gem Minerals",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Lumenite Nightstone",
+        "Category": "Geomaterials",
+        "Subcategory": "Gem Minerals",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Nullstone",
+        "Category": "Geomaterials",
+        "Subcategory": "Gem Minerals",
+        "Rarity": "Legendary",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Seras Shimmerstone",
+        "Category": "Geomaterials",
+        "Subcategory": "Gem Minerals",
+        "Rarity": "Legendary",
+        "Price": -1,
+        "Description": "A previously-undiscovered variant of crystalline Dawnetite. It is discovered deep within the Seras cliffside, obscured by many layers of dense surface rock. What process brings about its formation is unknown. While extraordinarily rare, it is not worth much more than more common variants. Instead, it has become one of the many symbols of the settlement."
+      }
+    ],
+    "Metals": [
+      {
+        "Name": "Amoten",
+        "Category": "Geomaterials",
+        "Subcategory": "Gem Minerals",
+        "Rarity": "Metals",
+        "Price": -1,
+        "Description": "A metal used as a material in many buildings because it is fairly durable, but it cannot stand up to more uncommon metals used in buildings in resistance to elemental pressures and other factors, so it is worth less. It is stored in 'block' form, a material input widely accepted by most auto-construction systems sold commercially."
+      },
+      {
+        "Name": "Lothen",
+        "Category": "Geomaterials",
+        "Subcategory": "Metals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "A hard metal used in Solblades, drills, and other piercing or cutting tools. It is stored in 'block' form, a material input widely accepted by most auto-construction systems sold commercially."
+      },
+      {
+        "Name": "Tundrium",
+        "Category": "Geomaterials",
+        "Subcategory": "Metals",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "A metal used most widely as a superconducter because it is more commonly found in nature, despite the cost of more-frequent replacements as the metal reacts to other forces and quickly loses its efficiency at transmitting power current. It is stored in 'block' form, a material input widely accepted by most auto-construction systems sold commercially."
+      },
+      {
+        "Name": "Diserine",
+        "Category": "Geomaterials",
+        "Subcategory": "Metals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "A metal used in heavy weapons, including Solblades. It is also used in drills and other piercing or cutting tools. It is stored in 'block' form, a material input widely accepted by most auto-construction systems sold commercially."
+      },
+      {
+        "Name": "Glavis",
+        "Category": "Geomaterials",
+        "Subcategory": "Metals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "A metal used in lightweight weapons, including Solblades. It is also used in drills and other piercing or cutting tools. It is stored in 'block' form, a material input widely accepted by most auto-construction systems sold commercially."
+      },
+      {
+        "Name": "Daultem",
+        "Category": "Geomaterials",
+        "Subcategory": "Metals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "A metal used as a material in many buildings because it is durable on its own, posessing a fair resistance to elemental pressures and other factors, but the reason it is so desirable is because it provides the base for many metal alloys used in buildings. It is stored in 'block' form, a material input widely accepted by most auto-construction systems sold commercially."
+      },
+      {
+        "Name": "Relium",
+        "Category": "Geomaterials",
+        "Subcategory": "Metals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "A more desirable metal for superconductors in machinery that is built to last. However, it is not economically feasible when large quantities of superconducting material is needed because it is less commonly found. It is stored in 'block' form, a material input widely accepted by most auto-construction systems sold commercially."
+      },
+      {
+        "Name": "Arborun",
+        "Category": "Geomaterials",
+        "Subcategory": "Metals",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "Arborun is called a 'living metal' in non-scientific contexts based on appearance only. This is because it shifts states, and different Arborun alloys will seem to some as if the metal holds a life of its own. It is decidedly inorganic, however. Arborun is not normally found in nature in its basic elemental state, but it is desirable in specialist components that maintain elemental qualities that allow it to be 'reprogrammed' for different reasons. The value of the metal is greatly dependent on the market, as most experienced merchants who don't already have a buyer will treat it as a common metal when setting prices, if they purchase it at all. It is stored in tanks that are specially suited to insulating the highly reactive metal."
+      },
+      {
+        "Name": "Embris",
+        "Category": "Geomaterials",
+        "Subcategory": "Metals",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": "This metal becomes a superconductor at a higher temperature than its counterparts, so it is less desirable to most. It is also extremely rare. However, it is still more valuable to those who are willing to spend significantly more to ensure they have the best materials on the largescale market because it is slightly more ductile. Some sophistichated Seeker blades use Embris alloys. It is also used in drills augmented with Torrentvira technology and other specialized tools. It is stored in 'block' form, a material input widely accepted by most auto-construction systems sold commercially."
+      },
+      {
+        "Name": "Luxule",
+        "Category": "Geomaterials",
+        "Subcategory": "Metals",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": "Pronounced L'xule with a very soft 'L'. Despite what many who have never seen the metal might think the name implies, pure Luxule metal absorbs most visible light, appearing extremely dark. It does have a metallic sheen that has been described as 'powerful' and 'off-putting' because the metal is rarely found in nature, rarely used by humans, and has a place in numerous myths as a substance given to mankinds by the gods for various mysterious purposes. In reality, it is just a rare and dense metal. It is stored in 'block' form, a material input widely accepted by most auto-construction systems sold commercially."
+      },
+      {
+        "Name": "WONDROUS_METAL",
+        "Category": "Geomaterials",
+        "Subcategory": "Metals",
+        "Rarity": "Legendary",
+        "Price": -1,
+        "Description": ""
+      }
+    ]
   }
 }
