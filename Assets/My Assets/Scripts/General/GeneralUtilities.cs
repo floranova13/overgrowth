@@ -5,22 +5,18 @@ using UnityEngine.SceneManagement;
 
 public static class GeneralUtilities
 {
-    public const string SCENE_MAIN_MENU = "Main";
-    public const string SCENE_NURSERY = "Nursery";
-    public const string SCENE_MARKET = "Market";
+    public const string SCENE_MAIN_MENU = "MainMenu";
+    public const string SCENE_GAME_MENU = "GameMenu";
 
-    static void ChangeScene(Menu sceneToLoad)
+    public static void ChangeScene(Menu sceneToLoad)
     {
         switch (sceneToLoad)
         {
-            case Menu.Main:
+            case Menu.MainMenu:
                 SceneManager.LoadScene(SCENE_MAIN_MENU);
                 break;
-            case Menu.Nursery:
-                SceneManager.LoadScene(SCENE_NURSERY);
-                break;
-            case Menu.Market:
-                SceneManager.LoadScene(SCENE_MARKET);
+            case Menu.GameMenu:
+                SceneManager.LoadScene(SCENE_GAME_MENU);
                 break;
             default:
                 Debug.LogError($"Cannot Load Scene: {sceneToLoad}");

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using Defective.JSON;
 
 [Serializable]
 public struct ResourceData
@@ -15,40 +16,9 @@ public struct ResourceData
 }
 
 [Serializable]
-public struct ResourceCategoryData
-{
-    public string Name { get; }
-    public string Category { get; }
-    public string Subcategory { get; }
-    public string Rarity { get; }
-    public int Price { get; }
-    public string Description { get; }
-}
-
-[Serializable]
 public class Resource
 {
-    protected static List<ResourceStruct> ResourceInfo
-    {
-        get
-        {
-            if (resourceInfo == null)
-            {
-                resourceInfo = ;
-                return resourceInfo;
-            }
-            return resourceInfo;
-        }
-        set
-        {
-            if (resourceInfo == null || resourceInfo.Count == 0)
-            {
-                resourceInfo = value;
-            }
-        }
-    }
-
-    public static List<ResourceStruct> resourceInfo;
+    public static List<ResourceData> ResourceInfo;
 
     public string name;
     public Category category;
@@ -58,118 +28,101 @@ public class Resource
 
     public Resource(string nameVal)
     {
-        List<string> info = FloraInfo.First(el => el[0] == nameVal).ToList();
-        string[] times = info[5].Split('-');
+        ResourceData info = GetResourceData(nameVal);
 
         name = nameVal;
-        isPlant = info[1].Equals("Plant");
-        price = int.Parse(info[2]);
-        rarity = new Rarity(info[3]);
-        maxGrowthStage = int.Parse(info[4]);
-        growthTime = new GrowthTime(int.Parse(times[0]), int.Parse(times[1]), int.Parse(times[2]), int.Parse(times[3]));
-        description = info[6];
-        growthStage = -1;
-        modifiers = new List<string>();
+        category = new Category(info.Category, info.Subcategory);
+        price = info.Price;
+        rarity = new Rarity(info.Rarity);
+        description = info.Description;
     }
 
-    public static List<ResourceStruct> ReadFromJSON()
+    public ResourceData GetResourceData(string s)
     {
-        TextAsset infoJSON = Resources.Load<TextAsset>("resourceInfo.json");
-        return JsonUtility.FromJson(infoJSON.text);
+        return ResourceInfo.First(resourceData => resourceData.Name == s);
+    }
+
+    // public Resource(string nameVal)
+    // {
+    //     List<string> info = FloraInfo.First(el => el[0] == nameVal).ToList();
+    //     string[] times = info[5].Split('-');
+
+    //     name = nameVal;
+    //     isPlant = info[1].Equals("Plant");
+    //     price = int.Parse(info[2]);
+    //     rarity = new Rarity(info[3]);
+    //     maxGrowthStage = int.Parse(info[4]);
+    //     growthTime = new GrowthTime(int.Parse(times[0]), int.Parse(times[1]), int.Parse(times[2]), int.Parse(times[3]));
+    //     description = info[6];
+    //     growthStage = -1;
+    //     modifiers = new List<string>();
+    // }
+
+    public static List<ResourceData> ReadFromJSON()
+    {
+        TextAsset infoJSON = Resources.Load<TextAsset>("Resource");
+        JSONObject jsonObject = JSONObject.Create(infoJSON);
+        Debug.Log(infoJSON.text);
+        // Debug.Log(jsonObject.ToString());
+        //.SelectMany(list => list).ToList();
+        return new List<ResourceData>();
     }
 
     // Get Same:
     // ------------------------------------------------------------------------------------------
     /// <summary>
-    /// Gets a specific Flora from a list of Flora or a new one if there is none.
+    /// Gets a specific Resource from a list of Resource or a new one if there is none.
     /// </summary>
-    /// <param name="floraList">Flora to search through</param>
-    /// <param name="flora">Flora to search for</param>
-    /// <returns>The Item found or a new one with a count of zero</returns>
-    public static Flora Same(List<Flora> floraList, Flora flora)
+    /// <param name="resourceList">Resource to search through</param>
+    /// <param name="resource">Resource to search for</param>
+    /// <returns>The Resource found</returns>
+    public static Resource Same(List<Resource> resourceList, Resource resource)
     {
-        if (flora == null)
+        if (resource == null)
         {
-            Debug.Log("Searching for NULL Flora.");
+            Debug.Log("Searching for NULL Resource.");
             return null;
         }
-        if (floraList.FirstOrDefault(x => x.name == flora.name) == null)
+        if (resourceList.FirstOrDefault(x => x.name == resource.name) == null)
         {
-            return new Flora(flora.name);
+            return new Resource(resource.name);
         }
-        return floraList.FirstOrDefault(x => x.name == flora.name);
+        return resourceList.FirstOrDefault(x => x.name == resource.name);
     }
 
     /// <summary>
-    /// Gets a specific List of Flora from a list of Flora, replacing any not found with
+    /// Gets a specific List of Resource from a list of Resource, replacing any not found with
     /// new ones if one is not found.
     /// </summary>
-    /// <param name="floraList">Flora to search through</param>
-    /// <param name="floraToSearchFor">Flora to search for</param>
-    /// <returns>The Flora found, any not found with counts of zero</returns>
-    public static List<Flora> Same(List<Flora> floraList, List<Flora> floraToSearchFor)
+    /// <param name="resourceList">Resource to search through</param>
+    /// <param name="resourceToSearchFor">Resource to search for</param>
+    /// <returns>The Resources found</returns>
+    public static List<Resource> Same(List<Resource> resourceList, List<Resource> resourcesToSearchFor)
     {
-        List<Flora> floraFoundList = new();
-        for (int i = 0; i < floraToSearchFor.Count; i++)
+        List<Resource> resourcesFoundList = new();
+        for (int i = 0; i < resourcesToSearchFor.Count; i++)
         {
-            floraFoundList.Add(Same(floraList, floraToSearchFor[i]));
+            resourcesFoundList.Add(Same(resourceList, resourcesToSearchFor[i]));
         }
-        return floraFoundList;
+        return resourcesFoundList;
     }
 
     /// <summary>
-    /// Gets a random Flora decided by the weighted rarities.
+    /// Gets a random Resource decided by the weighted rarities.
     /// </summary>
-    /// <returns>The random Flora</returns>
-    public static Flora GetRandomFlora()
+    /// <returns>The random Resource</returns>
+    public static Resource GetRandomResource()
     {
-        List<Flora> floraList = new();
-        List<int> floraIndexes = new();
+        List<Resource> resourceList = new();
+        List<int> resourceIndexes = new();
 
-        for (int i = 0; i < FloraInfo.Count; i++)
+        for (int i = 0; i < ResourceInfo.Count; i++)
         {
-            Flora flora = new(FloraInfo[i][0]);
-            floraList.Add(flora);
-            floraIndexes = floraIndexes.Concat(flora.rarity.GetWeight(i)).ToList();
+            Resource resource = new(ResourceInfo[i].Name);
+            resourceList.Add(resource);
+            resourceIndexes = resourceIndexes.Concat(resource.rarity.GetWeight(i)).ToList();
         }
 
-        return floraList[floraIndexes.PickRandom()];
+        return resourceList[resourceIndexes.PickRandom()];
     }
-
-    public Vector3 GetDefaultGrowthTime(bool advanceGrowthStage = false)
-    {
-        if (advanceGrowthStage)
-        {
-            if (growthStage == maxGrowthStage)
-            {
-                return Vector3.zero;
-            }
-            growthStage++;
-        }
-
-        int hours = growthTime.hours;
-        int minutes = growthTime.minutes;
-        int seconds = growthTime.seconds;
-        int growthStageMultiplier = growthTime.multiplier;
-
-        hours *= growthStageMultiplier * growthStage;
-        minutes *= growthStageMultiplier * growthStage;
-        seconds *= growthStageMultiplier * growthStage;
-
-        return new Vector3(hours, minutes, seconds);
-    }
-
-    public string GetGrowthTimeDescription()
-    {
-        // TODO: CALCULATE TIME TIERS
-        // TODO: ONCE RESEARCH SYSTEM IS IMPLEMENTED, SHOW ONLY IF RESEARCHED. THERE SHOULD BE 6 TIERS FOR KNOWN AND 3 TIERS FOR HALF-KNOWN.
-        return "Unknown";
-    }
-
-    public string GetClassification()
-    {
-        return isPlant ? "Plant" : "Fungus";
-    }
-
-    public bool IsFullyGrown() { return growthStage == maxGrowthStage; }
 }

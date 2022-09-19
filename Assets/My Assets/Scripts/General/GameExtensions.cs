@@ -228,12 +228,12 @@ public static class NumberExtensions
     /// <returns>True if the check passes, False otherwise</returns>
     public static bool PercentChance(this float val)
     {
-        Random rnd = new Random();
+        Random rnd = new();
         if (val == 0)
         {
             return false;
         }
-        return (rnd.NextDouble() < (val / 100d));
+        return rnd.NextDouble() < (val / 100d);
     }
 }
 
@@ -288,7 +288,7 @@ public static class ListExtensions
     /// <param name="list">The same list, only shuffled.</param>
     public static void Shuffle<T>(this IList<T> list)
     {
-        System.Random rnd = new System.Random();
+        Random rnd = new();
         int n = list.Count;
         while (n > 1)
         {
@@ -303,5 +303,5 @@ public static class ListExtensions
 
 public enum Menu
 {
-    Main, SelectMenu, Market, Nursery, Research
+    MainMenu, GameMenu
 }

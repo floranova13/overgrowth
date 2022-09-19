@@ -1080,5 +1080,469 @@
         "Description": ""
       }
     ]
+  },
+  "Equipment": {
+    "Template": [
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Weapons",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Weapons",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Weapons",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Weapons",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Guardian Weapons": [
+      {
+        "Name": "Solblade",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Weapons",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "Standard Issue Guardian Solblade, wielded by Guardians who do not have access to more advanced gear, as well as those in training. It performs well enough, though slightly worn."
+      },
+      {
+        "Name": "Solblade Dagger",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Weapons",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Short Solblade",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Weapons",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Viracharged Solblade",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Weapons",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Viracharged Solblade Dagger",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Weapons",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Viracharged Short Solblade",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Weapons",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Techblade Prototype",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Weapons",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Deriveter Lance",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Weapons",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": "A customized lance that the owner has spent much time designing and tweaking. Highly sophisticated, it shares mechanisms with the mining drills used by the settlement Engineering Division. It should be no surprise that the Engineering Division head himself helped both in the design and testing stages before signing off on the quality and safety of the weapon, for use by the Security Division head in real combat."
+      }
+    ],
+    "Seeker Weapons": [
+      {
+        "Name": "Seekerblade",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Weapons",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "Standard Issue Seekerblade, wielded by Seekers who do not have access to more advanced gear, as well as those in training. It performs well enough, though slightly worn."
+      },
+      {
+        "Name": "Viracharged Seekerblade",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Weapons",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Relium Seekerblade",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Weapons",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Embris Seekerblade",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Weapons",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Armor": [
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Armor",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Armor",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Armor",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Armor",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Guardian Armor": [
+      {
+        "Name": "Combat Armor",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Armor",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "Guardian standard issue combat armor very similar to equipment worn by low-ranking soldiers in large Sanctuary militaries. It is marked with the settlement's emblem, as well as the Guardian emblem."
+      },
+      {
+        "Name": "Heavy Combat Armor",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Armor",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Light Combat Armor",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Armor",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Shroudvira Armor",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Armor",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Ampvira Armor",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Armor",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Torrentvira-Assist Armor",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Armor",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Viramatrix Armor",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Armor",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Shineshroud Armor",
+        "Category": "Equipment",
+        "Subcategory": "Guardian Armor",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Seeker Armor": [
+      {
+        "Name": "Seeker Armor",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Armor",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "Standard Issue Seeker armor worn by Seekers who cannot be equipped with more advanced gear, as well as those who are in training."
+      },
+      {
+        "Name": "Forest Seeker Armor",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Armor",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Layered Seeker Armor",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Armor",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Stealthtech Seeker Armor",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Armor",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Embris-Threaded Seeker Armor",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Armor",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Utilities": [
+      {
+        "Name": "Warding Lantern",
+        "Category": "Equipment",
+        "Subcategory": "Utilities",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "The name of this device harkens back to a time when those venturing the wilderness carried primitive lanterns of metal and glass. These didn't only light the way, they kept certain creatures at bay. Modern Lanterns are small devices that emit light when activated. They can be used as flashlights, but more importantly, they can emit blinding pulses of light and ignite into what can be considered advanced forms of the lanterns of old. But the weight of these devices means that Seekers and Guardians only carry them when they expect to travel at night or into territory occupied by creatures that fear the light."
+      },
+      {
+        "Name": "COMMON_GENERAL_PERCEPTION_BOOSTER",
+        "Category": "Equipment",
+        "Subcategory": "Utilities",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Dual-Chambered Warding Lantern",
+        "Category": "Equipment",
+        "Subcategory": "Utilities",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "This latern is specially constructed to allow for two simultaneous calibration modes. In a situatiuon that requires haste, the wielder can quickly alternate between these settings rather than waste time calibrating the intensity and hue of light emitted. The convenience of this lantern over the standard variant is mos prominant in unexperienced wielders. These bearers lack the training to calibrate their laterns quickly, so it is easier to have two presets. But experienced bearers can also benefit greatly."
+      },
+      {
+        "Name": "UNCOMMON_GENERAL_PERCEPTION_BOOSTER",
+        "Category": "Equipment",
+        "Subcategory": "Utilities",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "RARE_GENERAL_PERCEPTION_BOOSTER",
+        "Category": "Equipment",
+        "Subcategory": "Utilities",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "WONDROUS_UTILITY",
+        "Category": "Equipment",
+        "Subcategory": "Utilities",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Analysis Gear": [
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Analysis Gear",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Analysis Gear",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Analysis Gear",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Analysis Gear",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Seeker Boosters": [
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Boosters",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Boosters",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Boosters",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Seeker Boosters",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ],
+    "Environmental Gear": [
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Environmental Gear",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Environmental Gear",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Environmental Gear",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "Environmental Gear",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ]
   }
 }

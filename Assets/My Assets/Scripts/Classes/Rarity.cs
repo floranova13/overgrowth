@@ -43,23 +43,4 @@ public class Rarity
 
         return weightList;
     }
-
-    /// <summary>
-    /// Gets a random Flora decided by the weighted rarities.
-    /// </summary>
-    /// <returns>The random Flora</returns>
-    public T GetRandomFlora(IEnumerable<T> listToPickFrom)
-    {
-        List<T> newList = new();
-        List<int> indexList = new();
-
-        for (int i = 0; i < FloraInfo.Count; i++)
-        {
-            T currentElement = new(FloraInfo[i][0]);
-            floraList.Add(currentElement);
-            indexList = indexList.Concat(flora.rarity.GetWeight(i)).ToList();
-        }
-
-        return floraList[indexList.PickRandom()];
-    }
 }

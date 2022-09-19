@@ -8,6 +8,7 @@ public class GameSave
 {
     public static GameSave s;
     public static int INITIAL_PETALS = 60;
+    public static List<string> INITIAL_RESOURCES = new List<string> { "Solblade" };
 
     // ------------------------------------------------------------------------------------------
     // ------------------------------------------------------------------------------------------
@@ -23,10 +24,8 @@ public class GameSave
 
     // Possessions:
     // ------------------------------------------------------------------------------------------
-
-    // public List<Seed> seeds;
-
     public int petals;
+    public List<Resource> resources;
 
     // ------------------------------------------------------------------------------------------
     // ------------------------------------------------------------------------------------------
@@ -37,6 +36,7 @@ public class GameSave
     public GameSave()
     {
         s = this;
+        Resource.ResourceInfo = Resource.ReadFromJSON();
 
         // General:
         // ------------------------------------------------------------------------------------------
@@ -45,13 +45,14 @@ public class GameSave
 
         // Possessions:
         // ------------------------------------------------------------------------------------------
-        // seeds = new List<Seed>();
         petals = INITIAL_PETALS;
+        resources = new List<Resource>();
+        // INITIAL_RESOURCES.ForEach(r => resources.Add(new Resource(r)));
 
         // X:
         // ------------------------------------------------------------------------------------------
 
         Debug.Log("Game Save Created");
-        GameStart.gameStarted = true;
+        GameStartScript.gameStarted = true;
     }
 }
