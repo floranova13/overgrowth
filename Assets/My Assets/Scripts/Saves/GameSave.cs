@@ -40,18 +40,18 @@ public class GameSave
 
         // General:
         // ------------------------------------------------------------------------------------------
-        //rnd = new Random();
+        // rnd = new Random();
         // research = new Research();
 
         // Possessions:
         // ------------------------------------------------------------------------------------------
         petals = INITIAL_PETALS;
         resources = new List<Resource>();
-        // INITIAL_RESOURCES.ForEach(r => resources.Add(new Resource(r)));
+        INITIAL_RESOURCES.ForEach(r => resources.Add(new Resource(r)));
 
         // X:
         // ------------------------------------------------------------------------------------------
-
+        Debug.Log(resources[0].ToString());
         Debug.Log("Game Save Created");
         GameStartScript.gameStarted = true;
     }
