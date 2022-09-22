@@ -1,0 +1,125 @@
+{
+  "category1": {
+    "subcategory1": [
+      {
+        "Category": "category1",
+        "Subcategory": "subcategory1",
+        "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      }
+    ],
+    "subcategory2": [
+      {
+        "Category": "category1",
+        "Subcategory": "subcategory2",
+        "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      }
+    ],
+    "subcategory3": [
+      {
+        "Category": "category1",
+        "Subcategory": "subcategory3",
+        "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      }
+    ]
+  },
+  "category2": {
+    "subcategory4": [
+      {
+        "Category": "category2",
+        "Subcategory": "subcategory4",
+        "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      }
+    ],
+    "subcategory5": [
+      {
+        "Category": "category2",
+        "Subcategory": "subcategory5",
+        "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      }
+    ],
+    "subcategory6": [
+      {
+        "Category": "category2",
+        "Subcategory": "subcategory6",
+        "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      }
+    ]
+  },
+  "category3": {
+    "subcategory7": [
+      {
+        "Category": "category3",
+        "Subcategory": "subcategory7",
+        "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      }
+    ],
+    "subcategory8": [
+      {
+        "Category": "category3",
+        "Subcategory": "subcategory8",
+        "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      }
+    ],
+    "subcategory9": [
+      {
+        "Category": "category3",
+        "Subcategory": "subcategory9",
+        "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      }
+    ]
+  }
+}

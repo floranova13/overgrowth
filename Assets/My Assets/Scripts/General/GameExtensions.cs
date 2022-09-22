@@ -61,23 +61,20 @@ namespace GameExtensions
         // Add:
         // ------------------------------------------------------------------------------------------
         /// <summary>
-        /// Add an Item to a List, either by adding a new Item list element or by increasing the
-        /// counts of an existing one.
+        /// Add an Resource to a List, either by adding a new Resource list element or by increasing the
+        /// count of an existing one.
         /// </summary>
-        /// <param name="itemList">The Item list to add to</param>
-        /// <param name="item">The Item to add</param>
-        //public static void Add(this List<Blightsource> itemList, Blightsource item, bool checkForSame)
-        //{
-        //	Blightsource same = Blightsource.Same(itemList, item);
-        //	if (same.count == 0)
-        //	{
-        //		itemList.Add(item);
-        //	}
-        //	else
-        //	{
-        //		same += item;
-        //	}
-        //}
+        /// <param name="resourceList">The Resource list to add to</param>
+        /// <param name="resource">The Resource to add</param>
+        public static void Add(this List<Resource> resourceList, Resource resource, bool checkForSame)
+        {
+        	Resource same = Resource.Same(resourceList, resource, false);
+        	if (same.Count == 0)
+        	{
+        		resourceList.Add(resource);
+        	}
+        	same += resource;
+        }
 
         // Add All:
         // ------------------------------------------------------------------------------------------

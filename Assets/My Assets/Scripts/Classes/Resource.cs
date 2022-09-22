@@ -34,21 +34,31 @@ public class Resource
 {
     public static List<ResourceData> ResourceInfo;
 
-    public string name;
-    public Category category;
-    public int price;
-    public Rarity rarity;
-    public string description;
+    public string Name { get; }
+    public Category Category { get; }
+    public int Price { get; }
+    public Rarity Rarity { get; }
+    public string Description { get; }
+
+    public int Count
+    {
+        get { return Count; }
+        set
+        {
+            Count = value;
+            if (Count < 0) { Debug.LogError($"{Name} has a count of {value}"); }
+        }
+    }
 
     public Resource(string nameVal)
     {
         ResourceData info = GetResourceData(nameVal);
 
-        name = nameVal;
-        category = new Category(info.Category, info.Subcategory);
-        price = info.Price;
-        rarity = new Rarity(info.Rarity);
-        description = info.Description;
+        Name = nameVal;
+        Category = new Category(info.Category, info.Subcategory);
+        Price = info.Price;
+        Rarity = new Rarity(info.Rarity);
+        Description = info.Description;
     }
 
     public ResourceData GetResourceData(string name)
@@ -81,7 +91,7 @@ public class Resource
         return resources;
     }
 
-    // Get Same:
+    // Same:
     // ------------------------------------------------------------------------------------------
     /// <summary>
     /// Gets a specific Resource from a list of Resource or a new one if there is none.
@@ -89,18 +99,24 @@ public class Resource
     /// <param name="resourceList">Resource to search through</param>
     /// <param name="resource">Resource to search for</param>
     /// <returns>The Resource found</returns>
-    public static Resource Same(List<Resource> resourceList, Resource resource)
+    public static Resource Same(List<Resource> resourceList, Resource resource, bool requireCount = true)
     {
         if (resource == null)
         {
             Debug.LogError("Searching for NULL Resource.");
             return null;
         }
-        if (resourceList.FirstOrDefault(x => x.name == resource.name) == null)
+        if (resourceList.FirstOrDefault(x => x.Name == resource.Name) == null)
         {
-            return new Resource(resource.name);
+            if (requireCount)
+            {
+                return null;
+            }
+            return new Resource(resource.Name);
         }
-        return resourceList.FirstOrDefault(x => x.name == resource.name);
+        Resource foundResource = resourceList.FirstOrDefault(x => x.Name == resource.Name);
+
+        return foundResource.Count < resource.Count ? null : foundResource;
     }
 
     /// <summary>
@@ -110,13 +126,21 @@ public class Resource
     /// <param name="resourceList">Resource to search through</param>
     /// <param name="resourceToSearchFor">Resource to search for</param>
     /// <returns>The Resources found</returns>
-    public static List<Resource> Same(List<Resource> resourceList, List<Resource> resourcesToSearchFor)
+    public static List<Resource> Same(List<Resource> resourceList, List<Resource> resourcesToSearchFor, bool requireCounts = true)
     {
         List<Resource> resourcesFoundList = new();
         for (int i = 0; i < resourcesToSearchFor.Count; i++)
         {
-            resourcesFoundList.Add(Same(resourceList, resourcesToSearchFor[i]));
+            Resource foundResource = Same(resourceList, resourcesToSearchFor[i], requireCounts);
+
+            if (foundResource == null || (requireCounts && foundResource.Count < resourcesToSearchFor[i].Count))
+            {
+                return null;
+            }
+
+            resourcesFoundList.Add(foundResource);
         }
+
         return resourcesFoundList;
     }
 
@@ -133,7 +157,7 @@ public class Resource
         {
             Resource resource = new(ResourceInfo[i].Name);
             resourceList.Add(resource);
-            resourceIndexes = resourceIndexes.Concat(resource.rarity.GetWeight(i)).ToList();
+            resourceIndexes = resourceIndexes.Concat(resource.Rarity.GetWeight(i)).ToList();
         }
 
         return resourceList[resourceIndexes.PickRandom()];
@@ -152,7 +176,7 @@ public class Resource
         {
             Resource resource = new(names[i]);
             resourceList.Add(resource);
-            resourceIndexes = resourceIndexes.Concat(resource.rarity.GetWeight(i)).ToList();
+            resourceIndexes = resourceIndexes.Concat(resource.Rarity.GetWeight(i)).ToList();
         }
 
         return resourceList[resourceIndexes.PickRandom()];
@@ -213,6 +237,73 @@ public class Resource
 
     override public string ToString()
     {
-        return $"{{ Name: '{name}', Category: '{category.Primary}', Subcategory: '{category.Secondary}', Rarity: '{rarity.GetRarityText()}', Price: '{price}', Description: '{description}' }}";
+        return $"{{ Name: '{Name}', Category: '{Category.Primary}', Subcategory: '{Category.Secondary}', Rarity: '{Rarity.GetRarityText()}', Price: '{Price}', Description: '{Description}' }}";
+    }
+
+    // ------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------
+    // Operator Overloading: 
+    // ------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------
+
+    public static Resource operator +(Resource resource, int i)
+    {
+        resource.Count += i;
+        return resource;
+    }
+    public static Resource operator +(Resource resource1, Resource resource2)
+    {
+        if (resource1.GetType() == resource2.GetType())
+        {
+            resource1.Count += resource2.Count;
+            return resource1;
+        }
+        return resource1;
+    }
+    public static Resource operator -(Resource resource, int i)
+    {
+        resource.Count -= i;
+        return resource;
+    }
+    public static Resource operator -(Resource resource1, Resource resource2)
+    {
+        if (resource1.GetType() == resource2.GetType())
+        {
+            resource1.Count -= resource2.Count;
+            return resource1;
+        }
+        return resource1;
+    }
+    public static bool operator >=(Resource resource1, Resource resource2)
+    {
+        return resource1.GetType() == resource2.GetType() && resource1.Count >= resource2.Count;
+    }
+    public static bool operator <=(Resource resource1, Resource resource2)
+    {
+        return resource1.GetType() == resource2.GetType() && resource1.Count <= resource2.Count;
+    }
+    public static bool operator >=(Resource resource, int i)
+    {
+        return resource.Count >= i;
+    }
+    public static bool operator <=(Resource resource, int i)
+    {
+        return resource.Count >= i;
+    }
+    public static bool operator >(Resource resource1, Resource resource2)
+    {
+        return resource1.GetType() == resource2.GetType() && resource1.Count > resource2.Count;
+    }
+    public static bool operator <(Resource resource1, Resource resource2)
+    {
+        return resource1.GetType() == resource2.GetType() && resource1.Count < resource2.Count;
+    }
+    public static bool operator >(Resource resource, int i)
+    {
+        return resource.Count > i;
+    }
+    public static bool operator <(Resource resource, int i)
+    {
+        return resource.Count < i;
     }
 }

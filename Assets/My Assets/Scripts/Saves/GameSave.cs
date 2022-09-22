@@ -7,8 +7,9 @@ using UnityEngine;
 public class GameSave
 {
     public static GameSave s;
-    public static int INITIAL_PETALS = 60;
+    public static int INITIAL_PETAL_COUNT = 60;
     public static List<string> INITIAL_RESOURCES = new List<string> { "Solblade" };
+    public static int INITIAL_MERCHANT_COUNT = 1;
 
     // ------------------------------------------------------------------------------------------
     // ------------------------------------------------------------------------------------------
@@ -27,6 +28,10 @@ public class GameSave
     public int petals;
     public List<Resource> resources;
 
+    // Economy:
+    // ------------------------------------------------------------------------------------------
+    public List<Merchant> merchants;
+
     // ------------------------------------------------------------------------------------------
     // ------------------------------------------------------------------------------------------
     // Constructor:
@@ -37,6 +42,7 @@ public class GameSave
     {
         s = this;
         Resource.ResourceInfo = Resource.ReadFromJSON();
+        Merchant.MerchantInfo = Merchant.ReadFromJSON();
 
         // General:
         // ------------------------------------------------------------------------------------------
@@ -45,9 +51,17 @@ public class GameSave
 
         // Possessions:
         // ------------------------------------------------------------------------------------------
-        petals = INITIAL_PETALS;
+        petals = INITIAL_PETAL_COUNT;
         resources = new List<Resource>();
         INITIAL_RESOURCES.ForEach(r => resources.Add(new Resource(r)));
+
+        // Economy:
+        // ------------------------------------------------------------------------------------------
+        merchants = new List<Merchant>();
+        for (int i = 0; i < INITIAL_MERCHANT_COUNT; i++)
+        {
+            merchants.Add(new Merchant());
+        }
 
         // X:
         // ------------------------------------------------------------------------------------------
