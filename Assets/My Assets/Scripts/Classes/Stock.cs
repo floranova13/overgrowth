@@ -8,6 +8,7 @@ using GameExtensions;
 [Serializable]
 public class Stock
 {
+    private Merchant Merchant { get; }
     public List<string> PossibleInventory { get; }
     public int InventorySize { get; }
     public int InventoryRefreshInterval { get; }
@@ -18,7 +19,7 @@ public class Stock
     public int Budget { get; private set; }
     public int RefreshCount { get; private set; }
 
-    public Stock(List<string> possibleInventory, int inventorySize, int inventoryRefreshInterval, int costMargins, int maxBudget)
+    public Stock(List<string> possibleInventory, int inventorySize, int inventoryRefreshInterval, int costMargins, int maxBudget, Merchant merchant)
     {
         PossibleInventory = possibleInventory;
         InventorySize = inventorySize;
@@ -27,6 +28,7 @@ public class Stock
         MaxBudget = maxBudget;
         Budget = maxBudget;
         RefreshCount = inventoryRefreshInterval;
+        Merchant = merchant;
         SetRandomInventory();
     }
 
@@ -35,26 +37,11 @@ public class Stock
         Inventory = Resource.GetRandomResources(InventorySize, PossibleInventory);
     }
 
-    public void MakeTransaction(Resource resource, bool isBuying)
-    {
-         int price = GetAdjustedPrice(resource, isBuying);
-
-        if (isBuying)
-        {
-            GameSave.s.resources.Add(resource, true);
-            GameSave.s.petals -= price;
-        }
-        else
-        {
-            Resource foundResource = Resource.Same(GameSave.s.resources, resource);
-            foundResource -= resource;
-            GameSave.s.petals += price;
-        }
-    }
-
     public int GetAdjustedPrice(Resource resource, bool isBuying)
     {
+        // TODO: CHANGE BASED ON REPUTATION
         // TODO: CHANGE SO THAT THERE IS A CURVE, THE HIGHER THE MARGIN, THE LESS IT IMPACTS BUYING/SELLING
+        int reputation = Merchant.Reputation;
         double modifier = (isBuying ? 1 : -1) * 0.05 + 1;
 
         return Mathf.RoundToInt((float)modifier) * resource.Count * resource.Price;
@@ -67,6 +54,24 @@ public class Stock
         {
             SetRandomInventory();
             RefreshCount = InventoryRefreshInterval;
+            Budget = MaxBudget;
+        }
+    }
+
+    public void MakeTransaction(Resource resource, bool isBuying)
+    {
+        int price = GetAdjustedPrice(resource, isBuying);
+
+        if (isBuying)
+        {
+            GameSave.s.resources.Add(resource, true);
+            GameSave.s.petals -= price;
+        }
+        else
+        {
+            Resource foundResource = Resource.Same(GameSave.s.resources, resource);
+            foundResource -= resource;
+            GameSave.s.petals += price;
         }
     }
 }

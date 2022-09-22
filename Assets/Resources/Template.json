@@ -1,0 +1,38 @@
+{
+  "CATEGORY_TEMPLATE": {
+    "Template": [
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "",
+        "Category": "Equipment",
+        "Subcategory": "",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ]
+  }
+}

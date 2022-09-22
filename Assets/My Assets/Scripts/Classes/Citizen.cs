@@ -25,25 +25,8 @@ public class Citizen
         {
             Gender = Gender.Male;
         }
-        Name = GetRandomName(Gender);
+        Name = CitizenUtilities.GetRandomName(Gender);
         Reputation = 0;
-    }
-
-    public string GetRandomName(Gender gender)
-    {
-        List<string> nonbinaryNames = new() { "Lillium", "Robin", "Ash", "Koda", "Riley", "Lux" };
-        List<string> femaleNames = new() { "Amanda", "Veronica", "Cera", "Lauren", "Brianna", "Erin" };
-        List<string> maleNames = new() { "Adam", "Noah", "Thomas", "Stephan", "Francis", "Benjamin" };
-
-        string chosenName = gender switch
-        {
-            Gender.Nonbinary => nonbinaryNames.PickRandom(),
-            Gender.Female => femaleNames.PickRandom(),
-            Gender.Male => maleNames.PickRandom(),
-            _ => nonbinaryNames.Concat(femaleNames).Concat(maleNames).ToList().PickRandom(),
-        };
-
-        return chosenName;
     }
 
     public void ChangeReputation(int amount)

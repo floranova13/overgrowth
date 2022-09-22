@@ -1082,74 +1082,6 @@
     ]
   },
   "Equipment": {
-    "Template": [
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "",
-        "Rarity": "Common",
-        "Price": -1,
-        "Description": ""
-      },
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "",
-        "Rarity": "Uncommon",
-        "Price": -1,
-        "Description": ""
-      },
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "",
-        "Rarity": "Rare",
-        "Price": -1,
-        "Description": ""
-      },
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "",
-        "Rarity": "Wondrous",
-        "Price": -1,
-        "Description": ""
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "Weapons",
-        "Rarity": "Common",
-        "Price": -1,
-        "Description": ""
-      },
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "Weapons",
-        "Rarity": "Uncommon",
-        "Price": -1,
-        "Description": ""
-      },
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "Weapons",
-        "Rarity": "Rare",
-        "Price": -1,
-        "Description": ""
-      },
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "Weapons",
-        "Rarity": "Wondrous",
-        "Price": -1,
-        "Description": ""
-      }
-    ],
     "Guardian Weapons": [
       {
         "Name": "Solblade",
@@ -1245,40 +1177,6 @@
         "Name": "Embris Seekerblade",
         "Category": "Equipment",
         "Subcategory": "Seeker Weapons",
-        "Rarity": "Wondrous",
-        "Price": -1,
-        "Description": ""
-      }
-    ],
-    "Armor": [
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "Armor",
-        "Rarity": "Common",
-        "Price": -1,
-        "Description": ""
-      },
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "Armor",
-        "Rarity": "Uncommon",
-        "Price": -1,
-        "Description": ""
-      },
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "Armor",
-        "Rarity": "Rare",
-        "Price": -1,
-        "Description": ""
-      },
-      {
-        "Name": "",
-        "Category": "Equipment",
-        "Subcategory": "Armor",
         "Rarity": "Wondrous",
         "Price": -1,
         "Description": ""
@@ -1444,31 +1342,47 @@
     ],
     "Analysis Gear": [
       {
-        "Name": "",
+        "Name": "Analysis Chip",
         "Category": "Equipment",
         "Subcategory": "Analysis Gear",
         "Rarity": "Common",
         "Price": -1,
-        "Description": ""
+        "Description": "Sophisticated analysis software runs on the user's STEM Glove. Though it requires minimal user interaction to function, it's accompanying processes tax the STEM's power supply. It is not recommended to run this software in parrallel with other systems."
       },
       {
-        "Name": "",
+        "Name": "Helmet Recorder",
         "Category": "Equipment",
         "Subcategory": "Analysis Gear",
         "Rarity": "Uncommon",
         "Price": -1,
-        "Description": ""
+        "Description": "A video and audio recorder that easily attaches to helmets. Once the wearer returns to the settlement, the recording is added to the settlement's databases, to be reviewed in safety."
       },
       {
-        "Name": "",
+        "Name": "Seras Analysis Chip",
+        "Category": "Equipment",
+        "Subcategory": "Analysis Gear",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "Sophisticated analysis software runs on the user's STEM Glove. Though it requires minimal user interaction to function, it's accompanying processes tax the STEM's power supply. It is not recommended to run this software in parrallel with other systems. This is a modified version of the standard chip, customized for Seras' unique surroundings."
+      },
+      {
+        "Name": "Beholder Helmet Recorder",
         "Category": "Equipment",
         "Subcategory": "Analysis Gear",
         "Rarity": "Rare",
         "Price": -1,
-        "Description": ""
+        "Description": "A video and audio recorder that easily attaches to helmets. Once the wearer returns to the settlement, the recording is added to the settlement's databases, to be reviewed in safety. The 'Beholder' variant includes many upgrades, including light filtering and Viralight vision."
       },
       {
-        "Name": "",
+        "Name": "Analysis Beacon Launcher",
+        "Category": "Equipment",
+        "Subcategory": "Analysis Gear",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": "A device designed to launch small chips that latch onto their target, be it living or not. Once launched, they activate and begin producing a signal that can be tracked by the settlement's analysis Wilderness Command Center. Before or after launching a beacon, a user may attach a small message to the signal that will help staff prioritize analysis requests and determine whether or not to retrieve beacons. This tool can be tremendously helpful if used diligently, but beacons are too-commonly launched with incomprehensible tags or none at all."
+      },
+      {
+        "Name": "WONDROUS_ANALYSIS_GEAR",
         "Category": "Equipment",
         "Subcategory": "Analysis Gear",
         "Rarity": "Wondrous",
@@ -1478,7 +1392,7 @@
     ],
     "Seeker Boosters": [
       {
-        "Name": "",
+        "Name": "SEEKER PERCEPTION BOOSTER",
         "Category": "Equipment",
         "Subcategory": "Seeker Boosters",
         "Rarity": "Common",
@@ -1486,7 +1400,7 @@
         "Description": ""
       },
       {
-        "Name": "",
+        "Name": "SEEKER PERCEPTION BOOSTER 2",
         "Category": "Equipment",
         "Subcategory": "Seeker Boosters",
         "Rarity": "Uncommon",
@@ -1494,7 +1408,7 @@
         "Description": ""
       },
       {
-        "Name": "",
+        "Name": "SEEKER PERCEPTION BOOSTER 3",
         "Category": "Equipment",
         "Subcategory": "Seeker Boosters",
         "Rarity": "Rare",
@@ -1502,7 +1416,7 @@
         "Description": ""
       },
       {
-        "Name": "",
+        "Name": "SEEKER PERCEPTION BOOSTER 4",
         "Category": "Equipment",
         "Subcategory": "Seeker Boosters",
         "Rarity": "Wondrous",
@@ -1512,31 +1426,31 @@
     ],
     "Environmental Gear": [
       {
-        "Name": "",
+        "Name": "Aquatic Outerlayer Seal",
         "Category": "Equipment",
         "Subcategory": "Environmental Gear",
         "Rarity": "Common",
         "Price": -1,
-        "Description": ""
+        "Description": "A suit manufacturing from a thin-but-durable synthetic material. It is worn over a Seeker or Guardian's other equipment to resist water when exploring or patrolling swamps and wetlands."
       },
       {
-        "Name": "",
+        "Name": "Field Chamber",
         "Category": "Equipment",
         "Subcategory": "Environmental Gear",
         "Rarity": "Uncommon",
         "Price": -1,
-        "Description": ""
+        "Description": "Field Chambers are portable shelter devices carried on journeys expected to last more than a day. These shelters rapidly construct themselves when installed at a rest site, and they are similarly quick to retract back to a transportable size when no longer in use. However, they are notably cramped. They need to be to be kept at that size in order to remain functional. This 'Mark 2' version is free of the various failings of earlier models, much to the satisfaction of the many Seekers and Guardians who have come to rely on them."
       },
       {
-        "Name": "",
+        "Name": "Reinforced Field Chamber",
         "Category": "Equipment",
         "Subcategory": "Environmental Gear",
         "Rarity": "Rare",
         "Price": -1,
-        "Description": ""
+        "Description": "Field Chambers are portable shelter devices carried on journeys expected to last more than a day. These shelters rapidly construct themselves when installed at a rest site, and they are similarly quick to retract back to a transportable size when no longer in use. However, they are notably cramped. They need to be to be kept at that size in order to remain functional. This is the 'Mark 3' version, substantially more durable than the previous models. It is also more expensive, and for this reason it is only used by the rich and the desperate, impoverished explorers that absolutely must stray far off the the Wilderness' few beaten paths."
       },
       {
-        "Name": "",
+        "Name": "WONDROUS_ENVIRONMENTAL_GEAR",
         "Category": "Equipment",
         "Subcategory": "Environmental Gear",
         "Rarity": "Wondrous",
@@ -1546,3 +1460,4 @@
     ]
   }
 }
+

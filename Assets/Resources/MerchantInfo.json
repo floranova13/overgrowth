@@ -1,20 +1,34 @@
 {
-  "category1": {
-    "subcategory1": [
+  "General Merchants": {
+    "Rookie Merchants": [
       {
-        "Category": "category1",
-        "Subcategory": "subcategory1",
+        "Name": "Rookie Element Exchanger",
+        "Category": "General Merchants",
+        "Subcategory": "Rookie Merchants",
         "Rarity": "Common",
         "PossibleInventory": [""],
         "InventorySize": 6,
         "InventoryRefreshInterval": 6,
         "CostMargins": 1,
         "Budget": 300,
-        "Description": ""
+        "Description": "Many inexperienced merchants begin their careers by buying processed Sol Units for processed Vira Units, selling that Sol at a greater price. Profit is minimal, with the customer base restricted to people who do not have access to more established providers of these relatively common elements. But startup costs are small and it requires very little knowledge of business to make some small profit."
+      },
+      {
+        "Name": "Rookie Hunter Trader",
+        "Category": "General Merchants",
+        "Subcategory": "Rookie Merchants",
+        "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": "Hunter Traders are merchants who purchase parts of creatures brought back from hunter kills to whoever will buy them. Hunter Trader professionals are well-known as go-to buyers in Hunter circles, often earning the requisite respect by being retired or part-time Hunters themselves. But for a rookie, all it takes is knowing one hunter willing to sell their spoils to start trading."
       }
     ],
     "subcategory2": [
       {
+        "Name": "",
         "Category": "category1",
         "Subcategory": "subcategory2",
         "Rarity": "Common",
@@ -28,6 +42,7 @@
     ],
     "subcategory3": [
       {
+        "Name": "",
         "Category": "category1",
         "Subcategory": "subcategory3",
         "Rarity": "Common",
@@ -40,22 +55,24 @@
       }
     ]
   },
-  "category2": {
-    "subcategory4": [
+  "Geo-Suppliers": {
+    "Mobile Geo-Suppliers": [
       {
-        "Category": "category2",
-        "Subcategory": "subcategory4",
+        "Name": "Local Geo-Trader",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Mobile Geo-Suppliers",
         "Rarity": "Common",
         "PossibleInventory": [""],
         "InventorySize": 6,
         "InventoryRefreshInterval": 6,
         "CostMargins": 1,
         "Budget": 300,
-        "Description": ""
+        "Description": "Some merchants favor mobility over profit. Why pull a cart through the wilderness when you can still scrape by carrying geomaterials in a pack."
       }
     ],
     "subcategory5": [
       {
+        "Name": "",
         "Category": "category2",
         "Subcategory": "subcategory5",
         "Rarity": "Common",
@@ -69,6 +86,7 @@
     ],
     "subcategory6": [
       {
+        "Name": "",
         "Category": "category2",
         "Subcategory": "subcategory6",
         "Rarity": "Common",
@@ -84,6 +102,7 @@
   "category3": {
     "subcategory7": [
       {
+        "Name": "",
         "Category": "category3",
         "Subcategory": "subcategory7",
         "Rarity": "Common",
@@ -97,6 +116,7 @@
     ],
     "subcategory8": [
       {
+        "Name": "",
         "Category": "category3",
         "Subcategory": "subcategory8",
         "Rarity": "Common",
@@ -110,6 +130,7 @@
     ],
     "subcategory9": [
       {
+        "Name": "",
         "Category": "category3",
         "Subcategory": "subcategory9",
         "Rarity": "Common",

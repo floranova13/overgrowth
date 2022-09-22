@@ -52,6 +52,7 @@ public class Merchant
     public Stock Stock { get; }
     public int RefreshCount { get; private set; }
     public int Budget { get; }
+    public int Reputation { get { return Citizen.Reputation; } }
 
     // ------------------------------------------------------------------------------------------
     // ------------------------------------------------------------------------------------------
@@ -67,20 +68,9 @@ public class Merchant
         Stock = new Stock(
           merchantData.PossibleInventory, merchantData.InventorySize,
           merchantData.InventoryRefreshInterval, merchantData.CostMargins,
-          merchantData.Budget
+          merchantData.Budget, this
         );
         Description = merchantData.Description;
-    }
-
-    public Merchant() => new Merchant(MerchantInfo.PickRandom());
-
-    public Merchant(List<string> subcategories)
-    {
-        new Merchant(MerchantInfo
-        .Where(merchant => subcategories
-        .Contains(merchant.Subcategory))
-        .ToList()
-        .PickRandom());
     }
 
     public Merchant(string subcategory)
@@ -91,6 +81,17 @@ public class Merchant
         .ToList()
         .PickRandom());
     }
+
+    public Merchant(List<string> subcategories)
+    {
+        new Merchant(MerchantInfo
+        .Where(merchant => subcategories
+        .Contains(merchant.Subcategory))
+        .ToList()
+        .PickRandom());
+    }
+
+    public Merchant() => new Merchant(MerchantInfo.PickRandom());
 
     // Read From JSON: 
     // ------------------------------------------------------------------------------------------
@@ -133,6 +134,20 @@ public class Merchant
     public void DayPassed()
     {
         Stock.DayPassed();
+    }
+
+    // Make Transaction: 
+    // ------------------------------------------------------------------------------------------
+    public void MakeTransaction(Resource resource, bool isBuying)
+    {
+        Stock.MakeTransaction(resource, isBuying);
+    }
+
+    // Change Reputation: 
+    // ------------------------------------------------------------------------------------------
+    public void ChangeReputation(int amount)
+    {
+        Citizen.ChangeReputation(amount);
     }
 
     // ------------------------------------------------------------------------------------------
@@ -227,7 +242,7 @@ public class Merchant
     //         return stockLists.PickRandom();
     //     }
 
-    //     Debug.Log("No Merchant Starting Stock Found [Rarity: " + stockRarity + "]");
+    //     Debug.LogError("No Merchant Starting Stock Found [Rarity: " + stockRarity + "]");
     //     return new List<Item>();
     // }
 

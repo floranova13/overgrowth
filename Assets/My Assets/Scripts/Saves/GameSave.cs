@@ -43,6 +43,7 @@ public class GameSave
         s = this;
         Resource.ResourceInfo = Resource.ReadFromJSON();
         Merchant.MerchantInfo = Merchant.ReadFromJSON();
+        Location.ReadFromJSON();
 
         // General:
         // ------------------------------------------------------------------------------------------
