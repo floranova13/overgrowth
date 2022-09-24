@@ -1458,6 +1458,42 @@
         "Description": ""
       }
     ]
+  },
+  "PersonalItems": {
+    "Accords": [
+      {
+        "Name": "COMMON_ACCORD",
+        "Category": "Personal Items",
+        "Subcategory": "",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "UNCOMMON_ACCORD",
+        "Category": "Personal Items",
+        "Subcategory": "Accords",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "RARE_ACCORD",
+        "Category": "Personal Items",
+        "Subcategory": "Accords",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "WONDROUS_ACCORD",
+        "Category": "Personal Items",
+        "Subcategory": "Accords",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      }
+    ]
   }
 }
 

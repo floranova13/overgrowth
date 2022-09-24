@@ -8,7 +8,7 @@ public class GameSave
 {
     public static GameSave s;
     public static int INITIAL_PETAL_COUNT = 60;
-    public static List<string> INITIAL_RESOURCES = new List<string> { "Solblade" };
+    public static List<string> INITIAL_RESOURCES = new() { "Solblade" };
     public static int INITIAL_MERCHANT_COUNT = 1;
 
     // ------------------------------------------------------------------------------------------

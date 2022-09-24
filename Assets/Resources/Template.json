@@ -3,7 +3,7 @@
     "Template": [
       {
         "Name": "",
-        "Category": "Equipment",
+        "Category": "",
         "Subcategory": "",
         "Rarity": "Common",
         "Price": -1,
@@ -11,7 +11,7 @@
       },
       {
         "Name": "",
-        "Category": "Equipment",
+        "Category": "",
         "Subcategory": "",
         "Rarity": "Uncommon",
         "Price": -1,
@@ -19,7 +19,7 @@
       },
       {
         "Name": "",
-        "Category": "Equipment",
+        "Category": "",
         "Subcategory": "",
         "Rarity": "Rare",
         "Price": -1,
@@ -27,7 +27,7 @@
       },
       {
         "Name": "",
-        "Category": "Equipment",
+        "Category": "",
         "Subcategory": "",
         "Rarity": "Wondrous",
         "Price": -1,

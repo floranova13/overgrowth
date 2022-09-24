@@ -72,10 +72,10 @@ public class Resource
                 for (int k = 0; k < jsonObject.list[i][j].count; k++)
                 {
                     var obj = jsonObject[i][j][k];
-                    Debug.Log(new List<string>() {
-                        obj[0].stringValue, obj[1].stringValue,
-                        obj[2].stringValue, obj[3].stringValue,
-                        obj[4].intValue.ToString(), obj[5].stringValue });
+                    // Debug.Log(new List<string>() {
+                    //     obj[0].stringValue, obj[1].stringValue,
+                    //     obj[2].stringValue, obj[3].stringValue,
+                    //     obj[4].intValue.ToString(), obj[5].stringValue });
                     var newResourceData = new ResourceData(
                         obj[0].stringValue, obj[1].stringValue, obj[2].stringValue,
                         obj[3].stringValue, obj[4].intValue, obj[5].stringValue

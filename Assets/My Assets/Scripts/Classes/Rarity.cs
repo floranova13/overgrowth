@@ -11,7 +11,7 @@ public class Rarity
     /// </summary>
     public int rarity;
 
-    public static List<string> RarityNames = new List<string>() { "Common", "Uncommon", "Rare", "Wondrous" };
+    public static List<string> RarityNames = new() { "Common", "Uncommon", "Rare", "Wondrous" };
     public static Dictionary<string, int> RarityWeights = new() { { "Common", 27 }, { "Uncommon", 9 }, { "Rare", 3 }, { "Wondrous", 1 } };
 
     public string GetRarityText() { return RarityNames[rarity]; }
@@ -29,9 +29,27 @@ public class Rarity
         }
         else
         {
-            Debug.Log($"Rarity: {rarityVal}");
-            rarity = int.Parse(rarityVal);
+            rarity = 0;
         }
+        // if (rarityVal == "")
+        // {
+        //     rarity = 0;
+        // }
+
+        // if (RarityNames.Contains(rarityVal.ToLower()))
+        // {
+        //     rarity = RarityNames.IndexOf(rarityVal);
+        // }
+        // else if (int.TryParse(rarityVal, out int i))
+        // {
+
+        //     rarity = int.Parse(rarityVal);
+        // }
+        // else
+        // {
+        //     Debug.Log($"Rarity: {rarityVal} is not valid!");
+        //     rarity = 0;
+        // }
     }
 
     public List<int> GetWeight(int i)
