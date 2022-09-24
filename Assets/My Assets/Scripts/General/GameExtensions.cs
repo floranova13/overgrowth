@@ -68,12 +68,15 @@ namespace GameExtensions
         /// <param name="resource">The Resource to add</param>
         public static void Add(this List<Resource> resourceList, Resource resource, bool checkForSame)
         {
-        	Resource same = Resource.Same(resourceList, resource, false);
-        	if (same.Count == 0)
-        	{
-        		resourceList.Add(resource);
-        	}
-        	same += resource;
+            Resource same = Resource.Same(resourceList, resource, false);
+            if (Resource.Same(resourceList, resource, false).Count == 0)
+            {
+                resourceList.Add(resource);
+            }
+            else
+            {
+                Resource.Same(resourceList, resource, false).Count += resource.Count;
+            }
         }
 
         // Add All:
@@ -84,13 +87,13 @@ namespace GameExtensions
         /// </summary>
         /// <param name="itemList">The Item list to add to</param>
         /// <param name="itemsToAdd">The Items to add</param>
-        //public static void AddAll(this List<Blightsource> sourceList, List<Blightsource> sourcesToAdd)
-        //{
-        //	for (int i = 0; i < sourcesToAdd.Count; i++)
-        //	{
-        //		sourceList.Add(sourcesToAdd[i]);
-        //	}
-        //}
+        public static void AddAll(this List<Resource> resourceList, List<Resource> resourcesToAdd)
+        {
+            for (int i = 0; i < resourcesToAdd.Count; i++)
+            {
+                resourceList.Add(resourcesToAdd[i], true);
+            }
+        }
 
         // Intersecting:
         // ------------------------------------------------------------------------------------------

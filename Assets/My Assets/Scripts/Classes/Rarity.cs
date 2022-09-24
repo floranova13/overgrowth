@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System;
 using System.Collections;
+using UnityEngine;
 
 [Serializable]
 public class Rarity
@@ -28,6 +29,7 @@ public class Rarity
         }
         else
         {
+            Debug.Log($"Rarity: {rarityVal}");
             rarity = int.Parse(rarityVal);
         }
     }

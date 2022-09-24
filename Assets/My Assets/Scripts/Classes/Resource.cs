@@ -40,15 +40,7 @@ public class Resource
     public Rarity Rarity { get; }
     public string Description { get; }
 
-    public int Count
-    {
-        get { return Count; }
-        set
-        {
-            Count = value;
-            if (Count < 0) { Debug.LogError($"{Name} has a count of {value}"); }
-        }
-    }
+    public int Count { get; set; }
 
     public Resource(string nameVal, int count = 0)
     {
@@ -64,7 +56,7 @@ public class Resource
 
     public ResourceData GetResourceData(string name)
     {
-        return ResourceInfo.First(resourceData => resourceData.Name == name);
+        return ResourceInfo.FirstOrDefault(resourceData => resourceData.Name == name);
     }
 
     public static List<ResourceData> ReadFromJSON()
@@ -80,6 +72,10 @@ public class Resource
                 for (int k = 0; k < jsonObject.list[i][j].count; k++)
                 {
                     var obj = jsonObject[i][j][k];
+                    Debug.Log(new List<string>() {
+                        obj[0].stringValue, obj[1].stringValue,
+                        obj[2].stringValue, obj[3].stringValue,
+                        obj[4].intValue.ToString(), obj[5].stringValue });
                     var newResourceData = new ResourceData(
                         obj[0].stringValue, obj[1].stringValue, obj[2].stringValue,
                         obj[3].stringValue, obj[4].intValue, obj[5].stringValue
@@ -168,201 +164,237 @@ public class Resource
     /// Gets a random Resource of the chosen Rarity or below, decided by the weighted rarities.
     /// </summary>
     /// <returns>The random Resource</returns>
-//     public static Resource GetRandomResource(string rarity)
-//     {
-//         return switch rarity {
-//             "Common" => GetRandomResource(GetResources("Common")),
-//             "Uncommon" => GetRandomResource(GetResources("Common").Join(GetResources("Uncommon")).ToList()),
-//             "Rare" => GetRandomResource(GetResources("Common").Join(GetResources("Uncommon")).ToList().Join(GetResources("Rare").ToList())),
-//             "Wondrous" => GetRandomResource(GetResources("Common").Join(GetResources("Uncommon")).ToList().Join(GetResources("Rare").ToList().Join(GetResources("Wondrous")))),
-//         }
-// }
+    //     public static Resource GetRandomResource(string rarity)
+    //     {
+    //         return switch rarity {
+    //             "Common" => GetRandomResource(GetResources("Common")),
+    //             "Uncommon" => GetRandomResource(GetResources("Common").Join(GetResources("Uncommon")).ToList()),
+    //             "Rare" => GetRandomResource(GetResources("Common").Join(GetResources("Uncommon")).ToList().Join(GetResources("Rare").ToList())),
+    //             "Wondrous" => GetRandomResource(GetResources("Common").Join(GetResources("Uncommon")).ToList().Join(GetResources("Rare").ToList().Join(GetResources("Wondrous")))),
+    //         }
+    // }
 
-/// <summary>
-/// Gets a list of Resources of the chosen Rarity.
-/// </summary>
-/// <returns>The Resource list</returns>
-public static List<ResourceData> GetResources(string rarity)
-{
-    return ResourceInfo.Where(resource => resource.Rarity == rarity).ToList();
-}
-
-/// <summary>
-/// Gets a random Resource from a list of possible resource names, decided by the weighted rarities.
-/// </summary>
-/// <returns>The random Resource</returns>
-public static Resource GetRandomResource(List<string> names)
-{
-    List<Resource> resourceList = new();
-    List<int> resourceIndexes = new();
-
-    for (int i = 0; i < names.Count; i++)
+    /// <summary>
+    /// Gets a list of Resources of the chosen Rarity.
+    /// </summary>
+    /// <returns>The Resource list</returns>
+    public static List<ResourceData> GetResources(string rarity)
     {
-        Resource resource = new(names[i]);
-        resourceList.Add(resource);
-        resourceIndexes = resourceIndexes.Concat(resource.Rarity.GetWeight(i)).ToList();
+        return ResourceInfo.Where(resource => resource.Rarity == rarity).ToList();
     }
 
-    return resourceList[resourceIndexes.PickRandom()];
-}
-
-/// <summary>
-/// Gets a random Resource from a list of possible resource data structs, decided by the weighted rarities.
-/// </summary>
-/// <returns>The random Resource</returns>
-public static Resource GetRandomResource(List<ResourceData> resources)
-{
-    List<Resource> resourceList = new();
-    List<int> resourceIndexes = new();
-
-    for (int i = 0; i < resources.Count; i++)
+    /// <summary>
+    /// Gets a random Resource from a list of possible resource names, decided by the weighted rarities.
+    /// </summary>
+    /// <returns>The random Resource</returns>
+    public static Resource GetRandomResource(List<string> names)
     {
-        Resource resource = new(resources[i].Name);
-        resourceList.Add(resource);
-        resourceIndexes = resourceIndexes.Concat(resource.Rarity.GetWeight(i)).ToList();
+        List<Resource> resourceList = new();
+        List<int> resourceIndexes = new();
+
+        for (int i = 0; i < names.Count; i++)
+        {
+            Resource resource = new(names[i]);
+            resourceList.Add(resource);
+            resourceIndexes = resourceIndexes.Concat(resource.Rarity.GetWeight(i)).ToList();
+        }
+
+        return resourceList[resourceIndexes.PickRandom()];
     }
 
-    return resourceList[resourceIndexes.PickRandom()];
-}
-
-/// <summary>
-/// Gets a random list of n Resources, decided by the weighted rarities.
-/// </summary>
-/// <returns>The list of random Resources</returns>
-public static List<Resource> GetRandomResources(int num)
-{
-    List<Resource> resourceList = new();
-
-    for (int i = 0; i < num; i++)
+    /// <summary>
+    /// Gets a random Resource from a list of possible resource data structs, decided by the weighted rarities.
+    /// </summary>
+    /// <returns>The random Resource</returns>
+    public static Resource GetRandomResource(List<ResourceData> resources)
     {
-        resourceList.Add(GetRandomResource());
+        List<Resource> resourceList = new();
+        List<int> resourceIndexes = new();
+
+        for (int i = 0; i < resources.Count; i++)
+        {
+            Resource resource = new(resources[i].Name);
+            resourceList.Add(resource);
+            resourceIndexes = resourceIndexes.Concat(resource.Rarity.GetWeight(i)).ToList();
+        }
+
+        return resourceList[resourceIndexes.PickRandom()];
     }
 
-    return resourceList;
-}
-
-/// <summary>
-/// Gets a random list of n Resources from a list of possible Resources, decided by the weighted rarities.
-/// </summary>
-/// <returns>The list of random Resources</returns>
-public static List<Resource> GetRandomResources(int num, List<string> names)
-{
-    List<Resource> resourceList = new();
-
-    for (int i = 0; i < num; i++)
+    /// <summary>
+    /// Gets a random list of n Resources, decided by the weighted rarities.
+    /// </summary>
+    /// <returns>The list of random Resources</returns>
+    public static List<Resource> GetRandomResources(int num)
     {
-        resourceList.Add(GetRandomResource(names));
+        List<Resource> resourceList = new();
+
+        for (int i = 0; i < num; i++)
+        {
+            resourceList.Add(GetRandomResource());
+        }
+
+        return resourceList;
     }
 
-    return resourceList;
-}
-
-/// <summary>
-/// Gets a random list of n Resources from a list of possible Resources, decided by the weighted rarities.
-/// </summary>
-/// <returns>The list of random Resources</returns>
-public static List<Resource> GetRandomResources(int num, List<ResourceData> resources)
-{
-    List<Resource> resourceList = new();
-
-    for (int i = 0; i < num; i++)
+    /// <summary>
+    /// Gets a random list of n Resources from a list of possible Resources, decided by the weighted rarities.
+    /// </summary>
+    /// <returns>The list of random Resources</returns>
+    public static List<Resource> GetRandomResources(int num, List<string> names)
     {
-        resourceList.Add(GetRandomResource(resources));
+        List<Resource> resourceList = new();
+
+        for (int i = 0; i < num; i++)
+        {
+            resourceList.Add(GetRandomResource(names));
+        }
+
+        return resourceList;
     }
 
-    return resourceList;
-}
-
-/// <summary>
-/// Gets a list of Resources by name category or subcategory.
-/// </summary>
-/// <returns>The found Resource</returns>
-public static List<Resource> GetResources(string category, bool isCategory)
-{
-    return ResourceInfo
-        .Where(r => isCategory && (r.Category == category) || !isCategory && r.Subcategory == category)
-        .Select(r => new Resource(r.Name))
-        .ToList();
-}
-
-/// <summary>
-/// Gets a Resources by a list of names.
-/// </summary>
-/// <returns>The found Resource</returns>
-public static List<Resource> GetResources(List<string> names)
-{
-    return names.Select(r => new Resource(r)).ToList();
-}
-
-override public string ToString()
-{
-    return $"{{ Name: '{Name}', Category: '{Category.Primary}', Subcategory: '{Category.Secondary}', Rarity: '{Rarity.GetRarityText()}', Price: '{Price}', Description: '{Description}' }}";
-}
-
-// ------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------
-// Operator Overloading: 
-// ------------------------------------------------------------------------------------------
-// ------------------------------------------------------------------------------------------
-
-public static Resource operator +(Resource resource, int i)
-{
-    resource.Count += i;
-    return resource;
-}
-public static Resource operator +(Resource resource1, Resource resource2)
-{
-    if (resource1.GetType() == resource2.GetType())
+    /// <summary>
+    /// Gets a random list of n Resources from a list of possible Resources, decided by the weighted rarities.
+    /// </summary>
+    /// <returns>The list of random Resources</returns>
+    public static List<Resource> GetRandomResources(int num, List<ResourceData> resources)
     {
-        resource1.Count += resource2.Count;
+        List<Resource> resourceList = new();
+
+        for (int i = 0; i < num; i++)
+        {
+            resourceList.Add(GetRandomResource(resources));
+        }
+
+        return resourceList;
+    }
+
+    /// <summary>
+    /// Gets a list of Resources by name category or subcategory.
+    /// </summary>
+    /// <returns>The found Resource</returns>
+    public static List<Resource> GetResources(string category, bool isCategory)
+    {
+        return ResourceInfo
+            .Where(r => isCategory && (r.Category == category) || !isCategory && r.Subcategory == category)
+            .Select(r => new Resource(r.Name))
+            .ToList();
+    }
+
+    /// <summary>
+    /// Gets a list of Resources by rarity and category or subcategory.
+    /// </summary>
+    /// <returns>The found Resource</returns>
+    public static List<Resource> GetResources(string category, bool isCategory, string rarity)
+    {
+        return ResourceInfo
+            .Where(r => r.Rarity == rarity && (isCategory && (r.Category == category) || !isCategory && r.Subcategory == category))
+            .Select(r => new Resource(r.Name))
+            .ToList();
+    }
+
+    /// <summary>
+    /// Gets a Resources by a list of names.
+    /// </summary>
+    /// <returns>The found Resource</returns>
+    public static List<Resource> GetResources(List<string> names)
+    {
+        List<Resource> resources = new();
+        for (int i = 0; i < names.Count; i++)
+        {
+            if (names[i].Contains(',') || IsCategory(names[i]) || IsSubcategory(names[i]))
+            {
+                if (names[i].Contains(','))
+                {
+                    string[] nameParts = names[i].Split(',');
+                    resources.AddAll(GetResources(nameParts[1], IsCategory(nameParts[1]), nameParts[0]));
+                }
+                else
+                {
+                    resources.AddAll(GetResources(names[i], IsCategory(names[i])));
+                }
+            }
+            else
+            {
+                resources.Add(new Resource(names[i]));
+            }
+        }
+
+        return resources;
+    }
+
+    override public string ToString()
+    {
+        return $"{{ Name: '{Name}', Category: '{Category.Primary}', Subcategory: '{Category.Secondary}', Rarity: '{Rarity.GetRarityText()}', Price: '{Price}', Description: '{Description}' }}";
+    }
+
+    // ------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------
+    // Operator Overloading: 
+    // ------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------
+
+    public static Resource operator +(Resource resource, int i)
+    {
+        resource.Count += i;
+        return resource;
+    }
+    public static Resource operator +(Resource resource1, Resource resource2)
+    {
+        if (resource1.GetType() == resource2.GetType())
+        {
+            resource1.Count += resource2.Count;
+            return resource1;
+        }
         return resource1;
     }
-    return resource1;
-}
-public static Resource operator -(Resource resource, int i)
-{
-    resource.Count -= i;
-    return resource;
-}
-public static Resource operator -(Resource resource1, Resource resource2)
-{
-    if (resource1.GetType() == resource2.GetType())
+    public static Resource operator -(Resource resource, int i)
     {
-        resource1.Count -= resource2.Count;
+        resource.Count -= i;
+        return resource;
+    }
+    public static Resource operator -(Resource resource1, Resource resource2)
+    {
+        if (resource1.GetType() == resource2.GetType())
+        {
+            resource1.Count -= resource2.Count;
+            return resource1;
+        }
         return resource1;
     }
-    return resource1;
-}
-public static bool operator >=(Resource resource1, Resource resource2)
-{
-    return resource1.GetType() == resource2.GetType() && resource1.Count >= resource2.Count;
-}
-public static bool operator <=(Resource resource1, Resource resource2)
-{
-    return resource1.GetType() == resource2.GetType() && resource1.Count <= resource2.Count;
-}
-public static bool operator >=(Resource resource, int i)
-{
-    return resource.Count >= i;
-}
-public static bool operator <=(Resource resource, int i)
-{
-    return resource.Count >= i;
-}
-public static bool operator >(Resource resource1, Resource resource2)
-{
-    return resource1.GetType() == resource2.GetType() && resource1.Count > resource2.Count;
-}
-public static bool operator <(Resource resource1, Resource resource2)
-{
-    return resource1.GetType() == resource2.GetType() && resource1.Count < resource2.Count;
-}
-public static bool operator >(Resource resource, int i)
-{
-    return resource.Count > i;
-}
-public static bool operator <(Resource resource, int i)
-{
-    return resource.Count < i;
-}
+    public static bool operator >=(Resource resource1, Resource resource2)
+    {
+        return resource1.GetType() == resource2.GetType() && resource1.Count >= resource2.Count;
+    }
+    public static bool operator <=(Resource resource1, Resource resource2)
+    {
+        return resource1.GetType() == resource2.GetType() && resource1.Count <= resource2.Count;
+    }
+    public static bool operator >=(Resource resource, int i)
+    {
+        return resource.Count >= i;
+    }
+    public static bool operator <=(Resource resource, int i)
+    {
+        return resource.Count >= i;
+    }
+    public static bool operator >(Resource resource1, Resource resource2)
+    {
+        return resource1.GetType() == resource2.GetType() && resource1.Count > resource2.Count;
+    }
+    public static bool operator <(Resource resource1, Resource resource2)
+    {
+        return resource1.GetType() == resource2.GetType() && resource1.Count < resource2.Count;
+    }
+    public static bool operator >(Resource resource, int i)
+    {
+        return resource.Count > i;
+    }
+    public static bool operator <(Resource resource, int i)
+    {
+        return resource.Count < i;
+    }
+
+    public static bool IsCategory(string label) => ResourceInfo.Any(resource => resource.Category == label);
+    public static bool IsSubcategory(string label) => ResourceInfo.Any(resource => resource.Subcategory == label);
 }

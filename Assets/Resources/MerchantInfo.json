@@ -2,7 +2,7 @@
   "General Merchants": {
     "Rookie Merchants": [
       {
-        "Name": "Rookie Element Exchanger",
+        "Name": "Rookie Peddler",
         "Category": "General Merchants",
         "Subcategory": "Rookie Merchants",
         "Rarity": "Common",
@@ -11,7 +11,7 @@
         "InventoryRefreshInterval": 6,
         "CostMargins": 1,
         "Budget": 300,
-        "Description": "Many inexperienced merchants begin their careers by buying processed Sol Units for processed Vira Units, selling that Sol at a greater price. Profit is minimal, with the customer base restricted to people who do not have access to more established providers of these relatively common elements. But startup costs are small and it requires very little knowledge of business to make some small profit."
+        "Description": "Many inexperienced merchants begin their careers by buying what they can at low cost and hoping the costs will rise. Their stock is largely eclectic."
       },
       {
         "Name": "Rookie Hunter Trader",
@@ -26,12 +26,12 @@
         "Description": "Hunter Traders are merchants who purchase parts of creatures brought back from hunter kills to whoever will buy them. Hunter Trader professionals are well-known as go-to buyers in Hunter circles, often earning the requisite respect by being retired or part-time Hunters themselves. But for a rookie, all it takes is knowing one hunter willing to sell their spoils to start trading."
       }
     ],
-    "subcategory2": [
+    "Independent Peddlers": [
       {
-        "Name": "",
-        "Category": "category1",
-        "Subcategory": "subcategory2",
-        "Rarity": "Common",
+        "Name": "Travelling Merchant",
+        "Category": "General Merchants",
+        "Subcategory": "Independent Peddlers",
+        "Rarity": "Uncommon",
         "PossibleInventory": [""],
         "InventorySize": 6,
         "InventoryRefreshInterval": 6,
@@ -40,11 +40,11 @@
         "Description": ""
       }
     ],
-    "subcategory3": [
+    "Merchant Emporium": [
       {
-        "Name": "",
-        "Category": "category1",
-        "Subcategory": "subcategory3",
+        "Name": "Variety Shop",
+        "Category": "General Merchants",
+        "Subcategory": "Merchant Emporium",
         "Rarity": "Common",
         "PossibleInventory": [""],
         "InventorySize": 6,
@@ -68,14 +68,86 @@
         "CostMargins": 1,
         "Budget": 300,
         "Description": "Some merchants favor mobility over profit. Why pull a cart through the wilderness when you can still scrape by carrying geomaterials in a pack."
+      },
+      {
+        "Name": "Excavation Associate",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Mobile Geo-Suppliers",
+        "Rarity": "Uncommon",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": "Some merchants favor mobility over profit. Why pull a cart through the wilderness when you can still scrape by carrying geomaterials in a pack."
+      },
+      {
+        "Name": "Mineral Supplier",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Mobile Geo-Suppliers",
+        "Rarity": "Uncommon",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": "Some merchants favor mobility over profit. Why pull a cart through the wilderness when you can still scrape by carrying geomaterials in a pack."
+      },
+      {
+        "Name": "Gemstome Appraiser",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Mobile Geo-Suppliers",
+        "Rarity": "Rare",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": "Some merchants favor mobility over profit. Why pull a cart through the wilderness when you can still scrape by carrying geomaterials in a pack."
       }
     ],
-    "subcategory5": [
+    "Geo-Supplier Wagons": [
       {
-        "Name": "",
-        "Category": "category2",
-        "Subcategory": "subcategory5",
-        "Rarity": "Common",
+        "Name": "Regional Geo-Trader",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Geo-Supplier Wagons",
+        "Rarity": "Uncommon",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      },
+      {
+        "Name": "Excavation Wagon",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Geo-Supplier Wagons",
+        "Rarity": "Uncommon",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      },
+      {
+        "Name": "Mineral Hauler",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Geo-Supplier Wagons",
+        "Rarity": "Uncommon",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      },
+      {
+        "Name": "Gemstone Curator",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Geo-Supplier Wagons",
+        "Rarity": "Uncommon",
         "PossibleInventory": [""],
         "InventorySize": 6,
         "InventoryRefreshInterval": 6,
@@ -84,12 +156,48 @@
         "Description": ""
       }
     ],
-    "subcategory6": [
+    "Geo-Supplier Caravans": [
       {
-        "Name": "",
-        "Category": "category2",
-        "Subcategory": "subcategory6",
+        "Name": "Geosource Caravan",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Geo-Supplier Caravans",
         "Rarity": "Common",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      },
+      {
+        "Name": "Excavation Caravan",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Geo-Supplier Caravans",
+        "Rarity": "Rare",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      },
+      {
+        "Name": "Mineral Caravan",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Geo-Supplier Caravans",
+        "Rarity": "Rare",
+        "PossibleInventory": [""],
+        "InventorySize": 6,
+        "InventoryRefreshInterval": 6,
+        "CostMargins": 1,
+        "Budget": 300,
+        "Description": ""
+      },
+      {
+        "Name": "Gemstone Magnate",
+        "Category": "Geo-Suppliers",
+        "Subcategory": "Geo-Supplier Caravans",
+        "Rarity": "Rare",
         "PossibleInventory": [""],
         "InventorySize": 6,
         "InventoryRefreshInterval": 6,
@@ -99,12 +207,12 @@
       }
     ]
   },
-  "category3": {
-    "subcategory7": [
+  "Merchant Guilds": {
+    "RED_MERCHANT_GUILD": [
       {
-        "Name": "",
-        "Category": "category3",
-        "Subcategory": "subcategory7",
+        "Name": "Red Merchant Guild Trader",
+        "Category": "Merchant Guilds",
+        "Subcategory": "RED_MERCHANT_GUILD",
         "Rarity": "Common",
         "PossibleInventory": [""],
         "InventorySize": 6,
@@ -114,11 +222,11 @@
         "Description": ""
       }
     ],
-    "subcategory8": [
+    "BLUE_MERCHANT_GUILD": [
       {
-        "Name": "",
-        "Category": "category3",
-        "Subcategory": "subcategory8",
+        "Name": "Blue Merchant Guild Trader",
+        "Category": "Merchant Guilds",
+        "Subcategory": "BLUE_MERCHANT_GUILD",
         "Rarity": "Common",
         "PossibleInventory": [""],
         "InventorySize": 6,
@@ -128,11 +236,11 @@
         "Description": ""
       }
     ],
-    "subcategory9": [
+    "GREEN_MERCHANT_GUILD": [
       {
-        "Name": "",
-        "Category": "category3",
-        "Subcategory": "subcategory9",
+        "Name": "Green Merchant Guild Trader",
+        "Category": "Merchant Guilds",
+        "Subcategory": "GREEN_MERCHANT_GUILD",
         "Rarity": "Common",
         "PossibleInventory": [""],
         "InventorySize": 6,

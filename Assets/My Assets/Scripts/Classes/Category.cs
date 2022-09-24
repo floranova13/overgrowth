@@ -17,4 +17,5 @@ public class Category
         subcategory = secondary;
     }
 
+    public bool IsCategory(string categoryVal) => category == categoryVal || subcategory == categoryVal;
 }

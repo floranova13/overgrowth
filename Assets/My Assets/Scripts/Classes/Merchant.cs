@@ -8,6 +8,7 @@ using Defective.JSON;
 
 public struct MerchantData
 {
+    public string Name { get; }
     public string Category { get; }
     public string Subcategory { get; }
     public string Rarity { get; }
@@ -19,11 +20,12 @@ public struct MerchantData
     public string Description { get; }
 
     public MerchantData(
-        string category, string subcategory,
+        string name, string category, string subcategory,
         string rarity, List<string> possibleInventory,
         int inventorySize, int inventoryRefreshInterval,
         int costMargins, int budget, string description)
     {
+        Name = name;
         Category = category;
         Subcategory = subcategory;
         Rarity = rarity;
@@ -44,6 +46,7 @@ public class Merchant
 {
     public static List<MerchantData> MerchantInfo;
 
+    public string Name { get; }
     public Citizen Citizen { get; }
     public Category Category { get; }
     public Rarity Rarity { get; }
@@ -62,6 +65,7 @@ public class Merchant
 
     public Merchant(MerchantData merchantData)
     {
+        Name = merchantData.Name;
         Citizen = new Citizen();
         Category = new Category(merchantData.Category, merchantData.Subcategory);
         Rarity = new Rarity(merchantData.Rarity);
@@ -73,23 +77,7 @@ public class Merchant
         Description = merchantData.Description;
     }
 
-    public Merchant(string subcategory)
-    {
-        new Merchant(MerchantInfo
-        .Where(merchant =>
-        subcategory == merchant.Subcategory)
-        .ToList()
-        .PickRandom());
-    }
-
-    public Merchant(List<string> subcategories)
-    {
-        new Merchant(MerchantInfo
-        .Where(merchant => subcategories
-        .Contains(merchant.Subcategory))
-        .ToList()
-        .PickRandom());
-    }
+    public Merchant(string name) => new Merchant(GetMerchant(name));
 
     public Merchant() => new Merchant(MerchantInfo.PickRandom());
 
@@ -108,11 +96,19 @@ public class Merchant
                 for (int k = 0; k < jsonObject.list[i][j].count; k++)
                 {
                     var obj = jsonObject[i][j][k];
+                    Debug.Log(new List<string>() { 
+                        obj[0].stringValue, obj[1].stringValue,
+                        obj[2].stringValue, obj[3].stringValue,
+                        string.Join(',', obj[4].list.Select(resource => resource.stringValue).ToList()),
+                        obj[5].intValue.ToString(), obj[6].intValue.ToString(), 
+                        obj[7].intValue.ToString(), obj[8].intValue.ToString(), 
+                        obj[9].stringValue });
                     var newMerchantData = new MerchantData(
-                        obj[0].stringValue, obj[1].stringValue, obj[2].stringValue,
-                        obj[3].list.Select(resource => resource.stringValue).ToList(),
-                        obj[4].intValue, obj[5].intValue, obj[6].intValue,
-                        obj[7].intValue, obj[8].stringValue
+                        obj[0].stringValue, obj[1].stringValue,
+                        obj[2].stringValue, obj[3].stringValue,
+                        obj[4].list.Select(resource => resource.stringValue).ToList(),
+                        obj[5].intValue, obj[6].intValue, obj[7].intValue,
+                        obj[8].intValue, obj[9].stringValue
                         );
                     merchants.Add(newMerchantData);
                 }
@@ -150,104 +146,40 @@ public class Merchant
         Citizen.ChangeReputation(amount);
     }
 
-    // ------------------------------------------------------------------------------------------
-    // ------------------------------------------------------------------------------------------
-    // Stock Lists: 
-    // ------------------------------------------------------------------------------------------
-    // ------------------------------------------------------------------------------------------
-
-    // Get Starting Stock List: 
-    // ------------------------------------------------------------------------------------------
-    // public static List<Item> GetStartingStockList(Rarity rarity = null)
-    // {
-    //     RaritySet raritySet = new RaritySet(new float[] { 66f, 30f, 4f, 0f, 0f });
-    //     Rarity stockRarity = rarity == null ? raritySet.GetRarity() : rarity;
-    //     if (stockRarity == Rarity.Common)
-    //     {
-    //         var stockLists = new List<List<Item>>()
-    //         {
-    //             new List<Item>()
-    //             {
-    //                 new Item("Red Corregate", 36), new Item("Green Corregate", 36),
-    //                 new Item("Blue Corregate", 36), new Item("Falestone", 36),
-    //                 new Item("Umiste", 36)
-    //             },
-    //             new List<Item>()
-    //             {
-    //                 new Item("Amoten", 72), new Item("Lothen", 72),
-    //                 new Item("Tundrium", 72)
-    //             },
-    //             new List<Item>()
-    //             {
-    //                 new Item("Reeker Redcap", 72), new Item("Breybarb", 72)
-    //             }
-    //         };
-    //         return stockLists.PickRandom();
-    //     }
-    //     else if (stockRarity == Rarity.Uncommon)
-    //     {
-    //         var stockLists = new List<List<Item>>()
-    //         {
-    //             new List<Item>()
-    //             {
-    //                 new Item("Red Corregate", 36), new Item("Green Corregate", 36),
-    //                 new Item("Blue Corregate", 36), new Item("Falestone", 36),
-    //                 new Item("Umiste", 36),
-    //                 new Item("Lumenite Lightstone", 18), new Item("Lumenite Nightstone", 18)
-    //             },
-    //             new List<Item>()
-    //             {
-    //                 new Item("Amoten", 72), new Item("Lothen", 72),
-    //                 new Item("Tundrium", 72),
-    //                 new Item("Diserine", 36), new Item("Glavis", 36),
-    //                 new Item("Daultem", 36), new Item("Relium", 36),
-    //                 new Item("Arborun", 36)
-    //             },
-    //             new List<Item>()
-    //             {
-    //                 new Item("Reeker Redcap", 72), new Item("Breybarb", 72),
-    //                 new Item("Ruckel Shroom", 36), new Item("Ilunite Glowcap", 36)
-    //             }
-    //         };
-    //         return stockLists.PickRandom();
-    //     }
-    //     else if (stockRarity == Rarity.Rare)
-    //     {
-    //         var stockLists = new List<List<Item>>()
-    //         {
-    //             new List<Item>()
-    //             {
-    //                 new Item("Red Corregate", 36), new Item("Green Corregate", 36),
-    //                 new Item("Blue Corregate", 36), new Item("Falestone", 36),
-    //                 new Item("Umiste", 36),
-    //                 new Item("Lumenite Lightstone", 18), new Item("Lumenite Nightstone", 18),
-    //                 new Item("Nullstone", 9), new Item("Seras Shimmerstone", 9)
-    //             },
-    //             new List<Item>()
-    //             {
-    //                 new Item("Amoten", 72), new Item("Lothen", 72),
-    //                 new Item("Tundrium", 72),
-    //                 new Item("Diserine", 36), new Item("Glavis", 36),
-    //                 new Item("Daultem", 36), new Item("Relium", 36),
-    //                 new Item("Arborun", 36),
-    //                 new Item("Embris", 18), new Item("Luxule", 18)
-    //             },
-    //             new List<Item>()
-    //             {
-    //                 new Item("Reeker Redcap", 72), new Item("Breybarb", 72),
-    //                 new Item("Ruckel Shroom", 36), new Item("Ilunite Glowcap", 36),
-    //                 new Item("Ilunite Glowcap", 18)
-    //             }
-    //         };
-    //         return stockLists.PickRandom();
-    //     }
-
-    //     Debug.LogError("No Merchant Starting Stock Found [Rarity: " + stockRarity + "]");
-    //     return new List<Item>();
-    // }
-
     // X: 
     // ------------------------------------------------------------------------------------------
+
+    public static MerchantData GetMerchant(string name) => MerchantInfo.First(merchant => merchant.Name == name);
+
+    public static List<MerchantData> GetMerchants(string category)
+    {
+        return MerchantInfo.Where(merchant =>
+            (IsCategory(category) && merchant.Category == category)
+            || (IsSubcategory(category) && merchant.Subcategory == category))
+            .ToList();
+    }
+
+    public static List<string> GetMerchantNames(List<string> labels)
+    {
+        List<string> merchantNameList = new();
+
+        for (int i = 0; i < labels.Count; i++)
+        {
+            if (IsCategoryOrSubcategory(labels[i]))
+            {
+                merchantNameList = merchantNameList
+                .Concat(GetMerchants(labels[i])
+                .Select(merchant => merchant.Name).ToList())
+                .ToList();
+            }
+            else
+            {
+                merchantNameList.Add(labels[i]);
+            }
+        }
+
+        return merchantNameList;
+    }
 
     /// <summary>
     /// Gets a random Merchant decided by the weighted rarities.
@@ -272,16 +204,14 @@ public class Merchant
     /// Gets a random Resource from a list of possible resources, decided by the weighted rarities.
     /// </summary>
     /// <returns>The random Resource</returns>
-    public static Merchant GetRandomMerchant(List<string> subcategories)
+    public static Merchant GetRandomMerchant(List<string> labels)
     {
-        List<Merchant> merchantList = new();
+        List<Merchant> merchantList = GetMerchantNames(labels).Select(merchant => new Merchant(GetMerchant(merchant))).ToList();
         List<int> merchantIndexes = new();
 
-        for (int i = 0; i < subcategories.Count; i++)
+        for (int i = 0; i < merchantList.Count; i++)
         {
-            Merchant merchant = new(subcategories[i]);
-            merchantList.Add(merchant);
-            merchantIndexes = merchantIndexes.Concat(merchant.Rarity.GetWeight(i)).ToList();
+            merchantIndexes = merchantIndexes.Concat(merchantList[i].Rarity.GetWeight(i)).ToList();
         }
 
         return merchantList[merchantIndexes.PickRandom()];
@@ -322,5 +252,9 @@ public class Merchant
     // X: 
     // ------------------------------------------------------------------------------------------
 
+    public static bool IsCategory(string label) => MerchantInfo.Any(merchant => merchant.Category == label);
+    public static bool IsSubcategory(string label) => MerchantInfo.Any(merchant => merchant.Subcategory == label);
+
+    public static bool IsCategoryOrSubcategory(string label) => IsCategory(label) || IsSubcategory(label);
 
 }

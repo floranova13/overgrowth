@@ -646,10 +646,10 @@
         "Description": ""
       },
       {
-        "Name": "LEGENDARY_ROCK",
+        "Name": "WONDROUS_ROCK",
         "Category": "Geomaterials",
         "Subcategory": "Rocks",
-        "Rarity": "Legendary",
+        "Rarity": "Wondrous",
         "Price": -1,
         "Description": ""
       }
@@ -736,10 +736,10 @@
         "Description": ""
       },
       {
-        "Name": "LEGENDARY_METALLIC_ORE",
+        "Name": "WONDROUS_METALLIC_ORE",
         "Category": "Geomaterials",
         "Subcategory": "Metallic Ores",
-        "Rarity": "Legendary",
+        "Rarity": "Wondrous",
         "Price": -1,
         "Description": ""
       }
@@ -858,10 +858,10 @@
         "Description": ""
       },
       {
-        "Name": "LEGENDARY_INDUSTRIAL_MINERAL",
+        "Name": "WONDROUS_INDUSTRIAL_MINERAL",
         "Category": "Geomaterials",
         "Subcategory": "Industrial Minerals",
-        "Rarity": "Legendary",
+        "Rarity": "Wondrous",
         "Price": -1,
         "Description": ""
       }
@@ -908,10 +908,10 @@
         "Description": ""
       },
       {
-        "Name": "LEGENDARY_FUEL_MINERAL",
+        "Name": "WONDROUS_FUEL_MINERAL",
         "Category": "Geomaterials",
         "Subcategory": "Fuel Minerals",
-        "Rarity": "Legendary",
+        "Rarity": "Wondrous",
         "Price": -1,
         "Description": ""
       }
@@ -977,7 +977,7 @@
         "Name": "Nullstone",
         "Category": "Geomaterials",
         "Subcategory": "Gem Minerals",
-        "Rarity": "Legendary",
+        "Rarity": "Wondrous",
         "Price": -1,
         "Description": ""
       },
@@ -985,7 +985,7 @@
         "Name": "Seras Shimmerstone",
         "Category": "Geomaterials",
         "Subcategory": "Gem Minerals",
-        "Rarity": "Legendary",
+        "Rarity": "Wondrous",
         "Price": -1,
         "Description": "A previously-undiscovered variant of crystalline Dawnetite. It is discovered deep within the Seras cliffside, obscured by many layers of dense surface rock. What process brings about its formation is unknown. While extraordinarily rare, it is not worth much more than more common variants. Instead, it has become one of the many symbols of the settlement."
       }
@@ -994,8 +994,8 @@
       {
         "Name": "Amoten",
         "Category": "Geomaterials",
-        "Subcategory": "Gem Minerals",
-        "Rarity": "Metals",
+        "Subcategory": "Metals",
+        "Rarity": "Common",
         "Price": -1,
         "Description": "A metal used as a material in many buildings because it is fairly durable, but it cannot stand up to more uncommon metals used in buildings in resistance to elemental pressures and other factors, so it is worth less. It is stored in 'block' form, a material input widely accepted by most auto-construction systems sold commercially."
       },
@@ -1075,7 +1075,7 @@
         "Name": "WONDROUS_METAL",
         "Category": "Geomaterials",
         "Subcategory": "Metals",
-        "Rarity": "Legendary",
+        "Rarity": "Wondrous",
         "Price": -1,
         "Description": ""
       }
