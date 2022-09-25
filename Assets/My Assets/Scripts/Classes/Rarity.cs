@@ -63,4 +63,9 @@ public class Rarity
 
         return weightList;
     }
+
+    public override string ToString()
+    {
+        return GetRarityText();
+    }
 }
