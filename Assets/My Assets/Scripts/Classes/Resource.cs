@@ -54,6 +54,17 @@ public class Resource
         Count = count;
     }
 
+    public Resource(ResourceData info, int count = 0)
+    {
+
+        Name = info.Name;
+        Category = new Category(info.Category, info.Subcategory);
+        Price = info.Price;
+        Rarity = new Rarity(info.Rarity);
+        Description = info.Description;
+        Count = count;
+    }
+
     public ResourceData GetResourceData(string name)
     {
         return ResourceInfo.FirstOrDefault(resourceData => resourceData.Name == name);

@@ -378,7 +378,7 @@
         "Description": ""
       },
       {
-        "Name": "Raveweed",
+        "Name": "Raveflesh",
         "Category": "Organic Samples",
         "Subcategory": "Flesher Fungi",
         "Rarity": "Wondrous",
@@ -485,7 +485,7 @@
         "Subcategory": "Stranglevines",
         "Rarity": "Rare",
         "Price": -1,
-        "Description": "An extremely rare carnivorous plant, about which little is known."
+        "Description": "An rare carnivorous plant, about which little is known."
       },
       {
         "Name": "WONDROUS_STRANGEVINES",
@@ -879,7 +879,7 @@
         "Name": "Hexatite",
         "Category": "Geomaterials",
         "Subcategory": "Fuel Minerals",
-        "Rarity": "Common",
+        "Rarity": "Uncommon",
         "Price": -1,
         "Description": ""
       },
@@ -887,12 +887,12 @@
         "Name": "Verexite",
         "Category": "Geomaterials",
         "Subcategory": "Fuel Minerals",
-        "Rarity": "Uncommon",
+        "Rarity": "Rare",
         "Price": -1,
         "Description": ""
       },
       {
-        "Name": "Ouret",
+        "Name": "RARE_FUEL_MINERAL",
         "Category": "Geomaterials",
         "Subcategory": "Fuel Minerals",
         "Rarity": "Rare",
@@ -985,6 +985,80 @@
         "Name": "Seras Shimmerstone",
         "Category": "Geomaterials",
         "Subcategory": "Gem Minerals",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": "A previously-undiscovered variant of crystalline Dawnetite. It is discovered deep within the Seras cliffside, obscured by many layers of dense surface rock. What process brings about its formation is unknown. While extraordinarily rare, it is not worth much more than more common variants. Instead, it has become one of the many symbols of the settlement."
+      }
+    ],
+    "Gemstone": [
+      {
+        "Name": "Red Corregate Gemstone",
+        "Category": "Geomaterials",
+        "Subcategory": "Gemstone",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Green Corregate Gemstone",
+        "Category": "Geomaterials",
+        "Subcategory": "Gemstone",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Blue Corregate Gemstone",
+        "Category": "Geomaterials",
+        "Subcategory": "Gemstone",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Falestone Gemstone",
+        "Category": "Geomaterials",
+        "Subcategory": "Gemstone",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Umiste Gemstone",
+        "Category": "Geomaterials",
+        "Subcategory": "Gemstone",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Lumenite Lightstone Gem",
+        "Category": "Geomaterials",
+        "Subcategory": "Gemstone",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Lumenite Nightstone Gem",
+        "Category": "Geomaterials",
+        "Subcategory": "Gemstone",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Nullstone Gem",
+        "Category": "Geomaterials",
+        "Subcategory": "Gemstone",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Seras Shimmerstone Gem",
+        "Category": "Geomaterials",
+        "Subcategory": "Gemstone",
         "Rarity": "Wondrous",
         "Price": -1,
         "Description": "A previously-undiscovered variant of crystalline Dawnetite. It is discovered deep within the Seras cliffside, obscured by many layers of dense surface rock. What process brings about its formation is unknown. While extraordinarily rare, it is not worth much more than more common variants. Instead, it has become one of the many symbols of the settlement."

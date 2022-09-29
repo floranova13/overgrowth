@@ -1,7 +1,9 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using EnhancedUI;
 using EnhancedUI.EnhancedScroller;
+using System.Linq;
 
 public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
 {
@@ -16,15 +18,10 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     /// </summary>
     public EnhancedScroller scroller;
 
-    public EnhancedScrollerCellView resourceCellViewPrefab;
-    public EnhancedScrollerCellView merchantCellViewPrefab;
-    public EnhancedScrollerCellView locationCellViewPrefab;
-    public EnhancedScrollerCellView textCellViewPrefab;
-
-    /// <summary>
-    /// The base path to the resources folder where sprites are located
-    /// </summary>
-    public string resourcePath;
+    public EnhancedScrollerCellView ResourceCellViewPrefab;
+    public EnhancedScrollerCellView MerchantCellViewPrefab;
+    public EnhancedScrollerCellView LocationCellViewPrefab;
+    public EnhancedScrollerCellView TextCellViewPrefab;
 
     void Start()
     {
@@ -44,9 +41,10 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
 
         _data = new List<Data>();
 
-        _data.Add(new TextData() { label = "Test Cell" });
-        _data.Add(new TextData() { label = "Test Cell" });
-        _data.Add(new TextData() { label = "Test Cell" });
+        for (int i = 0; i < Resource.ResourceInfo.Count; i++)
+        {
+            _data.Add(new ResourceCellData() { resource = new Resource(Resource.ResourceInfo[i]) });
+        }
 
         // tell the scroller to reload now that we have the data
         scroller.ReloadData();
@@ -84,15 +82,15 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
         }
         else if (_data[dataIndex] is MerchantCellData)
         {
-            return 100f;
+            return 120f;
         }
         else if (_data[dataIndex] is LocationCellData)
         {
-            return 100f;
+            return 90f;
         }
         else
         {
-            return 70f;
+            return 75f;
         }
     }
 
@@ -113,31 +111,31 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
         if (_data[dataIndex] is ResourceCellData)
         {
             // get a resource cell prefab from the scroller, recycling old cells if possible
-            cellView = scroller.GetCellView(resourceCellViewPrefab) as CellViewResource;
+            cellView = scroller.GetCellView(ResourceCellViewPrefab) as CellViewResource;
 
             // optional for clarity: set the cell's name to something to indicate this is a Resource item
-            cellView.name = "[Resource] " + (_data[dataIndex] as ResourceCellData).Name;
+            cellView.name = "[Resource] " + (_data[dataIndex] as ResourceCellData).resource.Name;
         }
         else if (_data[dataIndex] is MerchantCellData)
         {
             // get a merchant cell prefab from the scroller, recycling old cells if possible
-            cellView = scroller.GetCellView(merchantCellViewPrefab) as CellViewMerchant;
+            cellView = scroller.GetCellView(MerchantCellViewPrefab) as CellViewMerchant;
 
             // optional for clarity: set the cell's name to something to indicate this is a Merchant item
-            cellView.name = "[Merchant] " + (_data[dataIndex] as MerchantCellData).Name;
+            cellView.name = "[Merchant] " + (_data[dataIndex] as MerchantCellData).merchant.Name;
         }
         else if (_data[dataIndex] is LocationCellData)
         {
             // get a location cell prefab from the scroller, recycling old cells if possible
-            cellView = scroller.GetCellView(locationCellViewPrefab) as CellViewLocation;
+            cellView = scroller.GetCellView(LocationCellViewPrefab) as CellViewLocation;
 
             // optional for clarity: set the cell's name to something to indicate this is a Location item
-            cellView.name = "[Location] " + (_data[dataIndex] as LocationCellData).Name;
+            cellView.name = "[Location] " + (_data[dataIndex] as LocationCellData).location.Name;
         }
         else
         {
             // get a text cell prefab from the scroller, recycling old cells if possible
-            cellView = scroller.GetCellView(textCellViewPrefab) as CellViewText;
+            cellView = scroller.GetCellView(TextCellViewPrefab) as CellViewText;
 
             // optional for clarity: set the cell's name to something to indicate this is a text item
             cellView.name = "[Text]";

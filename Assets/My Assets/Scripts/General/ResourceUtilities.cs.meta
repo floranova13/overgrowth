@@ -3,7 +3,37 @@ guid: fef9fa5bb0261a4499a122a5275707a1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Resource_Sprite: {fileID: 21300000, guid: a3011246315966a4e863aeb7bb6c535b, type: 3}
+  - Petals_Sprite: {fileID: 21300000, guid: 5260037bd276f284e8b564ca86790199, type: 3}
+  - OrganicSamples_Sprite: {fileID: 21300000, guid: d198c489f8f19d044a1604aeefa0411c, type: 3}
+  - Geomaterials_Sprite: {fileID: 21300000, guid: a9914d485d9c9aa4395e14da2d32ebe2, type: 3}
+  - Equipment_Sprite: {fileID: 21300000, guid: 74098165e46099344925ad12a1b69367, type: 3}
+  - PersonalItems_Sprite: {fileID: 21300000, guid: 9e3f920dcd043a849a24dab93d51a0e5, type: 3}
+  - OrganicSamples_Flourishflora_Sprite: {fileID: 21300000, guid: b37c10d6eef40f04aa3a6a1f151cec9e, type: 3}
+  - OrganicSamples_Mosses_Sprite: {fileID: 21300000, guid: 17bbc96b6f6cf614bbd6ab3242422ba2, type: 3}
+  - OrganicSamples_Falshrooms_Sprite: {fileID: 21300000, guid: e2ed956a645a527418118a3ffcc27f1d, type: 3}
+  - OrganicSamples_Maremolds_Sprite: {fileID: 21300000, guid: 51cd3c3b37dd86843b2823dc469aaf7b, type: 3}
+  - OrganicSamples_FlesherFungi_Sprite: {fileID: 21300000, guid: 4b4a31f75d33dd4489185b2c4f5c35f9, type: 3}
+  - OrganicSamples_Trees_Sprite: {fileID: 21300000, guid: c1dcfd400df1e1546828dc63389232d6, type: 3}
+  - OrganicSamples_Waveskellen_Sprite: {fileID: 21300000, guid: b94a893c716d61044b678b363103a021, type: 3}
+  - OrganicSamples_Stranglevines_Sprite: {fileID: 21300000, guid: 75f8db63b2e0bd44cb97e6d0d224a1f1, type: 3}
+  - OrganicSamples_Stillferns_Sprite: {fileID: 21300000, guid: e439904ea462520428295472aa0ddc1d, type: 3}
+  - Geomaterials_Rocks_Sprite: {fileID: 21300000, guid: af7e8f427ebe31c4abbfadaab0a40ceb, type: 3}
+  - Geomaterials_MetallicOres_Sprite: {fileID: 21300000, guid: 197c09f17d312fd448d1f445efdcec14, type: 3}
+  - Geomaterials_IndustrialMinerals_Sprite: {fileID: 21300000, guid: 7eebfce6e0d0cfb45b8c735c62f1a4ce, type: 3}
+  - Geomaterials_FuelMinerals_Sprite: {fileID: 21300000, guid: 3cb09a93f15636844baed57a57dee03e, type: 3}
+  - Geomaterials_GemMinerals_Sprite: {fileID: 21300000, guid: 04b1770862992584db52888d16575c3a, type: 3}
+  - Geomaterials_Metals_Sprite: {fileID: 21300000, guid: 1204eef3787dcd243bd4db053c13da10, type: 3}
+  - Equipment_GuardianWeapons_Sprite: {fileID: 21300000, guid: c225336c2abf0314a8b2e0792801c1f8, type: 3}
+  - Equipment_SeekerWeapons_Sprite: {fileID: 21300000, guid: 7800f20e376e62740b8693d77d916bc4, type: 3}
+  - Equipment_GuardianArmor_Sprite: {fileID: 21300000, guid: a55590056c53f1845bc63ead6edae29d, type: 3}
+  - Equipment_SeekerArmor_Sprite: {fileID: 21300000, guid: 6717bb5969e4f7b4bb1d78904a266193, type: 3}
+  - Equipment_Utilities_Sprite: {fileID: 21300000, guid: a98c9e7ed5ba578409ebd40c9ff55d1e, type: 3}
+  - Equipment_AnalysisGear_Sprite: {fileID: 21300000, guid: a66ff636f761efc4d9fe8afd5010ad02, type: 3}
+  - Equipment_SeekerBoosters_Sprite: {fileID: 21300000, guid: a99e0c27165ef4e448f6d7a5978a3bd6, type: 3}
+  - Equipment_EnvironmentalGear_Sprite: {fileID: 21300000, guid: eb064b01ef6ad7a48a868dca73fbe83c, type: 3}
+  - PersonalItems_Accords_Sprite: {fileID: 21300000, guid: 2a87e78f2a01543418eca3844bf3ccd2, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

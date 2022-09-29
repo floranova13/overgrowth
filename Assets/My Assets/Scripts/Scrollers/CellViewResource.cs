@@ -21,8 +21,9 @@ public class CellViewResource : CellView
     /// <summary>
     /// Links to the UI fields
     /// </summary>
-    public TMP_Text nameText;
-    public Image resourceImage;
+    public TMP_Text NameText;
+    public Image CellImage;
+    public Image ResourceImage;
 
     /// <summary>
     /// Override of the base class's SetData function. This links the data
@@ -33,12 +34,10 @@ public class CellViewResource : CellView
     {
         // call the base SetData to link to the underlying _data
         base.SetData(data);
-
         // cast the data as rowData and store the reference
         _resourceData = data as ResourceCellData;
-
-        // update the UI with the data fields
-        nameText.text = _resourceData.resource.Name;
-        resourceImage.sprite = ResourceUtilities.Instance.GetBaseResourceSprite(_resourceData.resource.Name); 
+        // TODO: Set the CellImage based on the resource rarity
+        NameText.text = _resourceData.resource.Name;
+        ResourceImage.sprite = ResourceUtilities.Instance.GetBaseResourceSprite(_resourceData.resource.Name);
     }
 }
