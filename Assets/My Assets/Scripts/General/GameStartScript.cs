@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameStartScript : MonoBehaviour // TODO: THE HYBRID GLOBAL/INSTANCED NATURE OF THIS SCRIPT IS GOING TO CAUSE PROBLEMS
 {
     public static GameStartScript r;
-    public Menu startingMenu;
+    public Scene startingScene;
 
     public static bool gameStarted;
 
@@ -23,11 +23,11 @@ public class GameStartScript : MonoBehaviour // TODO: THE HYBRID GLOBAL/INSTANCE
 
     private void Start()
     {
-        switch (startingMenu)
+        switch (startingScene)
         {
-            case Menu.MainMenu:
+            case Scene.MainMenu:
                 break;
-            case Menu.GameMenu:
+            case Scene.GameMenu:
                 break;
             default:
                 break;

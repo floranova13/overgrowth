@@ -532,7 +532,7 @@
       {
         "Name": "Elongated Merow Tangle",
         "Category": "Organic Samples",
-        "Subcategory": "Trees",
+        "Subcategory": "Stillferns",
         "Rarity": "Rare",
         "Price": -1,
         "Description": "A common fern found in dense forests. It is difficult to travel through them, and they quickly regrow where they are cleared. It is for this reason that Seeker prefer to simply travel around them."
@@ -990,11 +990,11 @@
         "Description": "A previously-undiscovered variant of crystalline Dawnetite. It is discovered deep within the Seras cliffside, obscured by many layers of dense surface rock. What process brings about its formation is unknown. While extraordinarily rare, it is not worth much more than more common variants. Instead, it has become one of the many symbols of the settlement."
       }
     ],
-    "Gemstone": [
+    "Gemstones": [
       {
         "Name": "Red Corregate Gemstone",
         "Category": "Geomaterials",
-        "Subcategory": "Gemstone",
+        "Subcategory": "Gemstones",
         "Rarity": "Common",
         "Price": -1,
         "Description": ""
@@ -1002,7 +1002,7 @@
       {
         "Name": "Green Corregate Gemstone",
         "Category": "Geomaterials",
-        "Subcategory": "Gemstone",
+        "Subcategory": "Gemstones",
         "Rarity": "Common",
         "Price": -1,
         "Description": ""
@@ -1010,7 +1010,7 @@
       {
         "Name": "Blue Corregate Gemstone",
         "Category": "Geomaterials",
-        "Subcategory": "Gemstone",
+        "Subcategory": "Gemstones",
         "Rarity": "Common",
         "Price": -1,
         "Description": ""
@@ -1018,7 +1018,7 @@
       {
         "Name": "Falestone Gemstone",
         "Category": "Geomaterials",
-        "Subcategory": "Gemstone",
+        "Subcategory": "Gemstones",
         "Rarity": "Uncommon",
         "Price": -1,
         "Description": ""
@@ -1026,7 +1026,7 @@
       {
         "Name": "Umiste Gemstone",
         "Category": "Geomaterials",
-        "Subcategory": "Gemstone",
+        "Subcategory": "Gemstones",
         "Rarity": "Uncommon",
         "Price": -1,
         "Description": ""
@@ -1034,7 +1034,7 @@
       {
         "Name": "Lumenite Lightstone Gem",
         "Category": "Geomaterials",
-        "Subcategory": "Gemstone",
+        "Subcategory": "Gemstones",
         "Rarity": "Rare",
         "Price": -1,
         "Description": ""
@@ -1042,7 +1042,7 @@
       {
         "Name": "Lumenite Nightstone Gem",
         "Category": "Geomaterials",
-        "Subcategory": "Gemstone",
+        "Subcategory": "Gemstones",
         "Rarity": "Rare",
         "Price": -1,
         "Description": ""
@@ -1050,7 +1050,7 @@
       {
         "Name": "Nullstone Gem",
         "Category": "Geomaterials",
-        "Subcategory": "Gemstone",
+        "Subcategory": "Gemstones",
         "Rarity": "Wondrous",
         "Price": -1,
         "Description": ""
@@ -1058,7 +1058,7 @@
       {
         "Name": "Seras Shimmerstone Gem",
         "Category": "Geomaterials",
-        "Subcategory": "Gemstone",
+        "Subcategory": "Gemstones",
         "Rarity": "Wondrous",
         "Price": -1,
         "Description": "A previously-undiscovered variant of crystalline Dawnetite. It is discovered deep within the Seras cliffside, obscured by many layers of dense surface rock. What process brings about its formation is unknown. While extraordinarily rare, it is not worth much more than more common variants. Instead, it has become one of the many symbols of the settlement."

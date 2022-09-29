@@ -17,6 +17,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     /// This is our scroller we will be a delegate for
     /// </summary>
     public EnhancedScroller scroller;
+    public string ScrollerType;
 
     public EnhancedScrollerCellView ResourceCellViewPrefab;
     public EnhancedScrollerCellView MerchantCellViewPrefab;
@@ -28,23 +29,45 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
         // tell the scroller that this script will be its delegate
         scroller.Delegate = this;
 
-        LoadData();
+        LoadData(ScrollerType);
     }
 
     /// <summary>
     /// Populates the data with a lot of records
     /// </summary>
-    private void LoadData()
+    private void LoadData(string ScrollerType = "Resources")
     {
         // create some data
         // note we are using different data class fields for the header, row, and footer rows. This works due to polymorphism.
 
         _data = new List<Data>();
 
-        for (int i = 0; i < Resource.ResourceInfo.Count; i++)
+        switch (ScrollerType)
         {
-            _data.Add(new ResourceCellData() { resource = new Resource(Resource.ResourceInfo[i]) });
+            case "Resources":
+                for (int i = 0; i < GameSave.s.resources.Count; i++)
+                {
+                    _data.Add(new ResourceCellData() { resource = GameSave.s.resources[i] });
+                }
+                break;
+            case "Merchants":
+                for (int i = 0; i < GameSave.s.merchants.Count; i++)
+                {
+                    _data.Add(new MerchantCellData() { merchant = GameSave.s.merchants[i] });
+                }
+                break;
+            case "Merchant Inventory":
+                // TODO: Add Shop Controller Script to store a "CurrentMerchant" variable, and use that to populate the scroller.
+                break;
+            default:
+                for (int i = 0; i < Resource.ResourceInfo.Count; i++)
+                {
+                    _data.Add(new ResourceCellData() { resource = new Resource(Resource.ResourceInfo[i]) });
+                }
+                break;
         }
+
+
 
         // tell the scroller to reload now that we have the data
         scroller.ReloadData();

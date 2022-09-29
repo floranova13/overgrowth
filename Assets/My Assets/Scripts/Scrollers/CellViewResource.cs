@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using EnhancedUI.EnhancedScroller;
 using TMPro;
+using System;
+using System.Collections.Generic;
 
 /// <summary>
 /// This is the view for the rows
@@ -24,6 +26,12 @@ public class CellViewResource : CellView
     public TMP_Text NameText;
     public Image CellImage;
     public Image ResourceImage;
+    public Resource resource;
+
+    public static Color32 CommonColor = new(224, 224, 224, 255);
+    public static Color32 UncommonColor = new(84, 214, 134, 255);
+    public static Color32 RareColor = new(85, 192, 214, 255);
+    public static Color32 WondrousColor = new(182, 84, 214, 255);
 
     /// <summary>
     /// Override of the base class's SetData function. This links the data
@@ -32,11 +40,18 @@ public class CellViewResource : CellView
     /// <param name="data"></param>
     public override void SetData(Data data)
     {
+        Dictionary<String, Color> colorDict = new() {
+        { "Common", CommonColor },
+        { "Uncommon", UncommonColor },
+        { "Rare", RareColor },
+        { "Wondrous", WondrousColor },
+      };
         // call the base SetData to link to the underlying _data
         base.SetData(data);
         // cast the data as rowData and store the reference
         _resourceData = data as ResourceCellData;
-        // TODO: Set the CellImage based on the resource rarity
+        resource = _resourceData.resource;
+        CellImage.color = colorDict[_resourceData.resource.Rarity.GetRarityText()];
         NameText.text = _resourceData.resource.Name;
         ResourceImage.sprite = ResourceUtilities.Instance.GetBaseResourceSprite(_resourceData.resource.Name);
     }

@@ -1,6 +1,9 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections;
 using EnhancedUI.EnhancedScroller;
+
 
 /// <summary>
 /// This is the base class for the different cell types. We use a base class
@@ -22,4 +25,5 @@ public class CellView : EnhancedScrollerCellView
     {
         _data = data;
     }
+
 }

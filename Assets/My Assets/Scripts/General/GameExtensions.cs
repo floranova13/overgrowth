@@ -304,9 +304,14 @@ namespace GameExtensions
     }
 }
 
-public enum Menu
+public enum Scene
 {
     MainMenu, GameMenu
+}
+
+public enum Menu
+{
+    Possessions, Seeker, Market, Research
 }
 
 public enum Gender
