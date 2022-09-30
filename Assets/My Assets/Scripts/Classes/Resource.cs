@@ -42,7 +42,7 @@ public class Resource
 
     public int Count { get; set; }
 
-    public Resource(string nameVal, int count = 0)
+    public Resource(string nameVal, int count = 1)
     {
         ResourceData info = GetResourceData(nameVal);
 

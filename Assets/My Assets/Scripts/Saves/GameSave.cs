@@ -2,6 +2,7 @@ using System.Linq;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using GameExtensions;
 
 [Serializable]
 public class GameSave
@@ -54,6 +55,10 @@ public class GameSave
         // ------------------------------------------------------------------------------------------
         petals = INITIAL_PETAL_COUNT;
         resources = new List<Resource>();
+        for (int i = 0; i < 6; i++)
+        {
+            resources.AddAll(Resource.GetRandomResources(3));
+        }
         INITIAL_RESOURCES.ForEach(r => resources.Add(new Resource(r)));
 
         // Economy:

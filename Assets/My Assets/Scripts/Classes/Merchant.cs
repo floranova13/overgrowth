@@ -261,4 +261,42 @@ public class Merchant
 
     public static bool IsCategoryOrSubcategory(string label) => IsCategory(label) || IsSubcategory(label);
 
+    public string GetInventoryText()
+    {
+        return $"Inventory: ";
+    }
+
+    public string GetProficiencyText()
+    {
+        string proficiencyString = "Proficiency:";
+        switch (Stock.CostMargins)
+        {
+            case 1:
+                return $"{proficiencyString} Novice";
+            case 2:
+                return $"{proficiencyString} Novice";
+            case 3:
+                return $"{proficiencyString} Experienced";
+            case 4:
+                return $"{proficiencyString} Experienced";
+            case 5:
+                return $"{proficiencyString} Experienced";
+            case 6:
+                return $"{proficiencyString} Veteran";
+            case 7:
+                return $"{proficiencyString} Veteran";
+            case 8:
+                return $"{proficiencyString} Veteran";
+            case 9:
+                return $"{proficiencyString} Veteran";
+            case 10:
+                return $"{proficiencyString} Expert";
+            case 11:
+                return $"{proficiencyString} Expert";
+            case 12:
+                return $"{proficiencyString} Expert";
+        }
+        return proficiencyString;
+    }
+
 }

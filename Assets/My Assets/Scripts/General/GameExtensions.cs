@@ -69,13 +69,13 @@ namespace GameExtensions
         public static void Add(this List<Resource> resourceList, Resource resource, bool checkForSame)
         {
             Resource same = Resource.Same(resourceList, resource, false);
-            if (Resource.Same(resourceList, resource, false).Count == 0)
+            if (checkForSame && same.Count == 0)
             {
                 resourceList.Add(resource);
             }
             else
             {
-                Resource.Same(resourceList, resource, false).Count += resource.Count;
+                same.Count += resource.Count;
             }
         }
 

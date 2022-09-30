@@ -24,6 +24,11 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     public EnhancedScrollerCellView LocationCellViewPrefab;
     public EnhancedScrollerCellView TextCellViewPrefab;
 
+    public void RefreshScroller()
+    {
+        LoadData(ScrollerType);
+    }
+
     void Start()
     {
         // tell the scroller that this script will be its delegate

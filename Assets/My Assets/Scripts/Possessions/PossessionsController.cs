@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PossessionsController : Singleton<PossessionsController>
@@ -15,6 +16,10 @@ public class PossessionsController : Singleton<PossessionsController>
     public TMP_Text ResourcePriceText;
     public TMP_Text ResourceDescriptionText;
 
+    public Canvas PossessionsCanvas;
+
+    public Button PossessionsMenuButton;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +30,13 @@ public class PossessionsController : Singleton<PossessionsController>
     private void Reset()
     {
         selectedResource = null;
+        ResourceNameText.text = "";
+        ResourceCategoryText.text = "";
+        ResourceSubcategoryText.text = "";
+        ResourceRarityText.text = "";
+        ResourceCountText.text = "";
+        ResourcePriceText.text = "";
+        ResourceDescriptionText.text = "";
     }
 
     public void SelectResource(Resource resource)
@@ -42,5 +54,17 @@ public class PossessionsController : Singleton<PossessionsController>
         ResourceCountText.text = $"Count: {selectedResource.Count}";
         ResourcePriceText.text = $"Base Price: {selectedResource.Price}";
         ResourceDescriptionText.text = selectedResource.Description;
+    }
+
+    public void OpenMenu()
+    {
+        PossessionsMenuButton.interactable = false;
+        Reset();
+        PossessionsCanvas.gameObject.SetActive(true);
+    }
+
+    public void CloseMenu()
+    {
+        PossessionsCanvas.gameObject.SetActive(false);
     }
 }
