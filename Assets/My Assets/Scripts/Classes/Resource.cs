@@ -408,4 +408,5 @@ public class Resource
 
     public static bool IsCategory(string label) => ResourceInfo.Any(resource => resource.Category == label);
     public static bool IsSubcategory(string label) => ResourceInfo.Any(resource => resource.Subcategory == label);
+    public static bool IsCategoryOrSubcategory(string label) => IsCategory(label) || IsSubcategory(label);
 }

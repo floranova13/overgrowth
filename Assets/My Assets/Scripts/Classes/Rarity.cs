@@ -30,33 +30,15 @@ public class Rarity
         else
         {
             rarity = 0;
+            Debug.LogError($"Rarity {rarityVal} not in the list of possible Rarities!");
         }
-        // if (rarityVal == "")
-        // {
-        //     rarity = 0;
-        // }
-
-        // if (RarityNames.Contains(rarityVal.ToLower()))
-        // {
-        //     rarity = RarityNames.IndexOf(rarityVal);
-        // }
-        // else if (int.TryParse(rarityVal, out int i))
-        // {
-
-        //     rarity = int.Parse(rarityVal);
-        // }
-        // else
-        // {
-        //     Debug.Log($"Rarity: {rarityVal} is not valid!");
-        //     rarity = 0;
-        // }
     }
 
-    public List<int> GetWeight(int i)
+    public List<int> GetWeight(int i, int modifier = 0)
     {
         var weightList = new List<int>();
 
-        for (int j = 0; j < rarity; j++)
+        for (int j = 0; j < RarityWeights[RarityNames[rarity]] + modifier; j++)
         {
             weightList.Add(i);
         }

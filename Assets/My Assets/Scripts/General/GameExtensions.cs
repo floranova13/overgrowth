@@ -174,6 +174,61 @@ namespace GameExtensions
         //	copyList.ForEach(x => x.count *= m);
         //	return copyList;
         //}
+
+        // Add All:
+        // ------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Add a list of Resource modifier tuples to another list of tuples, either by adding a new tuple or by
+        /// adding modifier to existing one.
+        /// </summary>
+        /// <param name="resourceModifiers">The resource tuple list to add to</param>
+        /// <param name="modifiersToAdd">The resource tuples to add</param>
+        public static void AddAll(this List<(string resource, int modifier)> resourceModifiers, List<(string resource, int modifier)> modifiersToAdd)
+        {
+            for (int i = 0; i < modifiersToAdd.Count; i++)
+            {
+                bool found = false;
+                for (int j = 0; !found && j < resourceModifiers.Count; j++)
+                {
+                    if (resourceModifiers[j].resource == modifiersToAdd[i].resource)
+                    {
+                        resourceModifiers[j] = (resourceModifiers[j].resource, resourceModifiers[j].modifier + modifiersToAdd[i].modifier);
+                        found = true;
+                    }
+                }
+                if (!found)
+                {
+                    resourceModifiers.Add((modifiersToAdd[i].resource, modifiersToAdd[i].modifier));
+                }
+            }
+        }
+                // Add All:
+        // ------------------------------------------------------------------------------------------
+        /// <summary>
+        /// Add a list of Resource modifier tuples to another list of tuples, either by adding a new tuple or by
+        /// adding modifier to existing one.
+        /// </summary>
+        /// <param name="resourceModifiers">The resource tuple list to add to</param>
+        /// <param name="modifiersToAdd">The resource tuples to add</param>
+        public static void AddAll(this List<(Resource resource, int modifier)> resourceModifiers, List<(string resource, int modifier)> modifiersToAdd)
+        {
+            for (int i = 0; i < modifiersToAdd.Count; i++)
+            {
+                bool found = false;
+                for (int j = 0; !found && j < resourceModifiers.Count; j++)
+                {
+                    if (resourceModifiers[j].resource.Name == modifiersToAdd[i].resource)
+                    {
+                        resourceModifiers[j] = (resourceModifiers[j].resource, resourceModifiers[j].modifier + modifiersToAdd[i].modifier);
+                        found = true;
+                    }
+                }
+                if (!found)
+                {
+                    resourceModifiers.Add((new Resource(modifiersToAdd[i].resource), modifiersToAdd[i].modifier));
+                }
+            }
+        }
     }
 
     public static class NumberExtensions

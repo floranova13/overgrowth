@@ -7,6 +7,8 @@ using System.Collections.Generic;
 
 public class MenuController : Singleton<MenuController>
 {
+    public Menu menu;
+
     public static Dictionary<string, Menu> MenuDict = new() {
       { "Possessions", Menu.Possessions },
       { "Seeker", Menu.Seeker },
@@ -14,9 +16,23 @@ public class MenuController : Singleton<MenuController>
       { "Research", Menu.Research },
     };
 
-    public void ChangeMenus(Menu menu)
+    public void ChangeMenus(Menu newMenu)
     {
         switch (menu)
+        {
+            case Menu.Possessions:
+                PossessionsController.Instance.CloseMenu();
+                break;
+            case Menu.Seeker:
+                break;
+            case Menu.Market:
+                break;
+            case Menu.Research:
+                break;
+            default:
+                break;
+        }
+        switch (newMenu)
         {
             case Menu.Possessions:
                 break;
@@ -31,8 +47,8 @@ public class MenuController : Singleton<MenuController>
         }
     }
 
-    public void ChangeMenus(string menu)
+    public void ChangeMenus(string newMenu)
     {
-        ChangeMenus(MenuDict[menu]);
+        ChangeMenus(MenuDict[newMenu]);
     }
 }

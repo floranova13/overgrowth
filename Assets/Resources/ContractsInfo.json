@@ -1,0 +1,364 @@
+{
+  "Locations": [
+    {
+      "Name": "Ilunite Forest",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Ilunite Forest",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Twisted Tangles",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Twisted Tangles",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Fole Expanse",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Fole Expanse",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Swiff Forest",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Swiff Forest",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "The Tunnels",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "The Tunnels",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Hule Grasslands",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Hule Grasslands",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Messhe Pond",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Messhe Pond",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Seras Riverline",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Seras Riverline",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Boreal Borderlands",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Boreal Borderlands",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Lake Magnae",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Lake Magnae",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Denor Woodlands",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Denor Woodlands",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Uresal Hills",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Uresal Hills",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Mossy Pockets",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Mossy Pockets",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Shroudrust Swamp",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Shroudrust Swamp",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Bel Wetlands",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Bel Wetlands",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Dry Pockets",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Dry Pockets",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Kosplinter Range",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Kosplinter Range",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Reye Desert",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Reye Desert",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Ashlocus",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Ashlocus",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    },
+    {
+      "Name": "Tantalese Rainforest",
+      "Contracts": [
+        {
+          "Name": "",
+          "Category": "",
+          "Subcategory": "",
+          "Location": "Tantalese Rainforest",
+          "Citizens": 1,
+          "Days": [1],
+          "Requirements": [],
+          "Results": [
+            { "resource": "", "modifier": 0 }
+          ],
+          "Description": ""
+        }
+      ]
+    }
+  ]
+}

@@ -13,13 +13,15 @@ public class Location
     public string Name { get; }
     public string Territory { get; }
     public int Threat { get; }
+    public List<(string resource, int modifier)> AvailableResources { get; }
     public string Description { get; }
 
-    public Location(string name, string territory, int threat, string description)
+    public Location(string name, string territory, int threat, List<(string resource, int modifier)> availableResources, string description)
     {
         Name = name;
         Territory = territory;
         Threat = threat;
+        AvailableResources = availableResources;
         Description = description;
     }
 
@@ -33,7 +35,9 @@ public class Location
         {
             Location newLocation = new(
                 jsonObject[i][0].stringValue, jsonObject[i][1].stringValue,
-                jsonObject[i][2].intValue, jsonObject[i][3].stringValue
+                jsonObject[i][2].intValue,
+                jsonObject[3].list.Select(result => (resource: result[0].stringValue, modifier: result[1].intValue)).ToList(),
+                jsonObject[i][4].stringValue
                 );
             Locations.Add(newLocation);
         }
@@ -52,5 +56,10 @@ public class Location
     public static Location GetRandomLocation(List<string> names)
     {
         return Locations.Where(Location => names.Contains(Location.Name)).ToList().PickRandom();
+    }
+
+    public static Location GetLocation(string locationName)
+    {
+        return Locations.FirstOrDefault(location => location.Name == locationName);
     }
 }
