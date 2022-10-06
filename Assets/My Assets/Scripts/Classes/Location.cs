@@ -27,7 +27,7 @@ public class Location
 
     public static void ReadFromJSON()
     {
-        TextAsset infoJSON = Resources.Load<TextAsset>("LocationsInfo");
+        TextAsset infoJSON = Resources.Load<TextAsset>("LocationInfo");
         JSONObject jsonObject = JSONObject.Create(infoJSON.text).list[0];
         Locations = new List<Location>();
 

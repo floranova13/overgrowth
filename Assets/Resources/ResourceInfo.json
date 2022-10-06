@@ -122,6 +122,22 @@
         "Description": ""
       },
       {
+        "Name": "Chillbud",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": "Small, bone-white buds that grow in cold climates."
+      },
+      {
+        "Name": "Smoulderflora",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
         "Name": "Nightray",
         "Category": "Organic Samples",
         "Subcategory": "Flourishflora",
@@ -147,6 +163,22 @@
       },
       {
         "Name": "Ripple Bloomlocus",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Frostfan",
+        "Category": "Organic Samples",
+        "Subcategory": "Flourishflora",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": "With enormous blue leaves, the frostfan blends into frigid landscapes."
+      },
+      {
+        "Name": "Blaze Blossom",
         "Category": "Organic Samples",
         "Subcategory": "Flourishflora",
         "Rarity": "Rare",
@@ -236,7 +268,7 @@
         "Description": "A rare, red variant of the moss said to grow wherever overwhelming sorrow taints the land. Some folklores add a positive slant to the myth, saying the moss absorbs grief, alleviating the woes of the suffering, lessening their burdens. However, this addition claims that Crimson Griever's Swath is moss that has already absorbed a significant amount of grief, implying terrible tragedies have taken place in the land in which it grows. Some supersticious Flora Seekers avoid areas where these plants grow. Others don't have the option and they pass through with haste. Some will seek out the plants, hoping to glean what they can about the conditions that allow them to grow in place of the common variety."
       },
       {
-        "Name": "WONDROUS_MOSS",
+        "Name": "Fieldfur",
         "Category": "Organic Samples",
         "Subcategory": "Mosses",
         "Rarity": "Wondrous",
@@ -294,7 +326,7 @@
         "Description": "Reeker mushrooms are common to many areas of the wilderness and even human-settled areas. However, the Evolutionary development of the Blackcap has long seperated from other varieties. Blackcaps are purged wherever they are found in human areas, thanks to 1 in 3 of their caps being moderately poisonous and possibly fatal."
       },
       {
-        "Name": "WONDROUS_FALSHROOM",
+        "Name": "Endshroom",
         "Category": "Organic Samples",
         "Subcategory": "Falshrooms",
         "Rarity": "Wondrous",
@@ -328,7 +360,7 @@
         "Description": "Set apart from its genetic relatives by a high rate of mutation, Moreph is more of an overwhelming nuisance than it is a catastrophe in and of itself. However, experts in the field have voiced concerns that this may not always be the case. Left alone, it may be the Moreph that contributes to this century's colonization disaster."
       },
       {
-        "Name": "MAREMOLD_RARE",
+        "Name": "Tearforge",
         "Category": "Organic Samples",
         "Subcategory": "Maremolds",
         "Rarity": "Rare",
@@ -336,7 +368,7 @@
         "Description": ""
       },
       {
-        "Name": "MAREMOLD_WONDROUS",
+        "Name": "Deathfeign",
         "Category": "Organic Samples",
         "Subcategory": "Maremolds",
         "Rarity": "Wondrous",
@@ -346,7 +378,7 @@
     ],
     "FlesherFungi": [
       {
-        "Name": "FLESHER_FUNGI_COMMON",
+        "Name": "Chokepore",
         "Category": "Organic Samples",
         "Subcategory": "Flesher Fungi",
         "Rarity": "Common",
@@ -388,7 +420,7 @@
     ],
     "Trees": [
       {
-        "Name": "COMMON_TREE",
+        "Name": "Blackbirch",
         "Category": "Organic Samples",
         "Subcategory": "Trees",
         "Rarity": "Common",
@@ -446,7 +478,7 @@
         "Description": "A bioluminescent waveskell that pulses to gently illuminate the dark depths where it grows."
       },
       {
-        "Name": "WONDROUS_WAVESKELLEN",
+        "Name": "Everwave",
         "Category": "Organic Samples",
         "Subcategory": "Waveskellen",
         "Rarity": "Wondrous",
@@ -488,7 +520,7 @@
         "Description": "An rare carnivorous plant, about which little is known."
       },
       {
-        "Name": "WONDROUS_STRANGEVINES",
+        "Name": "Murderroot",
         "Category": "Organic Samples",
         "Subcategory": "Stranglevines",
         "Rarity": "Wondrous",
@@ -538,7 +570,7 @@
         "Description": "A common fern found in dense forests. It is difficult to travel through them, and they quickly regrow where they are cleared. It is for this reason that Seeker prefer to simply travel around them."
       },
       {
-        "Name": "WONDROUS_STILLFERNS",
+        "Name": "Shiftfern",
         "Category": "Organic Samples",
         "Subcategory": "Stillferns",
         "Rarity": "Wondrous",
@@ -646,7 +678,7 @@
         "Description": ""
       },
       {
-        "Name": "WONDROUS_ROCK",
+        "Name": "Bloodslab",
         "Category": "Geomaterials",
         "Subcategory": "Rocks",
         "Rarity": "Wondrous",
@@ -736,7 +768,7 @@
         "Description": ""
       },
       {
-        "Name": "WONDROUS_METALLIC_ORE",
+        "Name": "Prodigite",
         "Category": "Geomaterials",
         "Subcategory": "Metallic Ores",
         "Rarity": "Wondrous",
@@ -858,7 +890,7 @@
         "Description": ""
       },
       {
-        "Name": "WONDROUS_INDUSTRIAL_MINERAL",
+        "Name": "Vexite",
         "Category": "Geomaterials",
         "Subcategory": "Industrial Minerals",
         "Rarity": "Wondrous",
@@ -892,7 +924,7 @@
         "Description": ""
       },
       {
-        "Name": "RARE_FUEL_MINERAL",
+        "Name": "Wellnine",
         "Category": "Geomaterials",
         "Subcategory": "Fuel Minerals",
         "Rarity": "Rare",
@@ -900,7 +932,7 @@
         "Description": ""
       },
       {
-        "Name": "RARE_FUEL_MINERAL",
+        "Name": "Nuletite",
         "Category": "Geomaterials",
         "Subcategory": "Fuel Minerals",
         "Rarity": "Rare",
@@ -908,7 +940,7 @@
         "Description": ""
       },
       {
-        "Name": "WONDROUS_FUEL_MINERAL",
+        "Name": "Somatite",
         "Category": "Geomaterials",
         "Subcategory": "Fuel Minerals",
         "Rarity": "Wondrous",
