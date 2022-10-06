@@ -214,6 +214,43 @@ public class Resource
     }
 
     /// <summary>
+    /// Gets a random Resource from a list of possible resource names with modifiers, decided by the weighted rarities and the modifiers.
+    /// </summary>
+    /// <returns>The random Resource</returns>
+    public static Resource GetRandomResource(List<(string resource, int modifier)> modifiers)
+    {
+        List<Resource> resourceList = new();
+        List<int> resourceIndexes = new();
+
+        for (int i = 0; i < modifiers.Count; i++)
+        {
+            Resource resource = new(modifiers[i].resource);
+            resourceList.Add(resource);
+            resourceIndexes = resourceIndexes.Concat(resource.Rarity.GetWeight(i, modifiers[i].modifier)).ToList();
+        }
+
+        return resourceList[resourceIndexes.PickRandom()];
+    }
+
+    /// <summary>
+    /// Gets a random Resource from a list of possible resource names with modifiers, decided by the weighted rarities and the modifiers.
+    /// </summary>
+    /// <returns>The random Resource</returns>
+    public static Resource GetRandomResource(List<(Resource resource, int modifier)> modifiers)
+    {
+        List<Resource> resourceList = new();
+        List<int> resourceIndexes = new();
+
+        for (int i = 0; i < modifiers.Count; i++)
+        {
+            resourceList.Add(modifiers[i].resource);
+            resourceIndexes = resourceIndexes.Concat(modifiers[i].resource.Rarity.GetWeight(i, modifiers[i].modifier)).ToList();
+        }
+
+        return resourceList[resourceIndexes.PickRandom()];
+    }
+
+    /// <summary>
     /// Gets a random Resource from a list of possible resource data structs, decided by the weighted rarities.
     /// </summary>
     /// <returns>The random Resource</returns>
@@ -259,6 +296,38 @@ public class Resource
         for (int i = 0; i < num; i++)
         {
             resourceList.Add(GetRandomResource(names));
+        }
+
+        return resourceList;
+    }
+
+    /// <summary>
+    /// Gets a random list of n Resources from a list of possible Resources, decided by the weighted rarities and modifiers.
+    /// </summary>
+    /// <returns>The list of random Resources</returns>
+    public static List<Resource> GetRandomResources(int num, List<(string resource, int modifier)> modifiers)
+    {
+        List<Resource> resourceList = new();
+
+        for (int i = 0; i < num; i++)
+        {
+            resourceList.Add(GetRandomResource(modifiers));
+        }
+
+        return resourceList;
+    }
+
+    /// <summary>
+    /// Gets a random list of n Resources from a list of possible Resources, decided by the weighted rarities and modifiers.
+    /// </summary>
+    /// <returns>The list of random Resources</returns>
+    public static List<Resource> GetRandomResources(int num, List<(Resource resource, int modifier)> modifiers)
+    {
+        List<Resource> resourceList = new();
+
+        for (int i = 0; i < num; i++)
+        {
+            resourceList.Add(GetRandomResource(modifiers));
         }
 
         return resourceList;

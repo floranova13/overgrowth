@@ -16,12 +16,15 @@ public struct ContractData
     public List<int> Days { get; }
     public List<string> Requirements { get; }
     public List<(Resource resource, int modifier)> Results { get; private set; }
+    public List<int> ResultsCount { get; }
+    public int Cost { get; }
     public string Description { get; }
 
     public ContractData(
         string name, string category, string subcategory, string location,
         int citizens, List<int> days, List<string> requirements,
-        List<(Resource resource, int modifier)> results, string description)
+        List<(Resource resource, int modifier)> results,
+        List<int> resultsCount, int cost, string description)
     {
         Name = name;
         Category = category;
@@ -31,6 +34,8 @@ public struct ContractData
         Days = days.Select(num => num).ToList();
         Requirements = requirements;
         Results = results;
+        ResultsCount = resultsCount;
+        Cost = cost;
         Description = description;
     }
 }
@@ -85,6 +90,8 @@ public class Contract
     public List<int> MaxDays { get; private set; }
     public List<string> Requirements { get; private set; }
     public List<(Resource resource, int modifier)> Results { get; private set; }
+    public List<int> ResultsCount { get; }
+    public int Cost { get; private set; }
     /// <summary>
     /// Description of Contract
     /// </summary>
@@ -118,6 +125,8 @@ public class Contract
         MaxDays = contractData.Days.Select(num => num).ToList();
         Requirements = contractData.Requirements.Select(requirement => requirement).ToList();
         Results = contractData.Results;
+        ResultsCount = contractData.ResultsCount;
+        Cost = contractData.Cost;
         Description = contractData.Description;
         Days = GetRandomDays();
         Seekers = new();
@@ -145,7 +154,8 @@ public class Contract
                 obj[6].list.ToList().Select(stringObj => stringObj.stringValue).ToList(),
                 GetResourceResults(obj[7].list.Select(result => (resource: result[0].stringValue, modifier: result[1].intValue)).ToList(),
                 Location.GetLocation(obj[3].stringValue)),
-                obj[8].stringValue);
+                obj[8].list.ToList().Select(num => num.intValue).ToList(),
+                obj[9].intValue, obj[10].stringValue);
             contracts.Add(newContractData);
         }
 
@@ -178,19 +188,6 @@ public class Contract
         return results;
     }
 
-    // ------------------------------------------------------------------------------------------
-    // ------------------------------------------------------------------------------------------
-    // Contract Class Setup: 
-    // ------------------------------------------------------------------------------------------
-    // ------------------------------------------------------------------------------------------
-
-
-    // ------------------------------------------------------------------------------------------
-    // ------------------------------------------------------------------------------------------
-    // Categories: 
-    // ------------------------------------------------------------------------------------------
-    // ------------------------------------------------------------------------------------------
-
     public static List<ContractData> GetContracts(string category)
     {
         return ContractInfo.Where(contract => contract.Category == category || contract.Subcategory == category)
@@ -203,84 +200,25 @@ public class Contract
     // ------------------------------------------------------------------------------------------
     // ------------------------------------------------------------------------------------------
 
-    // Do Rarity Roll:
-    // ------------------------------------------------------------------------------------------
-    public Rarity DoRarityRoll()
-    {
-        RaritySet raritySet = GetContractRaritySet(availableItems);
-        return raritySet.GetRarity();
-    }
-    // Get Contract Rarity Set:
-    // ------------------------------------------------------------------------------------------
-    /// <summary>
-    /// The RaritySet of a Contract is tied to how many Items are found in its Rarity tiers.
-    /// </summary>
-    /// <param name="availableDict"></param>
-    /// <returns>A RaritySet class</returns>
-    public static RaritySet GetContractRaritySet(Dictionary<Rarity, List<ItemWeight>> availableDict)
-    {
-        if (availableDict[Rarity.Rare].Count > 0)
-        {
-            if (availableDict[Rarity.Legendary].Count > 0)
-            {
-                return new RaritySet(new float[] { 72f, 21f, 6f, 1f });
-            }
-            return new RaritySet(new float[] { 72f, 21f, 7f, 0f });
-        }
-        else if (availableDict[Rarity.Legendary].Count > 0)
-        {
-            return new RaritySet(new float[] { 72f, 25f, 0f, 3f });
-        }
-        return new RaritySet(new float[] { 75f, 25f, 0f, 0f });
-    }
     // Roll Collection Count:
     // ------------------------------------------------------------------------------------------
     /// <summary>
     /// Each Contract has its own range of Items that can be collected on it.
     /// </summary>
-    /// <returns></returns>
-    public int RollCollectionCount()
-    {
-        System.Random rnd = GameSave.s.rnd;
-        var countMod = modifiers.First(x => x[0] == "Item Collection Count");
-        return rnd.Next(int.Parse(countMod[1]), int.Parse(countMod[2]) + 1);
-    }
+    /// <returns>A number of resources to acquire</returns>
+    public int RollResultsCount() => UnityEngine.Random.Range(ResultsCount[0], ResultsCount[1] + 1);
+
     // Do Item Award Rolls:
     // ------------------------------------------------------------------------------------------
     /// <summary>
     /// Randomly select the awarded Items from the completion of a Contract.
     /// </summary>
     /// <returns></returns>
-    public List<Item> DoItemAwardRolls()
+    public List<Resource> RollResults()
     {
-        Debug.Log("Doing Item Award Rolls: " + Name);
-        var awardList = new List<Item>();
+        int resultsResourceNumber = RollResultsCount();
 
-        int collectionCount = RollCollectionCount();
-        for (int i = 0; i < collectionCount; i++)
-        {
-            Rarity r = DoRarityRoll();
-            Debug.Log("Item Rarity Roll: " + r.Value);
-            string randomItemName = availableItems[r].DoItemRoll();
-            Debug.Log("Random Item Name: " + randomItemName);
-            if (randomItemName == "")
-            {
-                Debug.Log("No Additional Items, Skipping Collection");
-                continue;
-            }
-            // check if the resource collection count is overwritten
-            if (modifiers.Any(x => x[0] == "Item Count" && x[1] == randomItemName))
-            {
-                awardList.Add(new Item(randomItemName,
-                    int.Parse(modifiers.First(
-                        x => x[0] == "Item Count" && x[1] == randomItemName)[2])));
-            }
-            else
-            {
-                awardList.Add(new Item(randomItemName, 1));
-            }
-        }
-        return awardList;
+        return Resource.GetRandomResources(resultsResourceNumber, Results);
     }
     // X:
     // ------------------------------------------------------------------------------------------

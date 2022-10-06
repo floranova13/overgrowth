@@ -42,9 +42,11 @@ public class GameSave
     public GameSave()
     {
         s = this;
+        // TODO: MOVE THIS SOMEWHERE IT CAN BE STORED EVEN WHEN NOT CREATING A NEW SAVE
         Resource.ResourceInfo = Resource.ReadFromJSON();
         Merchant.MerchantInfo = Merchant.ReadFromJSON();
         Location.ReadFromJSON();
+        Contract.ContractInfo = Contract.ReadFromJSON();
 
         // General:
         // ------------------------------------------------------------------------------------------

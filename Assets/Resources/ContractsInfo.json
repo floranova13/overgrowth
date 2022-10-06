@@ -4,16 +4,16 @@
       "Name": "Ilunite Forest",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Exploring Bioluminescent Terrain",
+          "Category": "Familiar Forest",
+          "Subcategory": "Green Seed",
           "Location": "Ilunite Forest",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -22,16 +22,16 @@
       "Name": "Twisted Tangles",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Mapping The Tangles",
+          "Category": "Familiar Forest",
+          "Subcategory": "Green Seed",
           "Location": "Twisted Tangles",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -40,16 +40,16 @@
       "Name": "Fole Expanse",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Solitary Fole Survey",
+          "Category": "Familiar Forest",
+          "Subcategory": "Green Seed",
           "Location": "Fole Expanse",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -58,16 +58,16 @@
       "Name": "Swiff Forest",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Swiff Forest Expedition",
+          "Category": "Familiar Forest",
+          "Subcategory": "Green Seed",
           "Location": "Swiff Forest",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -83,9 +83,9 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -94,16 +94,16 @@
       "Name": "Hule Grasslands",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Grasslands Gathering",
+          "Category": "Riverland",
+          "Subcategory": "Green Seed",
           "Location": "Hule Grasslands",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -112,16 +112,16 @@
       "Name": "Messhe Pond",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Waterlogged Field Research",
+          "Category": "Riverland",
+          "Subcategory": "Green Seed",
           "Location": "Messhe Pond",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -130,16 +130,16 @@
       "Name": "Seras Riverline",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Trailing The Riverline",
+          "Category": "Riverland",
+          "Subcategory": "Green Seed",
           "Location": "Seras Riverline",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -148,16 +148,16 @@
       "Name": "Boreal Borderlands",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Borderlands Cartography",
+          "Category": "Far Reach",
+          "Subcategory": "Green Seed",
           "Location": "Boreal Borderlands",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -166,16 +166,16 @@
       "Name": "Lake Magnae",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Lake Diving",
+          "Category": "Far Reach",
+          "Subcategory": "Green Seed",
           "Location": "Lake Magnae",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -184,16 +184,16 @@
       "Name": "Denor Woodlands",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Solitary Woodlands Expedition",
+          "Category": "Woodland",
+          "Subcategory": "Green Seed",
           "Location": "Denor Woodlands",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -202,16 +202,16 @@
       "Name": "Uresal Hills",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Uresal Survey Hike",
+          "Category": "Woodland",
+          "Subcategory": "Green Seed",
           "Location": "Uresal Hills",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -220,16 +220,16 @@
       "Name": "Mossy Pockets",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Mossy Stroll",
+          "Category": "Woodland",
+          "Subcategory": "Green Seed",
           "Location": "Mossy Pockets",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -238,17 +238,17 @@
       "Name": "Shroudrust Swamp",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Shroudrust Slog",
+          "Category": "Wetland",
+          "Subcategory": "Green Seed",
           "Location": "Shroudrust Swamp",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
-          "Description": ""
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
+          "Description": "Only a single day is spent collecting within the swamp itself, as it is not permitted for contracted Seekers and Guardians to sleep within the dangerous region. It would be outrageously dangerous, given the corrosive habitat and the creatures that call it home. The remaining time is spent travelling to the swamp, preparing to enter it, and returning home."
         }
       ]
     },
@@ -256,16 +256,16 @@
       "Name": "Bel Wetlands",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Wetlands Wandering",
+          "Category": "Wetland",
+          "Subcategory": "Green Seed",
           "Location": "Bel Wetlands",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -274,16 +274,16 @@
       "Name": "Dry Pockets",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Dry Pockets Spelunking",
+          "Category": "Dryland",
+          "Subcategory": "Green Seed",
           "Location": "Dry Pockets",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -292,16 +292,16 @@
       "Name": "Kosplinter Range",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Mountain Climbing Expedition",
+          "Category": "Far Reach",
+          "Subcategory": "Green Seed",
           "Location": "Kosplinter Range",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -310,16 +310,16 @@
       "Name": "Reye Desert",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Desert Wandering Expedition",
+          "Category": "Dryland",
+          "Subcategory": "Green Seed",
           "Location": "Reye Desert",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -328,16 +328,16 @@
       "Name": "Ashlocus",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "The Blazing Trail",
+          "Category": "Dryland",
+          "Subcategory": "Green Seed",
           "Location": "Ashlocus",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
@@ -346,16 +346,16 @@
       "Name": "Tantalese Rainforest",
       "Contracts": [
         {
-          "Name": "",
-          "Category": "",
-          "Subcategory": "",
+          "Name": "Rainforest Trailblazing",
+          "Category": "Far Reach",
+          "Subcategory": "Green Seed",
           "Location": "Tantalese Rainforest",
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [
-            { "resource": "", "modifier": 0 }
-          ],
+          "Results": [{ "resource": "", "modifier": 0 }],
+          "ResultsCount": [6, 9],
+          "Cost": 0,
           "Description": ""
         }
       ]
