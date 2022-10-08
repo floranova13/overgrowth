@@ -428,6 +428,22 @@
         "Description": ""
       },
       {
+        "Name": "Undertrunk",
+        "Category": "Organic Samples",
+        "Subcategory": "Trees",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
+        "Name": "Highstone",
+        "Category": "Organic Samples",
+        "Subcategory": "Trees",
+        "Rarity": "Uncommon",
+        "Price": -1,
+        "Description": ""
+      },
+      {
         "Name": "Arvorloc Evergreen",
         "Category": "Organic Samples",
         "Subcategory": "Trees",
@@ -442,6 +458,14 @@
         "Rarity": "Rare",
         "Price": -1,
         "Description": "Towering trees with thick trunks encased in reddish bark. The oldest discovered trees are members of the Vitanark genus."
+      },
+      {
+        "Name": "Bloodbark",
+        "Category": "Organic Samples",
+        "Subcategory": "Trees",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": ""
       },
       {
         "Name": "Vitanark Veilas",
@@ -587,7 +611,7 @@
         "Subcategory": "Rocks",
         "Rarity": "Common",
         "Price": -1,
-        "Description": ""
+        "Description": "A low-density sedimentary rock. Minerals found in britomal rock include amodetite, lothenine, and vollite."
       },
       {
         "Name": "Claera",
@@ -595,7 +619,7 @@
         "Subcategory": "Rocks",
         "Rarity": "Common",
         "Price": -1,
-        "Description": ""
+        "Description": "A low-density sedimentary rock. Minerals found in claera rock include amodetite, lothenine, and nevanite."
       },
       {
         "Name": "Daphroth",
@@ -603,7 +627,7 @@
         "Subcategory": "Rocks",
         "Rarity": "Common",
         "Price": -1,
-        "Description": ""
+        "Description": "A low-density sedimentary rock. Minerals found in daphroth rock include amodetite, tundriumine, and nevanite."
       },
       {
         "Name": "Noma",
@@ -611,7 +635,7 @@
         "Subcategory": "Rocks",
         "Rarity": "Common",
         "Price": -1,
-        "Description": ""
+        "Description": "A low-density sedimentary rock. Minerals found in noma rock include lothenine, tundriumine, and furletite."
       },
       {
         "Name": "Sint",
@@ -619,7 +643,7 @@
         "Subcategory": "Rocks",
         "Rarity": "Common",
         "Price": -1,
-        "Description": ""
+        "Description": "A moderate-density metamorphic rock. Minerals found in sint rock include red corregate, blue corregate, fexatite, and rednaite."
       },
       {
         "Name": "Emite",
@@ -627,7 +651,15 @@
         "Subcategory": "Rocks",
         "Rarity": "Common",
         "Price": -1,
-        "Description": ""
+        "Description": "A moderate-density metamorphic rock. Minerals found in emite rock include red corregate, green corregate, hexatite, and sulite."
+      },
+      {
+        "Name": "Firsol",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Common",
+        "Price": -1,
+        "Description": "A moderate-density igneous rock. Minerals found in firsol rock include fexatite, hexatite, and red corregate."
       },
       {
         "Name": "Idanir",
@@ -635,7 +667,7 @@
         "Subcategory": "Rocks",
         "Rarity": "Uncommon",
         "Price": -1,
-        "Description": ""
+        "Description": "A low-density sedimentary rock. Minerals found in idanir rock include dalumatite, diserinine, and glavisine."
       },
       {
         "Name": "Helick",
@@ -643,7 +675,7 @@
         "Subcategory": "Rocks",
         "Rarity": "Uncommon",
         "Price": -1,
-        "Description": ""
+        "Description": "A low-density sedimentary rock. Minerals found in helick rock include dalumatite, reliumine, and arborunine."
       },
       {
         "Name": "Adrastel",
@@ -651,7 +683,7 @@
         "Subcategory": "Rocks",
         "Rarity": "Uncommon",
         "Price": -1,
-        "Description": ""
+        "Description": "A moderate-density metamorphic rock. Minerals found in adrastel rock include falestone, umiste, verexite, and murkite."
       },
       {
         "Name": "Cynora",
@@ -659,7 +691,7 @@
         "Subcategory": "Rocks",
         "Rarity": "Uncommon",
         "Price": -1,
-        "Description": ""
+        "Description": "A high-density metamorphic rock. Minerals found in cynora rock include seras shimmerstone, kasherite, dunite, valcerine, olocerine, grandite, durskite, and dawnetite."
       },
       {
         "Name": "Ouret",
@@ -667,7 +699,7 @@
         "Subcategory": "Rocks",
         "Rarity": "Rare",
         "Price": -1,
-        "Description": ""
+        "Description": "A moderate-density sedimentary rock. Minerals found in ouret rock include lumenite lightstone, lumenite nightstone, luxuline, fexatite, verexite, and baleite."
       },
       {
         "Name": "Reatite",
@@ -675,7 +707,15 @@
         "Subcategory": "Rocks",
         "Rarity": "Rare",
         "Price": -1,
-        "Description": ""
+        "Description": "A high-density metamorphic rock. Minerals found in reatite rock include nullstone, embrisine, and verexite."
+      },
+      {
+        "Name": "Emerok",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Rare",
+        "Price": -1,
+        "Description": "A moderate-density igneous rock. Minerals found in emerok include embrisine, luxuline, prodigite, wellnine, lumenite lightstone, and nullstone."
       },
       {
         "Name": "Bloodslab",
@@ -683,7 +723,15 @@
         "Subcategory": "Rocks",
         "Rarity": "Wondrous",
         "Price": -1,
-        "Description": ""
+        "Description": "A high-density sedimentary rock. Minerals found in bloodslab rock include prodegite, vexite, wellnine, nuletite, and somatite."
+      },
+      {
+        "Name": "Corethurst",
+        "Category": "Geomaterials",
+        "Subcategory": "Rocks",
+        "Rarity": "Wondrous",
+        "Price": -1,
+        "Description": "A high-density igneous rock. Minerals found in corethurst rock include diserinine, embrisine, and lumenite nightstone."
       }
     ],
     "Metallic Ores": [
@@ -1602,4 +1650,3 @@
     ]
   }
 }
-

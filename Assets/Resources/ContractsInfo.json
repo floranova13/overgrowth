@@ -11,7 +11,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -29,7 +29,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -47,7 +47,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -65,7 +65,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -83,7 +83,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -101,7 +101,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -119,7 +119,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -137,7 +137,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -155,7 +155,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -173,7 +173,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -191,7 +191,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -209,7 +209,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -227,7 +227,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -245,7 +245,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": "Only a single day is spent collecting within the swamp itself, as it is not permitted for contracted Seekers and Guardians to sleep within the dangerous region. It would be outrageously dangerous, given the corrosive habitat and the creatures that call it home. The remaining time is spent travelling to the swamp, preparing to enter it, and returning home."
@@ -263,7 +263,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -281,7 +281,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -299,7 +299,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -317,7 +317,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -335,7 +335,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
@@ -353,7 +353,7 @@
           "Citizens": 1,
           "Days": [1],
           "Requirements": [],
-          "Results": [{ "resource": "", "modifier": 0 }],
+          "Results": [],
           "ResultsCount": [6, 9],
           "Cost": 0,
           "Description": ""
