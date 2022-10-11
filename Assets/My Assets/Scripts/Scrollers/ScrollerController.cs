@@ -24,8 +24,9 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     public EnhancedScrollerCellView LocationCellViewPrefab;
     public EnhancedScrollerCellView TextCellViewPrefab;
 
-    public void RefreshScroller()
+    public void RefreshScroller(string newType = "")
     {
+        ScrollerType = newType;
         LoadData(ScrollerType);
     }
 
@@ -40,7 +41,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     /// <summary>
     /// Populates the data with a lot of records
     /// </summary>
-    private void LoadData(string ScrollerType = "Resources")
+    private void LoadData(string ScrollerType = "")
     {
         // create some data
         // note we are using different data class fields for the header, row, and footer rows. This works due to polymorphism.
@@ -49,6 +50,8 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
 
         switch (ScrollerType)
         {
+            case "":
+                break;
             case "Resources":
                 for (int i = 0; i < GameSave.s.resources.Count; i++)
                 {
@@ -63,6 +66,14 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
                 break;
             case "Merchant Inventory":
                 // TODO: Add Shop Controller Script to store a "CurrentMerchant" variable, and use that to populate the scroller.
+                List<Resource> merchantInventory = MarketController.Instance.selectedMerchant != null
+                    ? MarketController.Instance.selectedMerchant.Stock.Inventory
+                    : new List<Resource>();
+
+                for (int i = 0; i < merchantInventory.Count; i++)
+                {
+                    _data.Add(new ResourceCellData() { resource = merchantInventory[i] });
+                }
                 break;
             default:
                 for (int i = 0; i < Resource.ResourceInfo.Count; i++)

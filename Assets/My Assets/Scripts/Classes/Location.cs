@@ -33,6 +33,7 @@ public class Location
 
         for (int i = 0; i < jsonObject.list.Count; i++)
         {
+            Debug.Log(jsonObject[i][3].list.Count);
             Location newLocation = new(
                 jsonObject[i][0].stringValue, jsonObject[i][1].stringValue,
                 jsonObject[i][2].intValue,
@@ -41,6 +42,8 @@ public class Location
                 );
             Locations.Add(newLocation);
         }
+
+        Debug.Log(message: $"Location Count: {Locations.Count}");
     }
 
     /// <summary>

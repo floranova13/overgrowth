@@ -30,7 +30,7 @@ public class Rarity
         else
         {
             rarity = 0;
-            Debug.LogError($"Rarity {rarityVal} not in the list of possible Rarities!");
+            Debug.Log($"Rarity {rarityVal} not in the list of possible Rarities!");
         }
     }
 

@@ -9,12 +9,10 @@ public class MarketController : Singleton<MarketController>
     public Merchant selectedMerchant;
     public Resource selectedResource;
 
-    public ScrollerController MerchantsScrollerController;
-    public ScrollerController InventoryScrollerController;
-    public GameObject MerchantsScroller;
-    public GameObject InventoryScroller;
-    public Canvas MerchantInfoCanvas;
-    public Canvas InventoryInfoCanvas;
+    public ScrollerController MarketScrollerController;
+    public GameObject MarketScroller;
+    public GameObject MerchantInfoCanvas;
+    public GameObject InventoryInfoCanvas;
 
     public TMP_Text MerchantNameText;
     public TMP_Text MerchantCategoryText;
@@ -46,6 +44,12 @@ public class MarketController : Singleton<MarketController>
     {
         selectedMerchant = null;
         selectedResource = null;
+        ClearMerchantInfo();
+        ClearResourceInfo();
+    }
+
+    public void ClearMerchantInfo()
+    {
         MerchantNameText.text = "";
         MerchantCategoryText.text = "";
         MerchantSubcategoryText.text = "";
@@ -53,6 +57,10 @@ public class MarketController : Singleton<MarketController>
         MerchantInventoryText.text = "";
         MerchantCostMarginsText.text = "";
         MerchantDescriptionText.text = "";
+    }
+
+    public void ClearResourceInfo()
+    {
         ResourceNameText.text = "";
         ResourceCategoryText.text = "";
         ResourceSubcategoryText.text = "";
@@ -66,6 +74,18 @@ public class MarketController : Singleton<MarketController>
     {
         selectedMerchant = merchant;
         SetMerchantInfo();
+    }
+
+    public void ShowMerchantStock()
+    {
+        if (selectedMerchant != null)
+        {
+            ClearMerchantInfo();
+            ClearResourceInfo();
+            MerchantInfoCanvas.gameObject.SetActive(false);
+            InventoryInfoCanvas.gameObject.SetActive(true);
+            MarketScrollerController.RefreshScroller("Merchant Inventory");
+        }
     }
 
     private void SetMerchantInfo()
@@ -100,9 +120,7 @@ public class MarketController : Singleton<MarketController>
     {
         MarketMenuButton.interactable = false;
         Reset();
-        InventoryScroller.SetActive(false);
         InventoryInfoCanvas.gameObject.SetActive(false);
-        MerchantsScroller.SetActive(true);
         MerchantInfoCanvas.gameObject.SetActive(true);
         MarketCanvas.gameObject.SetActive(true);
     }

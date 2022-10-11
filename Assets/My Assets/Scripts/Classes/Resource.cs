@@ -96,6 +96,8 @@ public class Resource
             }
         }
 
+        Debug.Log($"Resource Data Count: {resources.Count}");
+
         return resources;
     }
 

@@ -146,18 +146,29 @@ public class Contract
 
         for (int i = 0; i < locationList.Count; i++)
         {
-            JSONObject obj = locationList[i];
-            ContractData newContractData = new(
-                obj[0].stringValue, obj[1].stringValue, obj[2].stringValue,
-                obj[3].stringValue, obj[4].intValue,
-                obj[5].list.ToList().Select(numObj => numObj.intValue).ToList(),
-                obj[6].list.ToList().Select(stringObj => stringObj.stringValue).ToList(),
-                GetResourceResults(obj[7].list.Select(result => (resource: result[0].stringValue, modifier: result[1].intValue)).ToList(),
-                Location.GetLocation(obj[3].stringValue)),
-                obj[8].list.ToList().Select(num => num.intValue).ToList(),
-                obj[9].intValue, obj[10].stringValue);
-            contracts.Add(newContractData);
+            List<JSONObject> contractList = locationList[i][1].list;
+
+            for (int j = 0; j < contractList.Count; j++)
+            {
+                JSONObject obj = contractList[j];
+                ContractData newContractData = new(
+                    obj[0].stringValue, obj[1].stringValue, obj[2].stringValue,
+                    obj[3].stringValue, obj[4].intValue,
+                    obj[5].list.ToList().Select(numObj => numObj.intValue).ToList(),
+                    obj[6].list.ToList().Select(stringObj => stringObj.stringValue).ToList(),
+                    obj[7].list == null ? new List<(Resource resource, int modifier)>() :
+                    GetResourceResults(
+                        obj[7].list.Select(result => (resource: result[0].stringValue, modifier: result[1].intValue)).ToList(),
+                        Location.GetLocation(obj[3].stringValue)
+                    ),
+                    obj[8].list.ToList().Select(num => num.intValue).ToList(),
+                    obj[9].intValue, obj[10].stringValue
+                );
+                contracts.Add(newContractData);
+            }
         }
+
+        Debug.Log(message: $"Contract Data Count: {contracts.Count}");
 
         return contracts;
     }

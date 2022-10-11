@@ -103,22 +103,22 @@ public class Merchant
                     //     obj[5].intValue.ToString(), obj[6].intValue.ToString(), 
                     //     obj[7].intValue.ToString(), obj[8].intValue.ToString(), 
                     //     obj[9].stringValue });
-                    Debug.Log($"Rarity: {obj[3]}");
-                    Debug.Log(message: $"PossibleInventory: {obj[4]}");
-                    // var newMerchantData = new MerchantData(
-                    //     obj[0].stringValue, obj[1].stringValue,
-                    //     obj[2].stringValue, obj[3].stringValue,
-                    //     (obj[4].isNull || !obj[4].isArray)
-                    //         ? new List<string>()
-                    //         : obj[4].list.Select(resource => resource.stringValue).ToList(),
-                    //     obj[5].intValue, obj[6].intValue, obj[7].intValue,
-                    //     obj[8].intValue, obj[9].stringValue
-                    //     );
-                    // merchants.Add(newMerchantData);
+                    // Debug.Log($"Rarity: {obj[3]}");
+                    // Debug.Log(message: $"PossibleInventory: {obj[4]}");
+                    var newMerchantData = new MerchantData(
+                        obj[0].stringValue, obj[1].stringValue,
+                        obj[2].stringValue, obj[3].stringValue,
+                        (obj[4].isNull || !obj[4].isArray)
+                            ? new List<string>()
+                            : obj[4].list.Select(resource => resource.stringValue).ToList(),
+                        obj[5].intValue, obj[6].intValue, obj[7].intValue,
+                        obj[8].intValue, obj[9].stringValue
+                        );
+                    merchants.Add(newMerchantData);
                 }
             }
         }
-
+        Debug.Log($"Merchant Data Count: {merchants.Count}");
         return merchants;
     }
 

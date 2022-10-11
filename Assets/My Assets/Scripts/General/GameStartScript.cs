@@ -17,7 +17,8 @@ public class GameStartScript : MonoBehaviour // TODO: THE HYBRID GLOBAL/INSTANCE
         {
             Debug.Log("Starting Game");
             SaveLoad.Load();
-            // MainController.Instance.unblocked = true;
+
+            DebugUtilities.CheckForMisspelledResourceNames();
         }
     }
 

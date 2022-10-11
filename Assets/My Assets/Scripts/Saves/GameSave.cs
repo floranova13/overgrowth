@@ -46,34 +46,32 @@ public class GameSave
         Resource.ResourceInfo = Resource.ReadFromJSON();
         Merchant.MerchantInfo = Merchant.ReadFromJSON();
         Location.ReadFromJSON();
-        Contract.ContractInfo = Contract.ReadFromJSON();
+        // Contract.ContractInfo = Contract.ReadFromJSON();
 
         // General:
         // ------------------------------------------------------------------------------------------
-        // rnd = new Random();
         // research = new Research();
 
         // Possessions:
         // ------------------------------------------------------------------------------------------
         petals = INITIAL_PETAL_COUNT;
         resources = new List<Resource>();
-        for (int i = 0; i < 6; i++)
-        {
-            resources.AddAll(Resource.GetRandomResources(3));
-        }
-        INITIAL_RESOURCES.ForEach(r => resources.Add(new Resource(r)));
+        // for (int i = 0; i < 6; i++)
+        // {
+        //     resources.AddAll(Resource.GetRandomResources(3));
+        // }
+        // INITIAL_RESOURCES.ForEach(r => resources.Add(new Resource(r)));
 
         // Economy:
         // ------------------------------------------------------------------------------------------
         merchants = new List<Merchant>();
-        for (int i = 0; i < INITIAL_MERCHANT_COUNT; i++)
-        {
-            merchants.Add(new Merchant());
-        }
+        // for (int i = 0; i < INITIAL_MERCHANT_COUNT; i++)
+        // {
+        //     merchants.Add(new Merchant());
+        // }
 
         // X:
         // ------------------------------------------------------------------------------------------
-        Debug.Log(resources[0].ToString());
         Debug.Log("Game Save Created");
         GameStartScript.gameStarted = true;
     }

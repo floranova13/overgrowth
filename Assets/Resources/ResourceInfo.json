@@ -604,7 +604,7 @@
     ]
   },
   "Geomaterials": {
-    "Rocks": [
+  "Rocks": [
       {
         "Name": "Britomal",
         "Category": "Geomaterials",
@@ -615,8 +615,8 @@
       },
       {
         "Name": "Claera",
-        "Category": "Geomaterials",
-        "Subcategory": "Rocks",
+      "Category": "Geomaterials",
+      "Subcategory": "Rocks",
         "Rarity": "Common",
         "Price": -1,
         "Description": "A low-density sedimentary rock. Minerals found in claera rock include amodetite, lothenine, and nevanite."
