@@ -34,8 +34,6 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     {
         // tell the scroller that this script will be its delegate
         scroller.Delegate = this;
-
-        LoadData(ScrollerType);
     }
 
     /// <summary>
@@ -59,6 +57,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
                 }
                 break;
             case "Merchants":
+                Debug.Log($"Populating Scroller: {GameSave.s.merchants.Count}");
                 for (int i = 0; i < GameSave.s.merchants.Count; i++)
                 {
                     _data.Add(new MerchantCellData() { merchant = GameSave.s.merchants[i] });

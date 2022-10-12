@@ -123,6 +123,7 @@ public class MarketController : Singleton<MarketController>
         InventoryInfoCanvas.gameObject.SetActive(false);
         MerchantInfoCanvas.gameObject.SetActive(true);
         MarketCanvas.gameObject.SetActive(true);
+        MarketScrollerController.RefreshScroller("Merchants");
     }
 
     public void CloseMenu()

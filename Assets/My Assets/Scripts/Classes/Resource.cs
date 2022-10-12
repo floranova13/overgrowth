@@ -49,7 +49,7 @@ public class Resource
         Name = nameVal;
         Category = new Category(info.Category, info.Subcategory);
         Price = info.Price;
-        Rarity = new Rarity(info.Rarity);
+        Rarity = new Rarity(info.Rarity, "Resource Class");
         Description = info.Description;
         Count = count;
     }
@@ -60,14 +60,21 @@ public class Resource
         Name = info.Name;
         Category = new Category(info.Category, info.Subcategory);
         Price = info.Price;
-        Rarity = new Rarity(info.Rarity);
+        Rarity = new Rarity(info.Rarity, "Resource Class with Count");
         Description = info.Description;
         Count = count;
     }
 
     public ResourceData GetResourceData(string name)
     {
-        return ResourceInfo.FirstOrDefault(resourceData => resourceData.Name == name);
+        ResourceData info = ResourceInfo.FirstOrDefault(resourceData => resourceData.Name == name);
+
+        if (info.Name == null)
+        {
+            Debug.LogError($"GetResourceData| No Resource Info Found For: {name}");
+        }
+
+        return info;
     }
 
     public static List<ResourceData> ReadFromJSON()
@@ -122,11 +129,13 @@ public class Resource
             {
                 return null;
             }
-            return new Resource(resource.Name);
+            return new Resource(resource.Name, 0);
         }
         Resource foundResource = resourceList.FirstOrDefault(x => x.Name == resource.Name);
 
-        return foundResource.Count < resource.Count ? null : foundResource;
+        return (requireCount && (foundResource.Count >= resource.Count))
+            ? null
+            : foundResource;
     }
 
     /// <summary>
@@ -202,6 +211,7 @@ public class Resource
     /// <returns>The random Resource</returns>
     public static Resource GetRandomResource(List<string> names)
     {
+        Debug.Log($"Getting Item Weights For: {string.Join(',', names)}");
         List<Resource> resourceList = new();
         List<int> resourceIndexes = new();
 
@@ -359,7 +369,7 @@ public class Resource
     {
         return ResourceInfo
             .Where(r => isCategory && (r.Category == category) || !isCategory && r.Subcategory == category)
-            .Select(r => new Resource(r.Name))
+            .Select(r => new Resource(r))
             .ToList();
     }
 
@@ -371,7 +381,7 @@ public class Resource
     {
         return ResourceInfo
             .Where(r => r.Rarity == rarity && (isCategory && (r.Category == category) || !isCategory && r.Subcategory == category))
-            .Select(r => new Resource(r.Name))
+            .Select(r => new Resource(r))
             .ToList();
     }
 
@@ -393,16 +403,29 @@ public class Resource
                 }
                 else
                 {
+                    Debug.Log($"GetResources| Getting Resources From Names: {string.Join(',', names)}");
+                    Debug.Log($"GetResources| Getting These Resources: {string.Join(',', GetResources(names[i], IsCategory(names[i])).Select(resource => resource.Name))}");
+
                     resources.AddAll(GetResources(names[i], IsCategory(names[i])));
                 }
             }
             else
             {
+                Debug.Log($"GetResources| Adding new Resource: {names[i]}");
                 resources.Add(new Resource(names[i]));
             }
         }
 
+        Debug.Log($"Resources Found: {resources}");
+
         return resources;
+    }
+
+    public static List<string> GetResourceNames(List<string> names)
+    {
+        List<Resource> resources = GetResources(names);
+
+        return resources.Select(r => r.Name).ToList();
     }
 
     override public string ToString()

@@ -6,6 +6,7 @@ using GameExtensions;
 using UnityEngine;
 using Defective.JSON;
 
+[Serializable]
 public struct MerchantData
 {
     public string Name { get; }
@@ -35,6 +36,7 @@ public struct MerchantData
         CostMargins = costMargins;
         Budget = budget;
         Description = description;
+        Debug.Log($"Merchant Rarity: {rarity}");
     }
 }
 
@@ -68,13 +70,15 @@ public class Merchant
         Name = merchantData.Name;
         Citizen = new Citizen();
         Category = new Category(merchantData.Category, merchantData.Subcategory);
-        Rarity = new Rarity(merchantData.Rarity);
+        Rarity = new Rarity(merchantData.Rarity, "Merchant Class");
         Stock = new Stock(
           merchantData.PossibleInventory, merchantData.InventorySize,
           merchantData.InventoryRefreshInterval, merchantData.CostMargins,
           merchantData.Budget, this
         );
         Description = merchantData.Description;
+
+        Debug.Log(Citizen.Name);
     }
 
     public Merchant(string name) => new Merchant(GetMerchant(name));
@@ -96,19 +100,12 @@ public class Merchant
                 for (int k = 0; k < jsonObject.list[i][j].count; k++)
                 {
                     var obj = jsonObject[i][j][k];
-                    // Debug.Log(new List<string>() { 
-                    //     obj[0].stringValue, obj[1].stringValue,
-                    //     obj[2].stringValue, obj[3].stringValue,
-                    //     string.Join(',', obj[4].list.Select(resource => resource.stringValue).ToList()),
-                    //     obj[5].intValue.ToString(), obj[6].intValue.ToString(), 
-                    //     obj[7].intValue.ToString(), obj[8].intValue.ToString(), 
-                    //     obj[9].stringValue });
-                    // Debug.Log($"Rarity: {obj[3]}");
-                    // Debug.Log(message: $"PossibleInventory: {obj[4]}");
+                    List<string> possibleInventory = obj[4].list.Select(s => s.stringValue).ToList();
+                    Debug.Log(message: $"<=^^=> Possible Inventory: {string.Join(',', possibleInventory)}");
                     var newMerchantData = new MerchantData(
                         obj[0].stringValue, obj[1].stringValue,
                         obj[2].stringValue, obj[3].stringValue,
-                        (obj[4].isNull || !obj[4].isArray)
+                        (possibleInventory == null || possibleInventory.Count == 0)
                             ? new List<string>()
                             : obj[4].list.Select(resource => resource.stringValue).ToList(),
                         obj[5].intValue, obj[6].intValue, obj[7].intValue,
@@ -299,4 +296,8 @@ public class Merchant
         return proficiencyString;
     }
 
+    override public string ToString()
+    {
+        return $"{{ Name: '{Name}', Category: '{Category.Primary}', Subcategory: '{Category.Secondary}', Rarity: '{Rarity.GetRarityText()}', Citizen Name: '{Citizen.Name}', Description: '{Description}' }}";
+    }
 }

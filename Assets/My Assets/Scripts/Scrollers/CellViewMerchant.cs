@@ -21,8 +21,10 @@ public class CellViewMerchant : CellView
     /// <summary>
     /// Links to the UI fields
     /// </summary>
-    public TMP_Text nameText;
-    public Image merchantImage;
+    public TMP_Text NameText;
+    public TMP_Text SpecializationText;
+    public Image MerchantImage;
+    public Merchant merchant;
 
     /// <summary>
     /// Override of the base class's SetData function. This links the data
@@ -36,9 +38,13 @@ public class CellViewMerchant : CellView
 
         // cast the data as MerchantCellData and store the reference
         _merchantData = data as MerchantCellData;
+        merchant = _merchantData.merchant;
+        Debug.Log(merchant.Name);
+        Debug.Log(merchant.Category.Secondary);
 
         // update the UI with the data fields
-        nameText.text = _merchantData.merchant.Name;
-        merchantImage.sprite = null; // TODO: SET CORRECT MERCHANT SPRITE
+        NameText.text = merchant.Citizen.Name;
+        SpecializationText.text = merchant.Category.Secondary;
+        MerchantImage.sprite = null; // TODO: SET CORRECT MERCHANT SPRITE
     }
 }

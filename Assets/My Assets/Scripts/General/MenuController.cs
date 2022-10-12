@@ -16,8 +16,17 @@ public class MenuController : Singleton<MenuController>
       { "Research", Menu.Research },
     };
 
+    private void Start()
+    {
+        // if (GameStartScript.gameStarted)
+        // {
+        //     ChangeMenus(Menu.Market);
+        // }
+    }
+
     public void ChangeMenus(Menu newMenu)
     {
+        // Close Currently Open Menu
         switch (menu)
         {
             case Menu.Possessions:
@@ -26,19 +35,23 @@ public class MenuController : Singleton<MenuController>
             case Menu.Seeker:
                 break;
             case Menu.Market:
+                MarketController.Instance.CloseMenu();
                 break;
             case Menu.Research:
                 break;
             default:
                 break;
         }
+        // Open New Menu
         switch (newMenu)
         {
             case Menu.Possessions:
+                PossessionsController.Instance.OpenMenu();
                 break;
             case Menu.Seeker:
                 break;
             case Menu.Market:
+                MarketController.Instance.OpenMenu();
                 break;
             case Menu.Research:
                 break;

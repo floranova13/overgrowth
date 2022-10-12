@@ -34,7 +34,9 @@ public class Stock
 
     public void SetRandomInventory()
     {
-        Inventory = Resource.GetRandomResources(InventorySize, PossibleInventory);
+        Debug.Log($"Possible Inventory: {string.Join(',', PossibleInventory)}");
+        Debug.Log($"Possible Inventory, Unpacked: {string.Join(',', Resource.GetResourceNames(PossibleInventory))}");
+        Inventory = Resource.GetRandomResources(InventorySize, Resource.GetResourceNames(PossibleInventory));
     }
 
     public int GetAdjustedPrice(Resource resource, bool isBuying)

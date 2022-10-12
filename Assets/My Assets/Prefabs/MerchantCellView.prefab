@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3181776019856209575}
   - component: {fileID: 3181776019856209573}
   - component: {fileID: 3181776019856209574}
-  - component: {fileID: 3181776019856209572}
+  - component: {fileID: 4241521967778617664}
   m_Layer: 5
   m_Name: MerchantCellView
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3181776019856209572
+--- !u!114 &4241521967778617664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,13 +89,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3181776019856209576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 439046cd459cd274ea41f12f4e6f3eee, type: 3}
+  m_Script: {fileID: 11500000, guid: 2de61d2c96707a34bbd501c7d0ca019c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellIdentifier: CellViewResource
+  cellIdentifier: Merchant
   NameText: {fileID: 3181776020732059587}
-  CellImage: {fileID: 3181776019856209574}
-  ResourceImage: {fileID: 3181776020149384672}
+  SpecializationText: {fileID: 3990994085673146451}
+  MerchantImage: {fileID: 3181776020149384672}
 --- !u!1 &3181776020149384674
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class Rarity
         rarity = rarityVal;
     }
 
-    public Rarity(string rarityVal)
+    public Rarity(string rarityVal, string origin)
     {
         if (RarityNames.Contains(rarityVal))
         {
@@ -30,7 +30,7 @@ public class Rarity
         else
         {
             rarity = 0;
-            Debug.Log($"Rarity {rarityVal} not in the list of possible Rarities!");
+            Debug.Log($"Rarity {rarityVal} not in the list of possible Rarities! Origin: {origin}");
         }
     }
 

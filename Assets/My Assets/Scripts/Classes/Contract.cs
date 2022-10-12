@@ -155,6 +155,7 @@ public class Contract
                     obj[0].stringValue, obj[1].stringValue, obj[2].stringValue,
                     obj[3].stringValue, obj[4].intValue,
                     obj[5].list.ToList().Select(numObj => numObj.intValue).ToList(),
+                    obj[6].list == null ? new List<string>() :
                     obj[6].list.ToList().Select(stringObj => stringObj.stringValue).ToList(),
                     obj[7].list == null ? new List<(Resource resource, int modifier)>() :
                     GetResourceResults(

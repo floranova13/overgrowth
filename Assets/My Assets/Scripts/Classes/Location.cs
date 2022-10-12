@@ -33,11 +33,11 @@ public class Location
 
         for (int i = 0; i < jsonObject.list.Count; i++)
         {
-            Debug.Log(jsonObject[i][3].list.Count);
             Location newLocation = new(
                 jsonObject[i][0].stringValue, jsonObject[i][1].stringValue,
                 jsonObject[i][2].intValue,
-                jsonObject[3].list.Select(result => (resource: result[0].stringValue, modifier: result[1].intValue)).ToList(),
+                jsonObject[i][3].list == null ? new List<(string resource, int modifier)>() :
+                jsonObject[i][3].list.Select(result => (resource: result[0].stringValue, modifier: result[1].intValue)).ToList(),
                 jsonObject[i][4].stringValue
                 );
             Locations.Add(newLocation);
