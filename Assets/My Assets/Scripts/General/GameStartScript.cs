@@ -8,17 +8,17 @@ public class GameStartScript : MonoBehaviour // TODO: THE HYBRID GLOBAL/INSTANCE
     public static GameStartScript r;
     public Scene startingScene;
 
-    public static bool gameStarted;
+    public static bool gameStarted = false;
 
     private void Awake()
     {
         r = this;
         if (!gameStarted)
         {
-            Debug.Log("Starting Game");
+            Debug.Log("GameStartScript - Awake| Starting Game");
             SaveLoad.Load();
 
-            DebugUtilities.CheckForMisspelledResourceNames();
+            // DebugUtilities.CheckForMisspelledResourceNames();
         }
     }
 

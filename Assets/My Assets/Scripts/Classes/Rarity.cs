@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 [Serializable]
@@ -38,10 +39,12 @@ public class Rarity
     {
         var weightList = new List<int>();
 
-        for (int j = 0; j < RarityWeights[RarityNames[rarity]] + modifier; j++)
+        for (int j = 0; j <= RarityWeights[RarityNames[rarity]] + modifier; j++)
         {
             weightList.Add(i);
         }
+
+        // Debug.Log($"Rarity - GetWeight| Weights: {string.Join(',', (weightList.Select(weight => weight.ToString()).ToList()))}");
 
         return weightList;
     }

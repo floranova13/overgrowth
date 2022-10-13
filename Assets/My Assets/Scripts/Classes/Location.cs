@@ -43,7 +43,7 @@ public class Location
             Locations.Add(newLocation);
         }
 
-        Debug.Log(message: $"Location Count: {Locations.Count}");
+        Debug.Log(message: $"Location - ReadFromJSON| Location Count: {Locations.Count}");
     }
 
     /// <summary>

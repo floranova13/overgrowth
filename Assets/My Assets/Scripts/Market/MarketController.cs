@@ -6,8 +6,8 @@ using TMPro;
 
 public class MarketController : Singleton<MarketController>
 {
-    public Merchant selectedMerchant;
-    public Resource selectedResource;
+    [HideInInspector] public Merchant selectedMerchant;
+    [HideInInspector] public Resource selectedResource;
 
     public ScrollerController MarketScrollerController;
     public GameObject MarketScroller;

@@ -169,7 +169,7 @@ public class Contract
             }
         }
 
-        Debug.Log(message: $"Contract Data Count: {contracts.Count}");
+        Debug.Log(message: $"Contract - ReadFromJSON| Contract Data Count: {contracts.Count}");
 
         return contracts;
     }

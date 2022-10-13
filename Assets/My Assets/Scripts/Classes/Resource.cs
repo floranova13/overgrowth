@@ -90,10 +90,6 @@ public class Resource
                 for (int k = 0; k < jsonObject.list[i][j].count; k++)
                 {
                     var obj = jsonObject[i][j][k];
-                    // Debug.Log(new List<string>() {
-                    //     obj[0].stringValue, obj[1].stringValue,
-                    //     obj[2].stringValue, obj[3].stringValue,
-                    //     obj[4].intValue.ToString(), obj[5].stringValue });
                     var newResourceData = new ResourceData(
                         obj[0].stringValue, obj[1].stringValue, obj[2].stringValue,
                         obj[3].stringValue, obj[4].intValue, obj[5].stringValue
@@ -211,7 +207,7 @@ public class Resource
     /// <returns>The random Resource</returns>
     public static Resource GetRandomResource(List<string> names)
     {
-        Debug.Log($"Getting Item Weights For: {string.Join(',', names)}");
+        Debug.Log($"Resource - GetRandomResource(List<string>)| Getting Item Weights For: {string.Join(',', names)}");
         List<Resource> resourceList = new();
         List<int> resourceIndexes = new();
 
@@ -221,6 +217,8 @@ public class Resource
             resourceList.Add(resource);
             resourceIndexes = resourceIndexes.Concat(resource.Rarity.GetWeight(i)).ToList();
         }
+
+        Debug.Log($"Resource - GetRandomResource| Resource Indexes: {string.Join(',', resourceIndexes)}");
 
         return resourceList[resourceIndexes.PickRandom()];
     }
@@ -403,20 +401,20 @@ public class Resource
                 }
                 else
                 {
-                    Debug.Log($"GetResources| Getting Resources From Names: {string.Join(',', names)}");
-                    Debug.Log($"GetResources| Getting These Resources: {string.Join(',', GetResources(names[i], IsCategory(names[i])).Select(resource => resource.Name))}");
+                    Debug.Log($"Resource - GetResources| Getting Resources From Names: {string.Join(',', names)}");
+                    // Debug.Log($"Resource - GetResources| Getting These Resources: {string.Join(',', GetResources(names[i], IsCategory(names[i])).Select(resource => resource.Name))}");
 
                     resources.AddAll(GetResources(names[i], IsCategory(names[i])));
                 }
             }
             else
             {
-                Debug.Log($"GetResources| Adding new Resource: {names[i]}");
+                // Debug.Log($"Resource - GetResources| Adding new Resource: {names[i]}");
                 resources.Add(new Resource(names[i]));
             }
         }
 
-        Debug.Log($"Resources Found: {resources}");
+        Debug.Log($"Resource - GetResources| Resources Found: {string.Join(',', resources.Select(resource => resource.Name))}");
 
         return resources;
     }

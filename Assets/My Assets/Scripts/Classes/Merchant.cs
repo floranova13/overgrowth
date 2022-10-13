@@ -36,7 +36,7 @@ public struct MerchantData
         CostMargins = costMargins;
         Budget = budget;
         Description = description;
-        Debug.Log($"Merchant Rarity: {rarity}");
+        // Debug.Log($"Merchant - MerchantData| Merchant Rarity: {rarity}");
     }
 }
 
@@ -65,8 +65,9 @@ public class Merchant
     // ------------------------------------------------------------------------------------------
     // ------------------------------------------------------------------------------------------
 
-    public Merchant(MerchantData merchantData)
+    public Merchant(MerchantData merchantData, string origin)
     {
+        Debug.Log($"Merchant - Merchant <Origin: {origin}| Name: {merchantData.Name}, Rarity: {merchantData.Rarity}");
         Name = merchantData.Name;
         Citizen = new Citizen();
         Category = new Category(merchantData.Category, merchantData.Subcategory);
@@ -81,9 +82,9 @@ public class Merchant
         Debug.Log(Citizen.Name);
     }
 
-    public Merchant(string name) => new Merchant(GetMerchant(name));
+    public Merchant(string name) : this(GetMerchant(name), "Merchant String Constructor") { Debug.Log("Merchant| String Constructor"); }
 
-    public Merchant() => new Merchant(MerchantInfo.PickRandom());
+    public Merchant() : this(MerchantInfo.PickRandom(), "Merchant No Argument Constructor") { Debug.Log("Merchant| No Argument Constructor"); }
 
     // Read From JSON: 
     // ------------------------------------------------------------------------------------------
@@ -101,21 +102,20 @@ public class Merchant
                 {
                     var obj = jsonObject[i][j][k];
                     List<string> possibleInventory = obj[4].list.Select(s => s.stringValue).ToList();
-                    Debug.Log(message: $"<=^^=> Possible Inventory: {string.Join(',', possibleInventory)}");
+                    Debug.Log(message: $"Merchant - ReadFromJSON| Possible Inventory: {string.Join(',', possibleInventory)}");
+                    Debug.Log(message: $"Merchant - ReadFromJSON| Rarity: {obj[3].stringValue}");
                     var newMerchantData = new MerchantData(
                         obj[0].stringValue, obj[1].stringValue,
                         obj[2].stringValue, obj[3].stringValue,
-                        (possibleInventory == null || possibleInventory.Count == 0)
-                            ? new List<string>()
-                            : obj[4].list.Select(resource => resource.stringValue).ToList(),
+                        (possibleInventory == null || possibleInventory.Count == 0) ? new List<string>() : possibleInventory,
                         obj[5].intValue, obj[6].intValue, obj[7].intValue,
                         obj[8].intValue, obj[9].stringValue
-                        );
+                    );
                     merchants.Add(newMerchantData);
                 }
             }
         }
-        Debug.Log($"Merchant Data Count: {merchants.Count}");
+        Debug.Log($"Merchant - ReadFromJSON| Merchant Data Count: {merchants.Count}");
         return merchants;
     }
 
@@ -150,7 +150,15 @@ public class Merchant
     // X: 
     // ------------------------------------------------------------------------------------------
 
-    public static MerchantData GetMerchant(string name) => MerchantInfo.First(merchant => merchant.Name == name);
+    public static MerchantData GetMerchant(string name)
+    {
+        List<MerchantData> foundMerchants = MerchantInfo.Where(merchant => merchant.Name == name).ToList();
+
+        Debug.Log($"Merchant - GetMerchant| Merchant Name To Find By: {name}");
+        Debug.Log($"Merchant - GetMerchant| Merchants Found: {foundMerchants.Count}");
+
+        return foundMerchants[0];
+    }
 
     public static List<MerchantData> GetMerchants(string category)
     {
@@ -188,34 +196,35 @@ public class Merchant
     /// <returns>The random Merchant</returns>
     public static Merchant GetRandomMerchant()
     {
-        List<Merchant> merchantList = new();
+        Debug.Log($"Merchant - MerchantInfo| Trying to get random Merchant");
+        List<MerchantData> merchantList = new();
         List<int> merchantIndexes = new();
 
         for (int i = 0; i < MerchantInfo.Count; i++)
         {
-            Merchant merchant = new(MerchantInfo[i].Subcategory);
-            merchantList.Add(merchant);
-            merchantIndexes = merchantIndexes.Concat(merchant.Rarity.GetWeight(i)).ToList();
+            merchantList.Add(MerchantInfo[i]);
+            merchantIndexes = merchantIndexes.Concat(new Rarity(MerchantInfo[i].Rarity, "Merchant - GetRandomMerchant").GetWeight(i)).ToList();
         }
 
-        return merchantList[merchantIndexes.PickRandom()];
+        return new Merchant(merchantList[merchantIndexes.PickRandom()], "Merchant GetRandomMerchant()");
     }
 
     /// <summary>
-    /// Gets a random Resource from a list of possible resources, decided by the weighted rarities.
+    /// Gets a random Merchant from a list of possible Merchants, decided by the weighted rarities.
     /// </summary>
     /// <returns>The random Resource</returns>
     public static Merchant GetRandomMerchant(List<string> labels)
     {
-        List<Merchant> merchantList = GetMerchantNames(labels).Select(merchant => new Merchant(GetMerchant(merchant))).ToList();
         List<int> merchantIndexes = new();
 
-        for (int i = 0; i < merchantList.Count; i++)
+        for (int i = 0; i < MerchantInfo.Count; i++)
         {
-            merchantIndexes = merchantIndexes.Concat(merchantList[i].Rarity.GetWeight(i)).ToList();
+            merchantIndexes =
+                merchantIndexes.Concat(new Rarity(MerchantInfo[i].Rarity, "Merchant - GetRandomMerchant").GetWeight(i).ToList())
+                .ToList();
         }
 
-        return merchantList[merchantIndexes.PickRandom()];
+        return new Merchant(MerchantInfo[merchantIndexes.PickRandom()], "Merchant GetRandomMerchant(List<string>)");
     }
 
     /// <summary>

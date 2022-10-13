@@ -21,7 +21,7 @@ public static class SaveLoad
 
     public static void Save()
     {
-        Debug.Log("Trying to Save");
+        Debug.Log("SaveLoad - Save| Trying to Save");
         GameSave save = GameSave.s;
         BinaryFormatter bf = new();
         if (!Directory.Exists(path))
