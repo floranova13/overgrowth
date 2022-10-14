@@ -24,7 +24,7 @@ public class CellViewMerchant : CellView
     public TMP_Text NameText;
     public TMP_Text SpecializationText;
     public Image MerchantImage;
-    public Merchant merchant;
+    [HideInInspector] public Merchant merchant;
 
     /// <summary>
     /// Override of the base class's SetData function. This links the data
@@ -39,8 +39,8 @@ public class CellViewMerchant : CellView
         // cast the data as MerchantCellData and store the reference
         _merchantData = data as MerchantCellData;
         merchant = _merchantData.merchant;
-        Debug.Log(merchant.Name);
-        Debug.Log(merchant.Category.Secondary);
+        Debug.Log($"CellViewMerchant - SetData| {merchant.Name}");
+        Debug.Log($"CellViewMerchant - SetData| {merchant.Category.Secondary}");
 
         // update the UI with the data fields
         NameText.text = merchant.Citizen.Name;

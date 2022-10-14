@@ -65,9 +65,10 @@ public class Merchant
     // ------------------------------------------------------------------------------------------
     // ------------------------------------------------------------------------------------------
 
-    public Merchant(MerchantData merchantData, string origin)
+    public Merchant(MerchantData merchantData)
     {
-        Debug.Log($"Merchant - Merchant <Origin: {origin}| Name: {merchantData.Name}, Rarity: {merchantData.Rarity}");
+        if(merchantData.Name == null) return;
+        Debug.Log($"Merchant - Merchant| Name: {merchantData.Name}, Rarity: {merchantData.Rarity}");
         Name = merchantData.Name;
         Citizen = new Citizen();
         Category = new Category(merchantData.Category, merchantData.Subcategory);
@@ -78,13 +79,43 @@ public class Merchant
           merchantData.Budget, this
         );
         Description = merchantData.Description;
-
-        Debug.Log(Citizen.Name);
     }
 
-    public Merchant(string name) : this(GetMerchant(name), "Merchant String Constructor") { Debug.Log("Merchant| String Constructor"); }
+    public Merchant(string name) : this(GetMerchant(name)) {}
+    // {
+    //     Debug.Log("Merchant| String Constructor");
+    //     MerchantData merchantData = GetMerchant(name);
+    //     Name = merchantData.Name;
+    //     Citizen = new Citizen();
+    //     Category = new Category(merchantData.Category, merchantData.Subcategory);
+    //     Rarity = new Rarity(merchantData.Rarity, "Merchant()");
+    //     Stock = new Stock(
+    //       merchantData.PossibleInventory, merchantData.InventorySize,
+    //       merchantData.InventoryRefreshInterval, merchantData.CostMargins,
+    //       merchantData.Budget, this
+    //     );
+    //     Description = merchantData.Description;
+    // }
 
-    public Merchant() : this(MerchantInfo.PickRandom(), "Merchant No Argument Constructor") { Debug.Log("Merchant| No Argument Constructor"); }
+    public Merchant() : this(MerchantInfo.PickRandom()) {}
+    // {
+    //     if (!GameStartScript.gameStarted) return;
+    //     Debug.Log("Merchant| No Argument Constructor");
+    //     MerchantData merchantData = MerchantInfo.PickRandom();
+
+
+
+    //     Name = merchantData.Name;
+    //     Citizen = new Citizen();
+    //     Category = new Category(merchantData.Category, merchantData.Subcategory);
+    //     Rarity = new Rarity(merchantData.Rarity, "Merchant()");
+    //     Stock = new Stock(
+    //       merchantData.PossibleInventory, merchantData.InventorySize,
+    //       merchantData.InventoryRefreshInterval, merchantData.CostMargins,
+    //       merchantData.Budget, this
+    //     );
+    //     Description = merchantData.Description;
+    // }
 
     // Read From JSON: 
     // ------------------------------------------------------------------------------------------
@@ -206,7 +237,10 @@ public class Merchant
             merchantIndexes = merchantIndexes.Concat(new Rarity(MerchantInfo[i].Rarity, "Merchant - GetRandomMerchant").GetWeight(i)).ToList();
         }
 
-        return new Merchant(merchantList[merchantIndexes.PickRandom()], "Merchant GetRandomMerchant()");
+        int randomIndex = merchantIndexes.PickRandom();
+        Debug.Log($"Merchant - GetRandomMerchant| {randomIndex}");
+
+        return new Merchant(merchantList[randomIndex]);
     }
 
     /// <summary>
@@ -224,7 +258,7 @@ public class Merchant
                 .ToList();
         }
 
-        return new Merchant(MerchantInfo[merchantIndexes.PickRandom()], "Merchant GetRandomMerchant(List<string>)");
+        return new Merchant(MerchantInfo[merchantIndexes.PickRandom()]);
     }
 
     /// <summary>
@@ -307,6 +341,7 @@ public class Merchant
 
     override public string ToString()
     {
+        if (Name == null) return "Merchant - ToString| Merchant Not Initialized";
         return $"{{ Name: '{Name}', Category: '{Category.Primary}', Subcategory: '{Category.Secondary}', Rarity: '{Rarity.GetRarityText()}', Citizen Name: '{Citizen.Name}', Description: '{Description}' }}";
     }
 }

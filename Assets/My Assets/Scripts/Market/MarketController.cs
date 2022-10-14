@@ -10,7 +10,6 @@ public class MarketController : Singleton<MarketController>
     [HideInInspector] public Resource selectedResource;
 
     public ScrollerController MarketScrollerController;
-    public GameObject MarketScroller;
     public GameObject MerchantInfoCanvas;
     public GameObject InventoryInfoCanvas;
 
@@ -118,11 +117,16 @@ public class MarketController : Singleton<MarketController>
 
     public void OpenMenu()
     {
+        MarketCanvas.gameObject.SetActive(true);
         MarketMenuButton.interactable = false;
         Reset();
         InventoryInfoCanvas.gameObject.SetActive(false);
         MerchantInfoCanvas.gameObject.SetActive(true);
-        MarketCanvas.gameObject.SetActive(true);
+        StartCoroutine(DelayedRefresh());
+    }
+
+    private IEnumerator DelayedRefresh() {
+        yield return new WaitForSeconds(0.05f);
         MarketScrollerController.RefreshScroller("Merchants");
     }
 

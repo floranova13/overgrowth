@@ -7,6 +7,7 @@ using TMPro;
 public class PossessionsController : Singleton<PossessionsController>
 {
     public Resource selectedResource;
+    public ScrollerController ScrollerController;
 
     public TMP_Text ResourceNameText;
     public TMP_Text ResourceCategoryText;
@@ -30,6 +31,11 @@ public class PossessionsController : Singleton<PossessionsController>
     private void Reset()
     {
         selectedResource = null;
+        ClearResourceInfo();
+    }
+
+    private void ClearResourceInfo()
+    {
         ResourceNameText.text = "";
         ResourceCategoryText.text = "";
         ResourceSubcategoryText.text = "";
@@ -58,9 +64,16 @@ public class PossessionsController : Singleton<PossessionsController>
 
     public void OpenMenu()
     {
+        PossessionsCanvas.gameObject.SetActive(true);
         PossessionsMenuButton.interactable = false;
         Reset();
-        PossessionsCanvas.gameObject.SetActive(true);
+        StartCoroutine(DelayedRefresh());
+    }
+
+    private IEnumerator DelayedRefresh()
+    {
+        yield return new WaitForSeconds(0.05f);
+        ScrollerController.RefreshScroller("Possessions");
     }
 
     public void CloseMenu()

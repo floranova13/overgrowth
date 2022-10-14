@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using UnityEngine;
 
 namespace GameExtensions
 {
@@ -202,7 +203,7 @@ namespace GameExtensions
                 }
             }
         }
-                // Add All:
+        // Add All:
         // ------------------------------------------------------------------------------------------
         /// <summary>
         /// Add a list of Resource modifier tuples to another list of tuples, either by adding a new tuple or by
@@ -274,8 +275,8 @@ namespace GameExtensions
         /// <returns>True if the check passes, False otherwise</returns>
         public static bool PercentChance(this int val)
         {
-            Random rnd = new Random();
-            return (rnd.Next(0, 100) < val);
+            System.Random rnd = new();
+            return rnd.Next(0, 100) < val;
         }
 
         /// <summary>
@@ -285,7 +286,7 @@ namespace GameExtensions
         /// <returns>True if the check passes, False otherwise</returns>
         public static bool PercentChance(this float val)
         {
-            Random rnd = new();
+            System.Random rnd = new();
             if (val == 0)
             {
                 return false;
@@ -306,10 +307,11 @@ namespace GameExtensions
         /// <returns>A random element or default value</returns>
         public static T PickRandom<T>(this List<T> source)
         {
-            System.Random rnd = new System.Random();
+            System.Random rnd = new();
             if (source == null || source.Count == 0)
             {
-                return default(T);
+                Debug.Log($"GameExtensions - PickRandom| Source is null or the count is 0");
+                return default;
             }
             return source[rnd.Next(0, source.Count)];
         }
@@ -345,7 +347,7 @@ namespace GameExtensions
         /// <param name="list">The same list, only shuffled.</param>
         public static void Shuffle<T>(this IList<T> list)
         {
-            Random rnd = new();
+            System.Random rnd = new();
             int n = list.Count;
             while (n > 1)
             {

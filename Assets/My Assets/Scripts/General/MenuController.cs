@@ -42,6 +42,7 @@ public class MenuController : Singleton<MenuController>
             default:
                 break;
         }
+        menu = newMenu;
         // Open New Menu
         switch (newMenu)
         {
@@ -62,6 +63,7 @@ public class MenuController : Singleton<MenuController>
 
     public void ChangeMenus(string newMenu)
     {
+        Debug.Log($"MenuController - ChangeMenus(string)| Changing To Menu: {newMenu}");
         ChangeMenus(MenuDict[newMenu]);
     }
 }

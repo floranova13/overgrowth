@@ -65,20 +65,24 @@ public class GameSave
         // Economy:
         // ------------------------------------------------------------------------------------------
         merchants = new List<Merchant>();
-        // for (int i = 0; i < INITIAL_MERCHANT_COUNT; i++)
-        // {
-        //     Merchant newMerchant = new();
-        //     Debug.Log($"GameSave| Creating new Merchant: {newMerchant}");
-        //     merchants.Add(newMerchant);
-
-        // }
-
-        Debug.Log($"GameSave| Merchants: {merchants.Count}");
+        for (int i = 0; i < INITIAL_MERCHANT_COUNT; i++)
+        {
+            Merchant newMerchant = new();
+            // Debug.Log($"GameSave| Merchant Info Count: {Merchant.MerchantInfo.Count}");
+            // Debug.Log($"GameSave| Creating new Merchant: {newMerchant.Name}");
+            merchants.Add(newMerchant);
+        }
 
         // X:
         // ------------------------------------------------------------------------------------------
         Debug.Log("GameSave| Game Save Created");
+
+
+        Debug.Log($"GameSave| Merchants: {merchants.Count}");
+
+        MenuController.Instance.ChangeMenus(Menu.Market);
+        BlockScript.Initialize();
         GameStartScript.gameStarted = true;
-        // MenuController.Instance.ChangeMenus(Menu.Market);
+
     }
 }

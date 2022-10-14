@@ -17,7 +17,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     /// This is our scroller we will be a delegate for
     /// </summary>
     public EnhancedScroller scroller;
-    public string ScrollerType;
+    [HideInInspector]public string ScrollerType;
 
     public EnhancedScrollerCellView ResourceCellViewPrefab;
     public EnhancedScrollerCellView MerchantCellViewPrefab;
@@ -97,7 +97,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     /// <returns>The number of cells</returns>
     public int GetNumberOfCells(EnhancedScroller scroller)
     {
-        // in this example, we just pass the number of our data elements
+        if(_data == null) return 0;
         return _data.Count;
     }
 

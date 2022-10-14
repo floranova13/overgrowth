@@ -24,7 +24,7 @@ public static class BlockScript
 
     // Initialize: 
     // ------------------------------------------------------------------------------------------
-    private static void Initialize()
+    public static void Initialize()
     {
         blocks = new List<string>();
         initialized = true;
