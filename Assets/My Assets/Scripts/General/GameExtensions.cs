@@ -368,7 +368,7 @@ public enum Scene
 
 public enum Menu
 {
-    Possessions, Seeker, Market, Research
+    Possessions, Seeker, Market, Research, None
 }
 
 public enum Gender

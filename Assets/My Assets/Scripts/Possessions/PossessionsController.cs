@@ -17,7 +17,7 @@ public class PossessionsController : Singleton<PossessionsController>
     public TMP_Text ResourcePriceText;
     public TMP_Text ResourceDescriptionText;
 
-    public Canvas PossessionsCanvas;
+    public GameObject PossessionsCanvas;
 
     public Button PossessionsMenuButton;
 
@@ -64,20 +64,31 @@ public class PossessionsController : Singleton<PossessionsController>
 
     public void OpenMenu()
     {
-        PossessionsCanvas.gameObject.SetActive(true);
+        Debug.Log("PossessionsController - OpenMenu| Opening Possessions Menu");
+        PossessionsCanvas.SetActive(true);
         PossessionsMenuButton.interactable = false;
         Reset();
-        StartCoroutine(DelayedRefresh());
-    }
-
-    private IEnumerator DelayedRefresh()
-    {
-        yield return new WaitForSeconds(0.05f);
-        ScrollerController.RefreshScroller("Possessions");
+        StartCoroutine(OpenOrCloseCoroutine());
     }
 
     public void CloseMenu()
     {
-        PossessionsCanvas.gameObject.SetActive(false);
+        StartCoroutine(OpenOrCloseCoroutine(false));
+    }
+
+    private IEnumerator OpenOrCloseCoroutine(bool open = true)
+    {
+        float delay = 0.1f;
+        if (open)
+        {
+            yield return new WaitForSeconds(delay);
+            ScrollerController.RefreshScroller("Resources");
+        }
+        else
+        {
+            ScrollerController.RefreshScroller(newType: "");
+            yield return new WaitForSeconds(delay);
+            PossessionsCanvas.SetActive(false);
+        }
     }
 }

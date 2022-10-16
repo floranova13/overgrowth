@@ -82,40 +82,8 @@ public class Merchant
     }
 
     public Merchant(string name) : this(GetMerchant(name)) {}
-    // {
-    //     Debug.Log("Merchant| String Constructor");
-    //     MerchantData merchantData = GetMerchant(name);
-    //     Name = merchantData.Name;
-    //     Citizen = new Citizen();
-    //     Category = new Category(merchantData.Category, merchantData.Subcategory);
-    //     Rarity = new Rarity(merchantData.Rarity, "Merchant()");
-    //     Stock = new Stock(
-    //       merchantData.PossibleInventory, merchantData.InventorySize,
-    //       merchantData.InventoryRefreshInterval, merchantData.CostMargins,
-    //       merchantData.Budget, this
-    //     );
-    //     Description = merchantData.Description;
-    // }
 
     public Merchant() : this(MerchantInfo.PickRandom()) {}
-    // {
-    //     if (!GameStartScript.gameStarted) return;
-    //     Debug.Log("Merchant| No Argument Constructor");
-    //     MerchantData merchantData = MerchantInfo.PickRandom();
-
-
-
-    //     Name = merchantData.Name;
-    //     Citizen = new Citizen();
-    //     Category = new Category(merchantData.Category, merchantData.Subcategory);
-    //     Rarity = new Rarity(merchantData.Rarity, "Merchant()");
-    //     Stock = new Stock(
-    //       merchantData.PossibleInventory, merchantData.InventorySize,
-    //       merchantData.InventoryRefreshInterval, merchantData.CostMargins,
-    //       merchantData.Budget, this
-    //     );
-    //     Description = merchantData.Description;
-    // }
 
     // Read From JSON: 
     // ------------------------------------------------------------------------------------------

@@ -17,7 +17,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     /// This is our scroller we will be a delegate for
     /// </summary>
     public EnhancedScroller scroller;
-    [HideInInspector]public string ScrollerType;
+    [HideInInspector] private string ScrollerType;
 
     public EnhancedScrollerCellView ResourceCellViewPrefab;
     public EnhancedScrollerCellView MerchantCellViewPrefab;
@@ -49,6 +49,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
         switch (ScrollerType)
         {
             case "":
+                scroller.ClearAll();
                 break;
             case "Resources":
                 for (int i = 0; i < GameSave.s.resources.Count; i++)
@@ -57,7 +58,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
                 }
                 break;
             case "Merchants":
-                Debug.Log($"Populating Scroller: {GameSave.s.merchants.Count}");
+                // Debug.Log($"Populating Scroller: {GameSave.s.merchants.Count}");
                 for (int i = 0; i < GameSave.s.merchants.Count; i++)
                 {
                     _data.Add(new MerchantCellData() { merchant = GameSave.s.merchants[i] });
@@ -82,8 +83,6 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
                 break;
         }
 
-
-
         // tell the scroller to reload now that we have the data
         scroller.ReloadData();
     }
@@ -97,7 +96,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     /// <returns>The number of cells</returns>
     public int GetNumberOfCells(EnhancedScroller scroller)
     {
-        if(_data == null) return 0;
+        if (_data == null) return 0;
         return _data.Count;
     }
 

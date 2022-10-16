@@ -28,7 +28,7 @@ public class MarketController : Singleton<MarketController>
     public TMP_Text ResourcePriceText;
     public TMP_Text ResourceDescriptionText;
 
-    public Canvas MarketCanvas;
+    public GameObject MarketCanvas;
 
     public Button MarketMenuButton;
 
@@ -117,21 +117,33 @@ public class MarketController : Singleton<MarketController>
 
     public void OpenMenu()
     {
-        MarketCanvas.gameObject.SetActive(true);
+        Debug.Log("MarketController - OpenMenu| Opening Market Menu");
         MarketMenuButton.interactable = false;
+        MarketCanvas.SetActive(true);
         Reset();
-        InventoryInfoCanvas.gameObject.SetActive(false);
-        MerchantInfoCanvas.gameObject.SetActive(true);
-        StartCoroutine(DelayedRefresh());
-    }
-
-    private IEnumerator DelayedRefresh() {
-        yield return new WaitForSeconds(0.05f);
-        MarketScrollerController.RefreshScroller("Merchants");
+        InventoryInfoCanvas.SetActive(false);
+        MerchantInfoCanvas.SetActive(true);
+        StartCoroutine(OpenOrCloseCoroutine());
     }
 
     public void CloseMenu()
     {
-        MarketCanvas.gameObject.SetActive(false);
+        StartCoroutine(OpenOrCloseCoroutine(false));
+    }
+
+    private IEnumerator OpenOrCloseCoroutine(bool open = true)
+    {
+        float delay = 0.1f;
+        if (open)
+        {
+            yield return new WaitForSeconds(delay);
+            MarketScrollerController.RefreshScroller("Merchants");
+        }
+        else
+        {
+            MarketScrollerController.RefreshScroller(newType: "");
+            yield return new WaitForSeconds(delay);
+            MarketCanvas.SetActive(false);
+        }
     }
 }

@@ -14,18 +14,28 @@ public class MenuController : Singleton<MenuController>
       { "Seeker", Menu.Seeker },
       { "Market", Menu.Market },
       { "Research", Menu.Research },
+      { "None", Menu.None },
+      { "", Menu.None },
     };
 
     private void Start()
     {
-        // if (GameStartScript.gameStarted)
-        // {
-        //     ChangeMenus(Menu.Market);
-        // }
     }
 
     public void ChangeMenus(Menu newMenu)
     {
+        StartCoroutine(ChangeMenuCoroutine(newMenu));
+    }
+
+    public void ChangeMenus(string newMenu)
+    {
+        Debug.Log($"MenuController - ChangeMenus(string)| Changing To Menu: {newMenu}");
+        ChangeMenus(MenuDict[newMenu]);
+    }
+
+    public IEnumerator ChangeMenuCoroutine(Menu newMenu)
+    {
+        float menuChangeDelay = 0.25f;
         // Close Currently Open Menu
         switch (menu)
         {
@@ -43,6 +53,7 @@ public class MenuController : Singleton<MenuController>
                 break;
         }
         menu = newMenu;
+        yield return new WaitForSeconds(menuChangeDelay);
         // Open New Menu
         switch (newMenu)
         {
@@ -59,11 +70,5 @@ public class MenuController : Singleton<MenuController>
             default:
                 break;
         }
-    }
-
-    public void ChangeMenus(string newMenu)
-    {
-        Debug.Log($"MenuController - ChangeMenus(string)| Changing To Menu: {newMenu}");
-        ChangeMenus(MenuDict[newMenu]);
     }
 }

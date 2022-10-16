@@ -39,12 +39,11 @@ public class CellViewMerchant : CellView
         // cast the data as MerchantCellData and store the reference
         _merchantData = data as MerchantCellData;
         merchant = _merchantData.merchant;
-        Debug.Log($"CellViewMerchant - SetData| {merchant.Name}");
-        Debug.Log($"CellViewMerchant - SetData| {merchant.Category.Secondary}");
+        // Debug.Log($"CellViewMerchant - SetData| {merchant.Name}");
+        // Debug.Log($"CellViewMerchant - SetData| {merchant.Category.Secondary}");
 
-        // update the UI with the data fields
         NameText.text = merchant.Citizen.Name;
-        SpecializationText.text = merchant.Category.Secondary;
+        SpecializationText.text = merchant.Name;
         MerchantImage.sprite = null; // TODO: SET CORRECT MERCHANT SPRITE
     }
 }

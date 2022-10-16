@@ -207,7 +207,7 @@ public class Resource
     /// <returns>The random Resource</returns>
     public static Resource GetRandomResource(List<string> names)
     {
-        Debug.Log($"Resource - GetRandomResource(List<string>)| Getting Item Weights For: {string.Join(',', names)}");
+        // Debug.Log($"Resource - GetRandomResource(List<string>)| Getting Item Weights For: {string.Join(',', names)}");
         List<Resource> resourceList = new();
         List<int> resourceIndexes = new();
 
@@ -218,7 +218,7 @@ public class Resource
             resourceIndexes = resourceIndexes.Concat(resource.Rarity.GetWeight(i)).ToList();
         }
 
-        Debug.Log($"Resource - GetRandomResource| Resource Indexes: {string.Join(',', resourceIndexes)}");
+        // Debug.Log($"Resource - GetRandomResource| Resource Indexes: {string.Join(',', resourceIndexes)}");
 
         return resourceList[resourceIndexes.PickRandom()];
     }
@@ -414,7 +414,7 @@ public class Resource
             }
         }
 
-        Debug.Log($"Resource - GetResources| Resources Found: {string.Join(',', resources.Select(resource => resource.Name))}");
+        // Debug.Log($"Resource - GetResources| Resources Found: {string.Join(',', resources.Select(resource => resource.Name))}");
 
         return resources;
     }
