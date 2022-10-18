@@ -16,7 +16,6 @@ public class CellViewMerchant : CellView
     /// By referencing the row data, we can save some time accessing
     /// the fields.
     /// </summary>
-    private MerchantCellData _merchantData;
 
     /// <summary>
     /// Links to the UI fields
@@ -35,10 +34,7 @@ public class CellViewMerchant : CellView
     {
         // call the base SetData to link to the underlying _data
         base.SetData(data);
-
-        // cast the data as MerchantCellData and store the reference
-        _merchantData = data as MerchantCellData;
-        merchant = _merchantData.merchant;
+        merchant = (data as MerchantCellData).merchant;
         // Debug.Log($"CellViewMerchant - SetData| {merchant.Name}");
         // Debug.Log($"CellViewMerchant - SetData| {merchant.Category.Secondary}");
 

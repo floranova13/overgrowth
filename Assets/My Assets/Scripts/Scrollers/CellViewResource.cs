@@ -18,7 +18,6 @@ public class CellViewResource : CellView
     /// By referencing the row data, we can save some time accessing
     /// the fields.
     /// </summary>
-    private ResourceCellData _resourceData;
 
     /// <summary>
     /// Links to the UI fields
@@ -49,10 +48,9 @@ public class CellViewResource : CellView
         // call the base SetData to link to the underlying _data
         base.SetData(data);
         // cast the data as rowData and store the reference
-        _resourceData = data as ResourceCellData;
-        resource = _resourceData.resource;
-        CellImage.color = colorDict[_resourceData.resource.Rarity.GetRarityText()];
-        NameText.text = _resourceData.resource.Name;
-        ResourceImage.sprite = ResourceUtilities.Instance.GetBaseResourceSprite(_resourceData.resource.Name);
+        resource = (data as ResourceCellData).resource;
+        CellImage.color = colorDict[resource.Rarity.GetRarityText()];
+        NameText.text = resource.Name;
+        ResourceImage.sprite = ResourceUtilities.Instance.GetBaseResourceSprite(resource.Name);
     }
 }

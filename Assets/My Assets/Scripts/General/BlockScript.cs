@@ -44,10 +44,9 @@ public static class BlockScript
             bool unblockedCheck = blocks.Where(x => x == blockName).ToList().Count == 0;
             if (!unblockedCheck)
             {
-                Debug.Log("Input Blocked, Block '" + blockName + "' Present");
+                Debug.Log($"Input Blocked, Block '{blockName}' Present");
             }
             return unblockedCheck;
-            //return blocks.Where(x => x == blockName).ToList().Count == 0;
         }
         if (blocks.Count != 0)
         {

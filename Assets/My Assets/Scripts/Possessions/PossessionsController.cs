@@ -25,7 +25,6 @@ public class PossessionsController : Singleton<PossessionsController>
     // Start is called before the first frame update
     void Start()
     {
-        Reset();
     }
 
     private void Reset()
@@ -66,7 +65,6 @@ public class PossessionsController : Singleton<PossessionsController>
     {
         Debug.Log("PossessionsController - OpenMenu| Opening Possessions Menu");
         PossessionsCanvas.SetActive(true);
-        PossessionsMenuButton.interactable = false;
         Reset();
         StartCoroutine(OpenOrCloseCoroutine());
     }
@@ -86,7 +84,7 @@ public class PossessionsController : Singleton<PossessionsController>
         }
         else
         {
-            ScrollerController.RefreshScroller(newType: "");
+            ScrollerController.RefreshScroller("");
             yield return new WaitForSeconds(delay);
             PossessionsCanvas.SetActive(false);
         }

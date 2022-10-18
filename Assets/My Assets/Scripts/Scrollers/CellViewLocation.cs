@@ -16,7 +16,7 @@ public class CellViewLocation : CellView
     /// By referencing the row data, we can save some time accessing
     /// the fields.
     /// </summary>
-    private LocationCellData _locationData;
+    public Location location;
 
     /// <summary>
     /// Links to the UI fields
@@ -35,10 +35,10 @@ public class CellViewLocation : CellView
         base.SetData(data);
 
         // cast the data as LocationCellData and store the reference
-        _locationData = data as LocationCellData;
+        location = (data as LocationCellData).location;
 
         // update the UI with the data fields
-        locationText.text = _locationData.location.Name;
+        locationText.text = location.Name;
         locationImage.sprite = null; // TODO: SET CORRECT LOCATION SPRITE
     }
 }

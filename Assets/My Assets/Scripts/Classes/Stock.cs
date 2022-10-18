@@ -34,8 +34,8 @@ public class Stock
 
     public void SetRandomInventory()
     {
-        Debug.Log($"Stock - SetRandomInventory| Possible Inventory: {string.Join(',', PossibleInventory)}");
-        Debug.Log($"Stock - SetRandomInventory| Possible Inventory, Unpacked: {string.Join(',', Resource.GetResourceNames(PossibleInventory))}");
+        // Debug.Log($"Stock - SetRandomInventory| Possible Inventory: {string.Join(',', PossibleInventory)}");
+        // Debug.Log($"Stock - SetRandomInventory| Possible Inventory, Unpacked: {string.Join(',', Resource.GetResourceNames(PossibleInventory))}");
         Inventory = Resource.GetRandomResources(InventorySize, Resource.GetResourceNames(PossibleInventory));
     }
 

@@ -36,11 +36,11 @@ public class MarketController : Singleton<MarketController>
     // Start is called before the first frame update
     void Start()
     {
-        Reset();
     }
 
     private void Reset()
     {
+        Debug.Log("MarketController - Reset| Resetting");
         selectedMerchant = null;
         selectedResource = null;
         ClearMerchantInfo();
@@ -49,6 +49,7 @@ public class MarketController : Singleton<MarketController>
 
     public void ClearMerchantInfo()
     {
+        Debug.Log("MarketController - ClearMerchantInfo| Clearing Merchant Info");
         MerchantNameText.text = "";
         MerchantCategoryText.text = "";
         MerchantSubcategoryText.text = "";
@@ -60,6 +61,7 @@ public class MarketController : Singleton<MarketController>
 
     public void ClearResourceInfo()
     {
+        Debug.Log("MarketController - ClearResourceInfo| Clearing Resource Info");
         ResourceNameText.text = "";
         ResourceCategoryText.text = "";
         ResourceSubcategoryText.text = "";
@@ -118,7 +120,6 @@ public class MarketController : Singleton<MarketController>
     public void OpenMenu()
     {
         Debug.Log("MarketController - OpenMenu| Opening Market Menu");
-        MarketMenuButton.interactable = false;
         MarketCanvas.SetActive(true);
         Reset();
         InventoryInfoCanvas.SetActive(false);
@@ -141,7 +142,7 @@ public class MarketController : Singleton<MarketController>
         }
         else
         {
-            MarketScrollerController.RefreshScroller(newType: "");
+            MarketScrollerController.RefreshScroller("");
             yield return new WaitForSeconds(delay);
             MarketCanvas.SetActive(false);
         }

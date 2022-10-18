@@ -16,12 +16,12 @@ public class CellViewText : CellView
     /// By referencing the header data, we can save some time accessing
     /// the fields.
     /// </summary>
-    private TextCellData _textData;
 
     /// <summary>
     /// A link to the Unity UI Text object to show the category
     /// </summary>
-    public TMP_Text text;
+    public string text;
+    public TMP_Text labelText;
 
     /// <summary>
     /// Override of the base class's SetData function. This links the data
@@ -34,9 +34,9 @@ public class CellViewText : CellView
         base.SetData(data);
 
         // cast the data as headerData and store the reference
-        _textData = data as TextCellData;
+        text = (data as TextCellData).label;
 
         // update the Category UI Text field with the data
-        text.text = _textData.label;
+        labelText.text = text;
     }
 }

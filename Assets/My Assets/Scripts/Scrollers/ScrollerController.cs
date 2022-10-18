@@ -27,7 +27,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     public void RefreshScroller(string newType = "")
     {
         ScrollerType = newType;
-        LoadData(ScrollerType);
+        StartCoroutine(LoadData(ScrollerType));
     }
 
     void Start()
@@ -39,8 +39,10 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     /// <summary>
     /// Populates the data with a lot of records
     /// </summary>
-    private void LoadData(string ScrollerType = "")
+    private IEnumerator LoadData(string ScrollerType = "")
     {
+        float delay = 0.05f;
+        float betweenDelay = 0.01f;
         // create some data
         // note we are using different data class fields for the header, row, and footer rows. This works due to polymorphism.
 
@@ -55,6 +57,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
                 for (int i = 0; i < GameSave.s.resources.Count; i++)
                 {
                     _data.Add(new ResourceCellData() { resource = GameSave.s.resources[i] });
+                    yield return new WaitForSeconds(betweenDelay);
                 }
                 break;
             case "Merchants":
@@ -62,6 +65,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
                 for (int i = 0; i < GameSave.s.merchants.Count; i++)
                 {
                     _data.Add(new MerchantCellData() { merchant = GameSave.s.merchants[i] });
+                    yield return new WaitForSeconds(betweenDelay);
                 }
                 break;
             case "Merchant Inventory":
@@ -73,17 +77,21 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
                 for (int i = 0; i < merchantInventory.Count; i++)
                 {
                     _data.Add(new ResourceCellData() { resource = merchantInventory[i] });
+                    yield return new WaitForSeconds(betweenDelay);
                 }
                 break;
             default:
                 for (int i = 0; i < Resource.ResourceInfo.Count; i++)
                 {
                     _data.Add(new ResourceCellData() { resource = new Resource(Resource.ResourceInfo[i]) });
+                    yield return new WaitForSeconds(betweenDelay);
                 }
                 break;
         }
+        yield return new WaitForSeconds(delay);
 
         // tell the scroller to reload now that we have the data
+        scroller.Delegate = this;
         scroller.ReloadData();
     }
 
@@ -143,7 +151,7 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     {
         CellView cellView;
 
-        // determin what cell view to get based on the type of the data row
+        // determine what cell view to get based on the type of the data
 
         if (_data[dataIndex] is ResourceCellData)
         {

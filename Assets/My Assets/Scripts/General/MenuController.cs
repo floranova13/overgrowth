@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 public class MenuController : Singleton<MenuController>
 {
-    public Menu menu;
+    [HideInInspector] public Menu menu = Menu.None;
 
     public static Dictionary<string, Menu> MenuDict = new() {
       { "Possessions", Menu.Possessions },
@@ -18,25 +18,37 @@ public class MenuController : Singleton<MenuController>
       { "", Menu.None },
     };
 
+    private void Awake()
+    {
+    }
+
     private void Start()
     {
     }
 
     public void ChangeMenus(Menu newMenu)
     {
-        StartCoroutine(ChangeMenuCoroutine(newMenu));
+        if (BlockScript.Unblocked())
+        {
+            BlockScript.Add("Changing Menu");
+            StartCoroutine(ChangeMenuCoroutine(newMenu));
+        }
     }
 
     public void ChangeMenus(string newMenu)
     {
-        Debug.Log($"MenuController - ChangeMenus(string)| Changing To Menu: {newMenu}");
-        ChangeMenus(MenuDict[newMenu]);
+        if (BlockScript.Unblocked())
+        {
+            Debug.Log($"MenuController - ChangeMenus(string)| Changing To Menu: {newMenu}");
+            ChangeMenus(MenuDict[newMenu]);
+        }
     }
 
     public IEnumerator ChangeMenuCoroutine(Menu newMenu)
     {
-        float menuChangeDelay = 0.25f;
+        float menuChangeDelay = 0.2f;
         // Close Currently Open Menu
+        Debug.Log($"MenuController - ChangeMenuCoroutine| Current Menu: {menu}");
         switch (menu)
         {
             case Menu.Possessions:
@@ -53,6 +65,7 @@ public class MenuController : Singleton<MenuController>
                 break;
         }
         menu = newMenu;
+        Debug.Log($"MenuController - ChangeMenuCoroutine| New Menu: {newMenu}");
         yield return new WaitForSeconds(menuChangeDelay);
         // Open New Menu
         switch (newMenu)
@@ -70,5 +83,6 @@ public class MenuController : Singleton<MenuController>
             default:
                 break;
         }
+        BlockScript.Remove("Changing Menu");
     }
 }
