@@ -7,7 +7,7 @@ using TMPro;
 public class PossessionsController : Singleton<PossessionsController>
 {
     public Resource selectedResource;
-    public ScrollerController ScrollerController;
+    public PossessionsScrollerController ScrollerController;
 
     public TMP_Text ResourceNameText;
     public TMP_Text ResourceCategoryText;
@@ -80,11 +80,11 @@ public class PossessionsController : Singleton<PossessionsController>
         if (open)
         {
             yield return new WaitForSeconds(delay);
-            ScrollerController.RefreshScroller("Resources");
+            ScrollerController.RefreshScroller();
         }
         else
         {
-            ScrollerController.RefreshScroller("");
+            ScrollerController.ClearScroller();
             yield return new WaitForSeconds(delay);
             PossessionsCanvas.SetActive(false);
         }

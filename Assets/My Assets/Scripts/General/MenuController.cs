@@ -46,15 +46,17 @@ public class MenuController : Singleton<MenuController>
 
     public IEnumerator ChangeMenuCoroutine(Menu newMenu)
     {
-        float menuChangeDelay = 0.2f;
+        float menuChangeDelay = 1f;
         // Close Currently Open Menu
         Debug.Log($"MenuController - ChangeMenuCoroutine| Current Menu: {menu}");
+                Debug.Log($"MenuController - ChangeMenuCoroutine| New Menu: {newMenu}");
         switch (menu)
         {
             case Menu.Possessions:
                 PossessionsController.Instance.CloseMenu();
                 break;
             case Menu.Seeker:
+                SeekerController.Instance.CloseMenu();
                 break;
             case Menu.Market:
                 MarketController.Instance.CloseMenu();
@@ -65,7 +67,6 @@ public class MenuController : Singleton<MenuController>
                 break;
         }
         menu = newMenu;
-        Debug.Log($"MenuController - ChangeMenuCoroutine| New Menu: {newMenu}");
         yield return new WaitForSeconds(menuChangeDelay);
         // Open New Menu
         switch (newMenu)
@@ -74,6 +75,7 @@ public class MenuController : Singleton<MenuController>
                 PossessionsController.Instance.OpenMenu();
                 break;
             case Menu.Seeker:
+                SeekerController.Instance.OpenMenu();
                 break;
             case Menu.Market:
                 MarketController.Instance.OpenMenu();

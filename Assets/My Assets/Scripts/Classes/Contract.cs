@@ -132,6 +132,8 @@ public class Contract
         Seekers = new();
     }
 
+    public Contract(ContractData info) : this(info.Name) { }
+
     public ContractData GetContractData(string name)
     {
         return ContractInfo.FirstOrDefault(contractData => contractData.Name == name);
@@ -200,9 +202,12 @@ public class Contract
         return results;
     }
 
-    public static List<ContractData> GetContracts(string category)
+    public static List<ContractData> GetContracts(string search)
     {
-        return ContractInfo.Where(contract => contract.Category == category || contract.Subcategory == category)
+        return ContractInfo.Where(
+            contract => contract.Category == search ||
+            contract.Subcategory == search ||
+            contract.Location == search)
             .ToList();
     }
 

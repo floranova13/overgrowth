@@ -307,12 +307,12 @@ namespace GameExtensions
         /// <returns>A random element or default value</returns>
         public static T PickRandom<T>(this List<T> source)
         {
-            System.Random rnd = new();
             if (source == null || source.Count == 0)
             {
                 Debug.Log($"GameExtensions - PickRandom| Source is null or the count is 0");
                 return default;
             }
+            System.Random rnd = new();
             return source[rnd.Next(0, source.Count)];
         }
 

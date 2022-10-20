@@ -67,7 +67,7 @@ public class Merchant
 
     public Merchant(MerchantData merchantData)
     {
-        if(merchantData.Name == null) return;
+        if (merchantData.Name == null) return;
         Debug.Log($"Merchant - Merchant| Name: {merchantData.Name}, Rarity: {merchantData.Rarity}");
         Name = merchantData.Name;
         Citizen = new Citizen();
@@ -81,9 +81,9 @@ public class Merchant
         Description = merchantData.Description;
     }
 
-    public Merchant(string name) : this(GetMerchant(name)) {}
+    public Merchant(string name) : this(GetMerchant(name)) { }
 
-    public Merchant() : this(MerchantInfo.PickRandom()) {}
+    public Merchant() : this(MerchantInfo.PickRandom()) { }
 
     // Read From JSON: 
     // ------------------------------------------------------------------------------------------
@@ -235,6 +235,11 @@ public class Merchant
     /// <returns>The list of random Merchants</returns>
     public static List<Merchant> GetRandomMerchants(int num)
     {
+        if (num == 0)
+        {
+            Debug.LogError("GetRandomMerchants: Number Was 0!");
+            return null;
+        }
         List<Merchant> merchantList = new();
 
         for (int i = 0; i < num; i++)
@@ -251,6 +256,11 @@ public class Merchant
     /// <returns>The list of random Merchants</returns>
     public static List<Merchant> GetRandomMerchants(int num, List<string> subcategories)
     {
+        if (num == 0 || subcategories == null || subcategories.Count == 0)
+        {
+            Debug.LogError("GetRandomMerchants: Number Was 0, subcategories was null, or subcategories was an empty list!");
+            return null;
+        }
         List<Merchant> merchantList = new();
 
         for (int i = 0; i < num; i++)

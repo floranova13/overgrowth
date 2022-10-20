@@ -6,6 +6,8 @@
 - TODO: Add the ability to have descriptions parsed with spoilers. Descriptions would be split based on unlock conditions.
 - TODO: Possibly add the option to sift rock for minerals, or, rather, mine rock and have a chance of the mineral appearing. The chances are in the file on geological materials.
 - TODO: Possibly have an Engineering division addon. The Seekers go out and find possible mining locations. The Guardian Division then defends these locations while the miners setup a mining operation.
+- TODO: Change Location Threat Info panel to display an image instead of a number.
+- TODO: The background of Location Threat should be styled like the territory.
 
 ## **RECENT NAME CHANGES:**
 - 

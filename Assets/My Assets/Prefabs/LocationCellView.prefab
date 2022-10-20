@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 3326066404049386927}
   - component: {fileID: 3326066404049386925}
   - component: {fileID: 3326066404049386926}
-  - component: {fileID: 3326066404049386924}
+  - component: {fileID: 7862667354318303449}
   m_Layer: 5
   m_Name: LocationCellView
   m_TagString: Untagged
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3326066404049386924
+--- !u!114 &7862667354318303449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,13 +164,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3326066404049386912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 439046cd459cd274ea41f12f4e6f3eee, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ecd2bf0f84683a40a11d45eb1b4046a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellIdentifier: CellViewResource
-  NameText: {fileID: 3326066404377810123}
-  CellImage: {fileID: 3326066404049386926}
-  ResourceImage: {fileID: 3326066403786096360}
+  cellIdentifier: Location
+  locationText: {fileID: 3326066404377810123}
+  locationImage: {fileID: 3326066403786096360}
 --- !u!1 &3326066404377810125
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +182,7 @@ GameObject:
   - component: {fileID: 3326066404377810122}
   - component: {fileID: 3326066404377810123}
   m_Layer: 5
-  m_Name: NameText
+  m_Name: LocationText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

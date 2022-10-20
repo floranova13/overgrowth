@@ -17,17 +17,15 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
     /// This is our scroller we will be a delegate for
     /// </summary>
     public EnhancedScroller scroller;
-    [HideInInspector] private string ScrollerType;
 
-    public EnhancedScrollerCellView ResourceCellViewPrefab;
-    public EnhancedScrollerCellView MerchantCellViewPrefab;
-    public EnhancedScrollerCellView LocationCellViewPrefab;
-    public EnhancedScrollerCellView TextCellViewPrefab;
+    public CellViewResource ResourceCellViewPrefab;
+    public CellViewMerchant MerchantCellViewPrefab;
+    public CellViewLocation LocationCellViewPrefab;
+    public CellViewText TextCellViewPrefab;
 
     public void RefreshScroller(string newType = "")
     {
-        ScrollerType = newType;
-        StartCoroutine(LoadData(ScrollerType));
+        StartCoroutine(LoadData(newType));
     }
 
     void Start()
@@ -51,7 +49,23 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
         switch (ScrollerType)
         {
             case "":
-                scroller.ClearAll();
+                break;
+            case "Locations":
+                for (int i = 0; i < Location.Locations.Count; i++)
+                {
+                    _data.Add(new LocationCellData() { location = Location.Locations[i] });
+                    yield return new WaitForSeconds(betweenDelay);
+                }
+                break;
+            case "Contracts": // TODO: CHECK WHICH ONES ARE UNLOCKED EVENTUALLY
+                List<Contract> contracts = Contract.GetContracts(SeekerController.Instance.selectedLocation.Name)
+                    .Select(info => new Contract(info))
+                    .ToList();
+                for (int i = 0; i < contracts.Count; i++)
+                {
+                    _data.Add(new LocationCellData() { location = Location.Locations[i] });
+                    yield return new WaitForSeconds(betweenDelay);
+                }
                 break;
             case "Resources":
                 for (int i = 0; i < GameSave.s.resources.Count; i++)
@@ -88,10 +102,10 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
                 }
                 break;
         }
-        yield return new WaitForSeconds(delay);
 
         // tell the scroller to reload now that we have the data
         scroller.Delegate = this;
+        yield return new WaitForSeconds(delay);
         scroller.ReloadData();
     }
 
@@ -141,7 +155,6 @@ public class ScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
 
     /// <summary>
     /// Gets the cell to be displayed. You can have numerous cell types, allowing variety in your list.
-    /// Some examples of this would be headers, footers, and other grouping cells.
     /// </summary>
     /// <param name="scroller">The scroller requesting the cell</param>
     /// <param name="dataIndex">The index of the data that the scroller is requesting</param>
